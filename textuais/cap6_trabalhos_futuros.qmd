@@ -1,0 +1,353 @@
+\chapter{\textbf{Comparações}}
+\setlength{\parindent}{1.3cm}
+
+```{r}
+#| echo: false
+#| error: false
+#| warning: false
+
+require(tidyverse)
+require(lubridate)
+require(ggtext)
+require(showtext)
+
+# font_add("times_new", "times.ttf")
+# showtext_opts(dpi = 300)
+# showtext_auto()
+```
+
+```{r}
+#| label: fig-graf_casos_denv_regional
+#| fig-cap: "Gráfico de casos registrados de Dengue na 17º Regiaonal de Saúde do Paraná, constituído pelos municípios de Alvorada do Sul, Assaí, Bela Vista do Paraíso, Cafeara, Cambé, Centenário do Sul, Florestópolis, Guaraci, Ibiporã, Jaguapitã, Jataizinho, Londrina, Lupionópolis, Miraselva, Pitangueiras, Porecatu, Prado Ferreira, Primeiro de Maio, Rolândia, Sertanópolis e Tamarana, no período de dezembro de 2021 à dezembro de 2025."
+#| echo: false
+#| error: false
+#| warning: false
+#| fig-width: 9
+# #| results: asis
+
+cal_regional_cap <- readRDS("C:/dados/projetos/2025_Mestrado/2025_Mestrado/ggplot/den_sus_cal_regional_cap.RDS")
+
+seq_a <- seq(0, 9000, 100)
+seq_b <- seq(0, 9000, 500)
+seq_a <- seq_a[!seq_a %in% seq_b]
+
+fig_cal_regional_cap <- cal_regional_cap |>
+  ggplot(aes(x = data, y = total_casos)) +
+  geom_hline(
+    yintercept = c(seq_a, seq_b),
+    linewidth = 0.1,
+    color = c(rep("gray90", 72), rep("gray50", 19)),
+    linetype = c(rep(1, 72), rep(3, 19))
+  ) +
+  geom_line(
+    show.legend = FALSE,
+    linewidth = 0.7,
+    colour = "#464749"
+  ) +
+  coord_cartesian(expand = FALSE, clip = "off") +
+  scale_y_continuous(breaks = c(seq(0, 9000, 500)), limits = c(0, 10000)) +
+  scale_x_date(
+    breaks = ymd(
+      c(
+        "2021-12-01",
+        "2022-06-01",
+        "2022-12-01",
+        "2023-06-01",
+        "2023-12-01",
+        "2024-06-01",
+        "2024-12-01",
+        "2025-06-01",
+        "2025-12-01"
+      )
+    ),
+    labels = c(
+      "2021/dez",
+      "2022/jun",
+      "2022/dez",
+      "2023/jun",
+      "2023/dez",
+      "2024/jun",
+      "2024/dez",
+      "2025/jun",
+      "2025/dez"
+    )
+  ) +
+  labs(
+    x = NULL,
+    y = NULL,
+    title = "Municípios da 17º Regional de Saúde do PR",
+    subtitle = "Casos registrados de Dengue"
+  ) +
+  theme(
+    text = element_text(family = "serif"),
+    plot.background = element_rect(fill = "#EEEEEE"),
+    plot.title = element_textbox_simple(
+      face = "bold",
+      size = 12,
+      width = NULL,
+      fill = NULL,
+      padding = margin(5, 4, 5, 4),
+      hjust = 0.5
+    ),
+    plot.subtitle =  element_textbox_simple(
+      size = 10,
+      width = NULL,
+      fill = NULL,
+      padding = margin(1, 4, 5, 4),
+      hjust = 0.5
+    ),
+    plot.margin = margin(4, 15, 10, 10),
+    axis.text.x = element_text(
+      size = 8.5,
+      margin = margin(t = 3),
+      color = "black"
+    ),
+    axis.ticks.length.x = unit(4, "pt"),
+    axis.ticks = element_line(linewidth = 0.3),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = NA)
+  )
+
+plot(fig_cal_regional_cap)
+```
+
+Fonte: BRASIL. Ministério da Saúde, [-@brasil.ministériodasaúdeSINAN]; BRASIL. Ministério da Saúde. DATASUS, [-@datasus2026]; IBGE, [-@ibgeInstitutoBrasileiroGeografia2023]; Saldanha, Bastos e Barcellos [-@saldanha2019].
+
+```{r}
+#| label: fig-graf-casos-denv-serta
+#| fig-cap: "Gráfico de casos registrados de Dengue do Município de Sertanópolis-Paraná, de dezembro de 2021 à dezembro de 2025, destacando o período de atividade do projeto de monitoramento de *Aedes* spp. na cidade de Sertanópolis/PR."
+#| echo: false
+#| error: false
+#| warning: false
+#| fig-width: 9
+# #| results: asis
+
+cal_sertanopolis_cap <- readRDS("C:/dados/projetos/2025_Mestrado/2025_Mestrado/ggplot/den_sus_cal_sertanopolis_cap.RDS")
+
+fig_cal_sertanopolis_cap <- cal_sertanopolis_cap |>
+  ggplot(aes(x = data, y = total_casos_serta, color = status_proj)) +
+  geom_rect(
+    xmin = ymd("2023-10-08"),
+    xmax = ymd("2026-01-01"),
+    ymin = -4,
+    ymax = 200,
+    fill = "#FCF0E9",
+    color = NA
+  ) +
+  geom_hline(
+    yintercept = c(0, 100, 200),
+    linewidth = 0.2,
+    color = "gray80",
+    linetype = 1
+  ) +
+  geom_line(linewidth = 0.7) +
+  coord_cartesian(expand = FALSE, clip = "off") +
+  scale_y_continuous(breaks = c(0, 100, 200), limits = c(0, 200)) +
+  scale_x_date(
+    breaks = ymd(
+      c(
+        "2021-12-01",
+        "2022-06-01",
+        "2022-12-01",
+        "2023-06-01",
+        "2023-12-01",
+        "2024-06-01",
+        "2024-12-01",
+        "2025-06-01",
+        "2025-12-01"
+      )
+    ),
+    labels = c(
+      "2021/dez",
+      "2022/jun",
+      "2022/dez",
+      "2023/jun",
+      "2023/dez",
+      "2024/jun",
+      "2024/dez",
+      "2025/jun",
+      "2025/dez"
+    )
+  ) +
+  scale_color_manual(breaks = c("antes", "depois"),
+                     values = c("#464749", "#2D7709"),
+                     labels = c("Sem monitoramento", "Com monitoramento")) +
+  labs(
+    x = NULL,
+    y = NULL,
+    title = "Município de Sertanópolis/PR",
+    subtitle = "Casos registrados de Dengue",
+    caption =
+  ) +
+  theme(
+    text = element_text(family = "serif"),
+    plot.background = element_rect(fill = "#EEEEEE"),
+    plot.title = element_textbox_simple(
+      face = "bold",
+      size = 12,
+      width = NULL,
+      fill = NULL,
+      padding = margin(5, 4, 5, 4),
+      hjust = 0.5
+    ),
+    plot.subtitle =  element_textbox_simple(
+      size = 10,
+      width = NULL,
+      fill = NULL,
+      padding = margin(1, 4, 5, 4),
+      hjust = 0.5
+    ),
+    plot.margin = margin(4, 15, 10, 10),
+    axis.text.x = element_text(
+      size = 8.5,
+      margin = margin(t = 3),
+      color = "black"
+    ),
+    axis.ticks.length.x = unit(4, "pt"),
+    axis.ticks = element_line(linewidth = 0.3),
+    axis.ticks.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = NA),
+    legend.position = c(0.18, 0.95),
+    legend.justification = c(1, 1),
+    legend.background = element_blank(),
+    legend.key = element_blank(),
+    legend.title = element_blank()
+  )
+
+plot(fig_cal_sertanopolis_cap)
+```
+
+Fonte: BRASIL. Ministério da Saúde, [-@brasil.ministériodasaúdeSINAN]; BRASIL. Ministério da Saúde. DATASUS, [-@datasus2026]; IBGE, [-@ibgeInstitutoBrasileiroGeografia2023]; Saldanha, Bastos e Barcellos [-@saldanha2019].
+
+```{r}
+#| label: fig-graf-comparacao-casos-denv-serta-proximidades
+#| fig-cap: "Gráfico comparativo do número de casos registrados de Dengue do Município de Sertanópolis-Paraná e do número de casos registrados de Dengue em municípios de pequeno porte (menos de 16 mil habitantes) da 17º Regiaonal de Saúde do Paraná, sendo eles Alvorada do Sul, Assaí, Bela Vista do Paraíso, Cafeara, Centenário do Sul, Florestópolis, Guaraci, Jaguapitã, Jataizinho, Lupionópolis, Miraselva, Pitangueiras, Porecatu, Prado Ferreira, Primeiro de Maio e Tamarana, no período de outubro de 2023 à dezembro de 2025, destacando o período de atividade do projeto de monitoramento de *Aedes* spp. na cidade de Sertanópolis/PR."
+#| echo: false
+#| error: false
+#| warning: false
+#| fig-width: 9
+
+
+seq_e = seq(0, 1500, by= 100)
+seq_f = seq(0, 1500, by= 500)
+seq_e <- seq_e[!seq_e %in% seq_f]
+
+cal_regional_pequenos_sem_serta_cap <- readRDS("C:/dados/projetos/2025_Mestrado/2025_Mestrado/ggplot/den_sus_regional_pequenos_sem_serta_cap.RDS")
+cal_regional_pequenos_sem_serta_cap_co <- cal_regional_pequenos_sem_serta_cap |>
+  filter(data > ymd("2023-10-02"))
+cal_sertanopolis_cap_co <- cal_sertanopolis_cap |>
+  filter(data > ymd("2023-10-02"))
+
+fig_comp_cal_sertanopolis_cap_co <- cal_sertanopolis_cap_co |>
+  ggplot(aes(x = data, color = status_proj)) +
+  # geom_rect(
+  #   xmin = ymd("2023-10-08"),
+  #   xmax = ymd("2026-01-01"),
+  #   ymin = -4,
+  #   ymax = 1500,
+  #   fill = "#FCF0E9",
+  #   color = NA
+  # )  +
+  geom_hline(
+    yintercept = c(0, 100, 200, 500, 1000, 1500),
+    linewidth = 0.2,
+    color = "gray80",
+    linetype = 1
+  ) +
+  geom_line(
+    data = cal_regional_pequenos_sem_serta_cap_co,
+    aes(x = data, y = total_casos_pequenos_sem_serta),
+    linewidth = 0.7
+  ) +
+  geom_line(
+    data = cal_sertanopolis_cap_co,
+    aes(x = data, y = total_casos_serta),
+    linewidth = 0.7
+  ) +
+  coord_cartesian(expand = FALSE, clip = "off") +
+  scale_y_continuous(breaks = c(0, 100, 200, 500, 1000, 1500),
+                     limits = c(0, 2000)) +
+  scale_x_date(
+    breaks = ymd(
+      c("2023-12-01",
+        "2024-06-01",
+        "2024-12-01",
+        "2025-06-01",
+        "2025-12-01"
+      )
+    ),
+    labels = c(
+      "2023/dez",
+      "2024/jun",
+      "2024/dez",
+      "2025/jun",
+      "2025/dez"
+    )
+  ) +
+  scale_color_manual(breaks = c("antes", "depois"),
+                     values = c("#464749", "red"),
+                     labels = c("Outros municípios", "Sertanópolis")) +
+  labs(
+    x = NULL,
+    y = NULL,
+    title = "Comparativo do número de casos de dengue registrado <br> nos Municípios da 17º Regional de Saúde do PR com <br> menos de 16 mil habtantes e Sertanópolis-PR",
+    subtitle = "Casos registrados de Dengue"
+  ) +
+  theme(
+    text = element_text(family = "serif"),
+    plot.background = element_rect(fill = "#EEEEEE"),
+    plot.title = element_textbox_simple(
+      face = "bold",
+      size = 12,
+      width = NULL,
+      fill = NULL,
+      padding = margin(5, 4, 5, 4),
+      hjust = 0
+    ),
+    plot.subtitle =  element_textbox_simple(
+      size = 10,
+      width = NULL,
+      fill = NULL,
+      padding = margin(1, 4, 5, 4),
+      hjust = 0
+    ),
+    plot.margin = margin(4, 15, 10, 10),
+    axis.text.x = element_text(
+      size = 8.5,
+      margin = margin(t = 3),
+      color = "black"
+    ),
+    axis.ticks.length.x = unit(4, "pt"),
+    axis.ticks = element_line(linewidth = 0.3),
+    axis.ticks.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = NA),
+    legend.position = c(0.18, 0.95),
+    legend.justification = c(1, 1),
+    legend.background = element_blank(),
+    legend.key = element_blank(),
+    legend.title = element_blank()
+  )
+
+```
+
+::: {#fig-dist-pontos-2 layout-ncol="1" layout-align="center"}
+```{r}
+#| message: false
+#| warning: false
+#| fig-align: default
+#| fig-height: 5
+#| fig-width: 9
+#| paged-print: true
+
+plot(fig_comp_cal_sertanopolis_cap_co)
+```
+
+**Fonte**: BRASIL. Ministério da Saúde, [-@brasil.ministériodasaúdeSINAN]; BRASIL. Ministério da Saúde. DATASUS, [-@datasus2026]; IBGE, [-@ibgeInstitutoBrasileiroGeografia2023]; Saldanha, Bastos e Barcellos [-@saldanha2019].
+
+Gráfico comparativo do número de casos registrados de Dengue do Município de Sertanópolis-Paraná e do número de casos registrados de Dengue em municípios de pequeno porte (menos de 16 mil habitantes) da 17º Regiaonal de Saúde do Paraná, sendo eles Alvorada do Sul, Assaí, Bela Vista do Paraíso, Cafeara, Centenário do Sul, Florestópolis, Guaraci, Jaguapitã, Jataizinho, Lupionópolis, Miraselva, Pitangueiras, Porecatu, Prado Ferreira, Primeiro de Maio e Tamarana, no período de outubro de 2023 à dezembro de 2025, destacando o período de atividade do projeto de monitoramento de *Aedes* spp. na cidade de Sertanópolis/PR.
+:::

@@ -1,0 +1,38 @@
+  \begin{center}
+  
+    \begin{vplace}[0]
+  
+    \Large{\uppercase{ {{< var tcc.autor >}} }}
+    
+    \end{vplace}
+
+    
+    \begin{DoubleSpace}
+        \vspace{\fill}\vspace{\fill}
+            \textbf{\Large{\uppercase{ {{< var tcc.titulo >}} }}}
+        \vspace*{1cm}
+    \end{DoubleSpace}
+
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+        {{< var tcc.preambulo >}}
+        
+        \vspace*{0.5cm}
+        \OnehalfSpacing
+        \center{\textbf{BANCA EXAMINADORA}}
+        \assinatura { {{< var tcc.banca_presidente >}} }\vspace{1pt}
+        {{< var tcc.instituicao_presidente >}} 
+        \assinatura{ {{< var tcc.banca_membro_um >}} }\vspace{1pt}
+        {{< var tcc.instituicao_membro_um >}}   
+        \assinatura{ {{< var tcc.banca_membro_dois >}} }\vspace{2pt}
+        {{< var tcc.instituicao_membro_dois >}}   
+        
+        \vspace{3cm}
+
+        {{< var tcc.cidade >}}, {{< var tcc.dia_defesa >}}~de {{< var tcc.mes_defesa >}}~de {{< var tcc.ano_defesa >}}.
+
+    \end{minipage}%
+
+\end{center}
+
+{{< pagebreak >}}

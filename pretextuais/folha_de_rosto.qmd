@@ -1,0 +1,62 @@
+\begin{center}
+    {\Large\textbf{\uppercase{ {{< var tcc.autor >}} }}}
+
+    \begin{vplace}[2]
+
+        \begin{DoubleSpace}
+
+            {\LARGE\textbf{\uppercase{ {{< var tcc.titulo >}} }}}
+
+        \end{DoubleSpace}
+
+        \vspace{0.5cm}
+
+        \begin{flushright}
+
+        \begin{SingleSpace}
+
+        \begin{hspace}{.45\textwidth}
+
+            \begin{minipage}{0.51\textwidth}
+                {{< var tcc.preambulo >}}
+
+            \vspace{0.4cm}
+
+                \begin{minipage}[t]{0.25\textwidth}
+                    {{< var tcc.orientador_rosto_rotulo >}}
+                \end{minipage}
+                \hfill
+                \begin{minipage}[t]{0.75\textwidth}
+                    {{< var tcc.orientador_rosto >}}
+                \end{minipage}
+
+            \vspace{6pt}
+
+                \begin{minipage}[t]{0.25\textwidth}
+                    {{< var tcc.coorientador_rosto_rotulo >}}
+                \end{minipage}
+                \hfill
+                \begin{minipage}[t]{0.75\textwidth}
+                    {{< var tcc.coorientador_rosto >}}
+                \end{minipage}
+
+            \end{minipage}
+
+            \end{hspace}
+
+        \end{SingleSpace}
+
+        \end{flushright}
+
+    \end{vplace}
+
+\vfill
+
+\setlength{\parskip}{0.0cm}
+\uppercase{ {{< var tcc.cidade >}} }
+\par
+{{< var tcc.ano >}}
+
+\end{center}
+
+{{< pagebreak >}}

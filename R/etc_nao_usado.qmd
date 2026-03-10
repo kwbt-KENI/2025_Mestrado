@@ -1,0 +1,277 @@
+
+::: {#fig-dist-ovos-menores25 layout-ncol="1" layout-align="center"}
+```{r}
+#| message: false
+#| fig-align: center
+#| warning: false
+#| echo: false
+#| fig-width: 6.3
+#| fig-height: 8
+
+df_comp_ovos_nos_maiores <- df_ovos_cord |>
+  filter(armadilha < 25) |>
+  group_by(armadilha) |>
+  mutate(armadilha = as.factor(armadilha))
+
+plot_df_comp_ovos_nos_maiores <- df_comp_ovos_nos_maiores |>
+  ggplot(aes(x = sem, y = ovos, colour = armadilha, group = armadilha)) +
+  geom_hline(
+    yintercept = seq(0, 1250, by = 250),
+    linewidth = 0.2,
+    color = "gray80",
+    linetype = 1
+  ) +
+  geom_line(linewidth = 0.7) +
+  facet_wrap(~armadilha, ncol = 3) +
+  coord_cartesian(expand = FALSE, clip = "off") +
+  scale_x_yearweek(
+    labels = function(x) format(x, "S%W-%Y")
+  ) +
+  scale_y_continuous(
+    breaks = seq(0, 1250, by = 250),
+    limits = c(0, 1250)
+  ) +
+labs(
+  x = "Semana epidemilógica da coleta",
+  y = "Número de ovos",
+  title = "Comparativo do número de ovos coletados por Ovitrampas instaladas no Municípios de Sertanópolis/PR, entre outubro de 2023 até dezembro de 2026",
+  colour = "Armadilha"
+) +
+  theme(
+    text = element_text(family = "serif"),
+    plot.background = element_rect(fill = "#EEEEEE"),
+    plot.title = element_blank(),
+
+    #   plot.title = element_textbox_simple(
+    #   face = "bold",
+    #   size = 12,
+    #   width = NULL,
+    #   fill = NULL,
+    #   padding = margin(0, 0, 0, 0),
+    #   hjust = 0
+    # ),
+
+    # plot.subtitle = element_textbox_simple(
+    #   size = 10,
+    #   width = NULL,
+    #   fill = NULL,
+    #   padding = margin(0, 0, 0, 0),
+    #   hjust = 0
+    # ),
+    plot.margin = margin(5, 20, 10, 15),
+    axis.text.x = element_text(
+      size = 8,
+      color = "black",
+      angle = 45,
+      hjust = 1
+    ),
+    axis.text.y = element_text(size = 8, color = "black"),
+    axis.ticks.length = unit(4, "pt"),
+    axis.ticks = element_line(linewidth = 0.3),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = "#eeeeee45"),
+    strip.background = element_rect(fill = "#EEEEEE", color = "black"),
+    strip.text = element_text(face = "bold", size = 9),
+    legend.position = "none"
+  )
+
+plot_df_comp_ovos_nos_maiores
+```
+
+\footnotesize Fonte: o próprio autor.
+
+Gráfico do comparativo do número de ovos coletados por ovitrampas instaladas no Municípios de Sertanópolis/PR, com a maior quantidade de ovos capturados, entre outubro de 2023 até dezembro de 2026.
+:::
+
+::: {#fig-dist-ovos-maiores25 layout-ncol="1" layout-align="center"}
+```{r}
+#| message: false
+#| fig-align: center
+#| warning: false
+#| echo: false
+#| fig-width: 6.3
+#| fig-height: 8
+
+df_comp_ovos_nos_maiores <- df_ovos_cord |>
+  filter(armadilha > 24) |>
+  group_by(armadilha) |>
+  mutate(armadilha = as.factor(armadilha))
+
+plot_df_comp_ovos_nos_maiores <- df_comp_ovos_nos_maiores |>
+  ggplot(aes(x = sem, y = ovos, colour = armadilha, group = armadilha)) +
+  geom_hline(
+    yintercept = seq(0, 1250, by = 250),
+    linewidth = 0.2,
+    color = "gray80",
+    linetype = 1
+  ) +
+  geom_line(linewidth = 0.7) +
+  facet_wrap(~armadilha, ncol = 3) +
+  coord_cartesian(expand = FALSE, clip = "off") +
+  scale_x_yearweek(
+    labels = function(x) format(x, "S%W-%Y")
+  ) +
+  scale_y_continuous(
+    breaks = seq(0, 1250, by = 250),
+    limits = c(0, 1250)
+  ) +
+  labs(
+    x = "Semana epidemilógica da coleta",
+    y = "Número de ovos",
+    title = "Comparativo do número de ovos coletados por Ovitrampas instaladas no Municípios de Sertanópolis/PR, entre outubro de 2023 até dezembro de 2026",
+    colour = "Armadilha"
+  ) +
+  theme(
+    text = element_text(family = "serif"),
+    plot.background = element_rect(fill = "#EEEEEE"),
+    plot.title = element_blank(),
+
+    #   plot.title = element_textbox_simple(
+    #   face = "bold",
+    #   size = 12,
+    #   width = NULL,
+    #   fill = NULL,
+    #   padding = margin(0, 0, 0, 0),
+    #   hjust = 0
+    # ),
+
+    # plot.subtitle = element_textbox_simple(
+    #   size = 10,
+    #   width = NULL,
+    #   fill = NULL,
+    #   padding = margin(0, 0, 0, 0),
+    #   hjust = 0
+    # ),
+    plot.margin = margin(5, 20, 10, 15),
+    axis.text.x = element_text(
+      size = 8,
+      color = "black",
+      angle = 45,
+      hjust = 1
+    ),
+    axis.text.y = element_text(size = 8, color = "black"),
+    axis.ticks.length = unit(4, "pt"),
+    axis.ticks = element_line(linewidth = 0.3),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = "#eeeeee45"),
+    strip.background = element_rect(fill = "#EEEEEE", color = "black"),
+    strip.text = element_text(face = "bold", size = 9),
+    legend.position = "none"
+  )
+
+plot_df_comp_ovos_nos_maiores
+```
+
+\footnotesize Fonte: o próprio autor.
+
+Gráfico do comparativo do número de ovos coletados por ovitrampas instaladas no Municípios de Sertanópolis/PR, com a maior quantidade de ovos capturados, entre outubro de 2023 até dezembro de 2026.
+:::
+
+
+```{r}
+#| echo: false
+#| error: false
+#| warning: false
+#| fig-width: 6.3
+cal_sertanopolis_cap <- readRDS(
+  "./data/den_sus_cal_sertanopolis_cap_2023_2026.RDS"
+)
+
+fig_cal_sertanopolis_cap <- cal_sertanopolis_cap |>
+  ggplot(aes(x = data, y = total_casos_serta, color = status_proj)) +
+  geom_rect(
+    xmin = ymd("2023-10-08"),
+    xmax = ymd("2026-01-01"),
+    ymin = -4,
+    ymax = 200,
+    fill = "#FCF0E9",
+    color = NA
+  ) +
+  geom_hline(
+    yintercept = c(0, 100, 200),
+    linewidth = 0.2,
+    color = "gray80",
+    linetype = 1
+  ) +
+  geom_line(linewidth = 0.7) +
+  coord_cartesian(expand = FALSE, clip = "off") +
+  scale_y_continuous(breaks = c(0, 100, 200), limits = c(0, 200)) +
+  scale_x_date(
+    breaks = ymd(
+      c(
+        "2021-12-01",
+        "2022-06-01",
+        "2022-12-01",
+        "2023-06-01",
+        "2023-12-01",
+        "2024-06-01",
+        "2024-12-01",
+        "2025-06-01",
+        "2025-12-01"
+      )
+    ),
+    labels = c(
+      "2021/dez",
+      "2022/jun",
+      "2022/dez",
+      "2023/jun",
+      "2023/dez",
+      "2024/jun",
+      "2024/dez",
+      "2025/jun",
+      "2025/dez"
+    )
+  ) +
+  scale_color_manual(
+    breaks = c("antes", "depois"),
+    values = c("#464749", "#2D7709"),
+    labels = c("Sem monitoramento", "Com monitoramento")
+  ) +
+  labs(
+    x = NULL,
+    y = NULL,
+    title = "Município de Sertanópolis/PR",
+    subtitle = "Casos registrados de Dengue",
+    caption =
+  ) +
+  theme(
+    text = element_text(family = "serif"),
+    plot.background = element_rect(fill = "#EEEEEE"),
+    plot.title = element_textbox_simple(
+      face = "bold",
+      size = 12,
+      width = NULL,
+      fill = NULL,
+      padding = margin(5, 4, 5, 4),
+      hjust = 0.5
+    ),
+    plot.subtitle = element_textbox_simple(
+      size = 10,
+      width = NULL,
+      fill = NULL,
+      padding = margin(1, 4, 5, 4),
+      hjust = 0.5
+    ),
+    plot.margin = margin(4, 15, 10, 10),
+    axis.text.x = element_text(
+      size = 8.5,
+      margin = margin(t = 3),
+      color = "black"
+    ),
+    axis.ticks.length.x = unit(4, "pt"),
+    axis.ticks = element_line(linewidth = 0.3),
+    axis.ticks.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = NA),
+    legend.position = c(0.18, 0.95),
+    legend.justification = c(1, 1),
+    legend.background = element_blank(),
+    legend.key = element_blank(),
+    legend.title = element_blank()
+  )
+
+plot(fig_cal_sertanopolis_cap)
+```

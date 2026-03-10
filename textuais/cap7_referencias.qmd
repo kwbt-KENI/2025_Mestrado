@@ -1,0 +1,10 @@
+\cleardoublepage
+\markboth{Referências}{Referências}
+\chapter*{Referência}
+\addcontentsline{toc}{chapter}{Referências}
+\postextual
+\RaggedRight
+\SingleSpacing
+
+::: {#refs}
+:::

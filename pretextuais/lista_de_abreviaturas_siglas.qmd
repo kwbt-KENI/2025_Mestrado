@@ -1,0 +1,22 @@
+\begin{siglas}
+  \item[CHIKV] \textit{Chikungunya virus} (Vírus da chikungunya)
+  \item[DENV] \textit{Dengue virus} (Vírus da dengue)
+  \item[FUNASA] Fundação Nacional de Saúde
+  \item[IBGE] Instituto Brasileiro de Geografia e Estatística
+  \item[IDO] Índice de Densidade de Ovos
+  \item[IPO] Índice de Positividade de Ovitrampas
+  \item[LEGM] Laboratório de Entomologia Geral e Médica
+  \item[LIRAa] Levantamento Rápido de Índice de \textit{Aedes aegypti}
+  \item[MAYV] \textit{Mayaro virus} (Vírus Mayaro)
+  \item[OROV] \textit{Oropouche virus} (Vírus da Febre do Oropouche)
+  \item[PCR] Reação em Cadeia da Polimerase
+  \item[PNCD] Programa Nacional de Controle da Dengue
+  \item[SERMUSA] Serviço Municipal de Saúde
+  \item[SINAN] Sistema de Informação de Agravos de Notificação
+  \item[SLEV] \textit{Saint Louis encephalitis virus} (Vírus da Encefalite de Saint Louis)
+  \item[UEL] Universidade Estadual de Londrina
+  \item[WEEV] \textit{Western equine encephalitis virus} (Vírus da Encefalite Equina do Oeste)
+  \item[WNV] \textit{West Nile virus} (Vírus da Febre do Nilo Ocidental)
+  \item[YFV] \textit{Yellow Fever virus} (Vírus da febre amarela)
+  \item[ZIKV] \textit{Zika virus} (Vírus da Zika)
+\end{siglas}

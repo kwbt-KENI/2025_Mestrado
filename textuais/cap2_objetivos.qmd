@@ -1,0 +1,24 @@
+\chapter{\textbf{Objetivos}}
+\setlength{\parindent}{1.3cm}
+
+\section{Objetivo Geral}
+
+Realizar ações de detecção precoce, monitoramento dos vetores e de arboviroses (DENV, CHIKV e ZIKV), acompanhando a flutuação populacional de Culicidae (Diptera) vetores e monitoramento de arboviroses no município de Sertanópolis, norte do Paraná.
+
+\subsection{Objetivo Específico}
+
+* Realizar o constante monitoramento entomológico de *Aedes* spp., utilizando armadilhas ovitrampas, na área urbana do município de Sertanópolis-PR.
+
+* Caracterizar e divulgar índices entomológicos baseados nos resultados da captura de ovos pelas armadilhas ovitrampas (Índice de Densidade de Ovos e Índice de Positividade de Ovitrampas) do município de Sertanópolis-PR.
+
+* Verificar a flutuação da oviposição de *Aedes* spp., monitorada por armadilhas ovitrampas, ao longo de dois anos de estudo, realizado no município de Sertanópolis-PR.
+
+* Realizar a captura de Culicidae (Diptera) adultos mensalmente, com auxílio de aspiradores de Nasci, em diferentes pontos estratégicos, como Unidades Básicas de Saúde na área urbana do município de Sertanópolis-PR.
+
+* Detectar, por meio de técnicas de Reação em Cadeia da Polimerase Quantitativa em Tempo Real, a presença vírus DENV (e seus sorotipos), CHIKV e ZIKV em *Aedes* spp. adultos fêmeas capturadas por aspiração no município de Sertanópolis-PR.
+
+<!-- considerar? difícil definir por conta da falta de dados meteriológicos -->
+
+<!-- * Verificar a relação, considerando a variação temporal, de diferentes fenômenos climática registrados na região (como variação da temperatura, umidade e precipitação) com as atividades de Culicidae (Diptera) vetores, representados pelo número de ovos coletados em armadilhas ovitrampas, número de adultos capturados em aspiração, e demais técnicas de detecção e amostragem entomológica realizadas no município, durante o período do presente estudo. -->
+
+<!-- * Verificar a relação da detecção viral de DENV, CHIKV e ZIKV e o número de enfermos acometidos pelas mesmas, com a presença e abundância de possíveis vetores, amostradas por armadilhas ovitrampas e aspiração, considerando a variação temporal e espacial dos dados. -->

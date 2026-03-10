@@ -1,0 +1,148 @@
+\chapter{\textbf{ Materiais e Métodos}}
+\setlength{\parindent}{1.3cm}
+
+\section{Área de Estudo}
+
+O presente estudo foi realizado no município de Sertanópolis, localizado no norte do Estado do Paraná, no sul do Brasil, com latitude aproximada de 23° 3' 23'' sul, e longitude de 51° 2' 12'' oeste - @fig-mapa-sertanopolis. O município possui um território de 505,532 km$^2$ totais, sendo destes, 8,23 km$^2$ de área urbanizada. Segundo o censo de em 2022, a cidade apresenta uma população de 15.930 pessoas, com densidade demográfica de 31,51 pessoas/km$^2$. Ressalta-se também o Índice de Desenvolvimento Humana do município, que é de 0,723 e 82,92% das residências apresentam esgoto ligado a rede municipal [@sertanóp2024]. O clima, segundo @nitsche2019, na região de Sertanópolis/PR é classificado como subtropical úmido (Cfa) pela classificação de Köppen.
+
+::: {#fig-mapa-sertanopolis layout-ncol="1" layout-align="center"}
+![](fig\mapa_sertanopolis.png){width="100%" fig-align="center"}
+
+\footnotesize Fonte: o próprio autor.
+
+Mapa da Área urbana da cidade de Sertanópolis - Paraná - Brasil.
+:::
+
+A escolha do município como foco da pesquisa foi devido a presença de um projeto pré-existente na localidade, vinculados ao Laboratório de Entomologia Geral e Médica da Universidade Estadual de Londrina (LEGM-UEL) e intitulado "Monitoramento e controle de Culicidae em áreas urbanas do norte do Paraná e ações integradas de educação ambiental", coordeando pelo Professor Dr. João Antonio Cyrino Zequi e implementado em 2023. Esse projeto pavimentou o contato com o município, agentes de saúde e endemias, facilitando a execução das atividades propostas pela pesquisa na área urbana do município de Sertanópolis.
+
+\section{Coleta de dados}
+
+Para a presente pesquisa, as coletas de Culicidae (Diptera), realizadas no município de Sertanópolis, Paraná, Brasil, de outubro de 2023 a dezembro de 2025 foram desenvolvidas sob licença permanente SISBIO/IBAMA (23093), com autorização e auxílio do Serviço Municipal de Saúde de Sertanópolis (SERMUSA) e Prefeitura de Sertanópolis/PR.
+
+\subsection{Monitoramento entomológico}
+
+\subsubsection{Coleta de Ovos}
+
+Para amostragem espacial da atividade de *Aedes*, verificada pela presença e taxa de oviposição, foram utilizadas armadilhas tipo ovitrampa [Fay e Eliason, -@fay1966preferred] georreferenciadas e individualizadas, espalhadas na área urbana do município, a uma distância de 200 metros. Esta armadilha consiste em um vaso preto (12cm de altura e 11cm diâmetro), com capacidade para 705mL, onde foram adicionados uma palheta de fibra *Duratree* (13cm de altura, 3cm largura, 5mm profundidade) e 300mL de fluído atrativo com larvicida (água, levedo de cerveja 0,1g/L e bioinseticida baseado em *Bacillus thuringiensis israelensis* (Goldberg e Margalit, 1977) - Vectobac WG®, com diluição de 0,03g/L), não havendo troca ou reposição de seus componentes durante o período de exposição da armadilha em campo [@fig-esquema-ovitrampa].
+
+::: {#fig-esquema-ovitrampa layout-ncol="1" layout-align="center"}
+![](fig\armadilha_esquema.png){width="100%" fig-align="center"}
+
+\footnotesize Fonte: o próprio autor.
+
+Imagem dos componentes da Armadilha Ovitrampa utilizada no projeto de monitoramento de Culicidae (Diptera) vetores em Sertanópolis-PR.
+:::
+
+As armadilhas foram instaladas em domicílios residenciais, estabelecimentos comerciais e indústrias. Para definição de possíveis pontos de instalação, foi elaborado um mapa com malha, constituído de linhas verticais e horizontais a uma distância de 200 metros, por toda a área urbana do município [@fig-esquema-area]. Cada ponto de interseção entre as linhas traçadas foi utilizado como referência para a instalação de armadilhas. O mapa foi previamente envido à equipe de endemias municipal que, após análise, sugeriu os locais de instalação iniciais, com base na malha. Em outubro de 2023, junto à prefeitura do município e equipes de endemias, foram instaladas 36 armadilhas ovitrampa. Os locais iniciais foram escolhidos sob supervisão da prefeitura de Sertanópolis.
+
+::: {#fig-esquema-area layout-ncol="1" layout-align="center"}
+![](fig\sertanopolis_delim.png){width="100%" fig-align="center"}
+
+\footnotesize Fonte: o próprio autor.
+
+Mapa com malha de 200m x 200m na zona urbana da cidade de Sertanópolis, utilizado para instalação de armadilhas Ovitrampa utilizados no projeto de monitoramento de Culicidae (Diptera) vetores, entre outubro de 2023 a dezembro de 2025.
+:::
+
+Em dezembro de 2023, em uma reanálise da distribuição das armadilhas instaladas anteriormente, foi verificado a necessidade de instalação de dez novas armadilhas, em localidades não acobertadas. Em reanálises subsequentes, com discussões a respeito da distribuição das armadilhas junto a equipe de endemias, foram sugeridas a instalação de mais armadilhas, como em janeiro de 2025, no qual fora adicionada uma armadilha em outra localidade; agosto de 2025 onde mais três armadilhas foram instaladas em novos pontos, todas as instalações tiveram supervisão da equipe de endemias do município. No final do projeto, totalizou-se 50 armadilhas no perímetro urbano do município de Sertanópolis, como destacado na @fig-mapa-sertanopolis-armadilha.
+<!-- Arrumarar o mapa, adicionar um mapa só para os pontos -->
+
+::: {#fig-mapa-sertanopolis-armadilha layout-ncol="1" layout-align="center"}
+![](fig\mapa_sertanopolis_com_armadilha.png){width="100%" fig-align="center"}
+
+\footnotesize Fonte: o próprio autor.
+
+Mapa da Área urbana da cidade de Sertanópolis - Paraná - Brasil, destacando os pontos de instalação de armadilhas ovitrampas durante o monitoramento de *Aedes* spp., entre 2023 e 2025.
+:::
+
+
+
+Nota-se que, todas as armadilhas foram instaladas em locais cobertos, sem exposição constante à luz solar, a uma altura de até dois metros do solo, seguindo metodologia de @alves2023 e @silvak.2021. Durante a instalação, os proprietários dos imóveis foram orientados a não alterarem a posição e constituição da armadilha, para evitar possíveis alterações nos dados coletados. Foi definido um período de 15 dias para revisitar aos imóveis, realizando a coleta e manutenção das armadilhas, recolhendo e adicionando novas palhetas, realizando a limpeza e troca do fluído da armadilha. As revisões aconteceram durante todo o período do projeto, buscando manter a frequência de 15 dias entre cada coleta.
+
+Após cada coleta as palhetas foram encaminhadas ao LEGM-UEL para avaliação, onde eram inicialmente postas a secar em ambiente natural, dentro de bandejas de plástico, por um período de quatro dias. Após a secagem, realizou-se a contagem de ovos totais encontrados em cada palheta, utilizando como apoio uma lupa estereoscópica. Depois da contagem, as palhetas foram raspadas utilizando escovas de limpeza, e os ovos e resíduos descartados. Todos os dados de contagem de ovos foram tabelados, de acordo com o ponto georreferenciado da armadilha e a data de coleta, sendo utilizados para alimentação do banco de dados e construção de relatórios mensais de infestação do município.
+
+É importante destacar que, durante a execução do projeto, houve alteração no local de instalação de algumas armadilhas. Em alguns casos, a pedido do proprietário da propriedade e, em outros, devido a recorrentes dificuldades em acessar a armadilha/imóvel durante a coleta. As armadilhas que necessitaram de alteração do local de instalação eram realocadas para outro endereço na proximidade, levando em consideração a abrangência das demais armadilhas, evitando também, quando possível, uma sobreposição da área de cobertura de outras armadilhas na região. Todas as ocorrências de alteração de endereço foram registradas para maior controle do monitoramento no município.
+
+\subsubsection{Coleta de Adultos}
+
+Para a coleta de adultos foram designados oito pontos, não sorteados, escolhidos pelos pesquisadores e pela equipe de endemias do município com base no histórico epidemiológico da região. O primeiro critério de relevância utilizado foi a presença e circulação de pessoas em situação de saúde agravantes, sendo assim selecionadas três Unidades Básicas de Saúde. O segundo critério, de relevância entomológica, foi definido com base na recomendação dos agentes de endemias do município que, pelo seu envolvimento nas atividades de monitoramento entomológico, como a execução do LIRA*a*, reconheceram propriedades com recorrente encontro de focos de larvas de *Aedes* e criadouros nas proximidades. Por esse critério, quatro estabelecimentos comerciais e uma residência foram selecionados. Ao total, foram selecionados oito locais para a realização da aspiração, como demonstrado na @fig-mapa_sertanopolis_aspiracao. Com exceção do ponto (SNA) UBS-1, todos os pontos possuíam  armadilhas ovitrampa instaladas na localidade.
+
+::: {#fig-mapa_sertanopolis_aspiracao layout-ncol="1" layout-align="center"}
+![](fig\mapa_sertanopolis_aspiracao.png){width="100%" fig-align="center"}
+
+\footnotesize Fonte: o próprio autor.
+
+Mapa da Área urbana da cidade de Sertanópolis - Paraná - Brasil, destacando os pontos da realização de aspiração mensal para captura de mosquitos adultos, entre 2023 a 2025. Sendo desses pontos, (SNA) UBS-1, (A33) UBS-2 e (A20) UBS-3 Unidades Básicas de Saúde, (A09) P-A09, (A19) P-A19, (A36) P-36 e (A46) P-A46 estabelecimentos comerciais e (A10) P-A10 residencial.
+:::
+
+Para a coletas de adultos, foi estabelecido um intervalo de um mês para a repetição da aspiração em cada ponto estabelecido. Nessas localidades, foram realizadas coletas de Culicidae adultos com auxílio de aspirador de @nasci1981 adaptado. O aparelho consiste em um cilindro de alumínio acoplado a uma hélice e motor de 12 volts, alimentado por uma bateria estacionária. Em uma das bordas do cilindro era encaixado um saco de tecido tule e, com o poder de sucção do motor (junto das hélices), seres alados e outros organismos foram capturados no saco de tecido (@fig-asp-nasci). Durante esse processo, também foi utilizado um cabo de alumínio flexível para promover o deslocamento de insetos alados em repouso, facilitando sua aspiração.
+
+<!-- nota: lembrar que não é amostragem, não houve critério de aleatoriedade -->
+Em cada ponto de coleta, foram realizadas aspirações com duração de 15 minutos. Esta metodologia foi baseada nos trabalhos de @alves2023 e @silvak.2021. Foi padronizado a execução da aspiração com apenas um pesquisador responsável pelo manuseio do aspirador de Nasci, enquanto outro promovia o deslocamento dos insetos em repouso, com o auxílio do cabo de alumínio. O material capturado pela aspiração, depois do período de coleta, foi armazenado em caixas de isopor aclimatadas com algodão úmido e, em alguns casos, gelo reutilizável (a depender da temperatura externa), em sequência, foram transportadas para o LEGM-UEL, onde era realizada a triagem do material vivo para futuras análise genéticas. Nesse cenário, as aspirações ocorriam no início da tarde, entre 12:30h a 15:30h, para diminuição da exposição do material vivo a um ambiente de confinamento, dando sequência ao deslocamento da equipe de pesquisa, do local de coleta (Sertanópolis/PR) para Londrina/PR, nas dependências LEGM-UEL.
+
+No LEGM-UEL, os adultos capturados, ainda vivos, foram expostos a uma temperatura de -12°C ± 6°C, dentro de um freezer de geladeira convencional, por um período aproximado de 10 minutos, com o intuito de diminuir a atividade dos indivíduos e permitir sua triagem e identificação por morfoespécie. Cada agrupamento de indivíduos foi armazenado em microtubos de trava dupla com capacidade para 1,5mL. Com base na identificação de morfoespécie dos mosquitos, os microtubos foram etiquetados (data, local de captura, sexo e presença ou não de sangue ingurgitado). Após a triagem e etiquetagem, os adultos foram armazenados em freezer a -80ºC, para preservação do material genético e futura extração. Os dados das etiquetas foram utilizados para alimentação do banco de dados de captura de adultos.
+
+::: {#fig-asp-nasci layout-ncol="1" layout-align="center"}
+![](fig\aspiradores_nasci.png){width="100%" fig-align="center"}
+
+\footnotesize Fonte: o próprio autor.
+
+Aspiradores de @nasci1981 adaptados utilizados para coleta de Culicidae (Diptera) adultos no município de Sertanópolis-PR.
+:::
+
+<!-- NÃO UTILIZAR DADOS METERIOLÓGICOS NOS MODELOS -->
+
+\subsection{Dados epidemiológicos}
+
+Dados epidemiológicos de arbovírus (DENV, ZIKV, CHIKV) da cidade de Sertanópolis e região foram coletados do banco de dados Sistema de Informação de Agravos de Notificação (SINAN), disponibilizados de forma pública. Foram extraídos dados de 2015 à 2025, utilizando o pacote em R: Microdatasus (https://github.com/rfsaldanha/microdatasus), seguindo metodologia descrita por Saldanha, Bastos e Barcellos [-@saldanha2019] [@R-core;@saldanha2019]. Os códigos utilizados para no processo estão disponibilizados em <https://github.com/kwbt-KENI/2025_Mestrado.git>.
+
+\section{Análise de dados}
+
+As análises iniciaram com a importação e limpeza de dados das séries temporais de número de ovos coletados por armadilha ovitrampa, número de adultos coletados por aspiração de cada local, e dados dos números de casos de arboviroses registrados, dentro do ambiente em R. Os dados foram organizados por agrupamentos de intervalos semanais, quinzenais e mensais, de acordo com a estruturação da análise subsequente.
+
+Referente às análises de ovos coletados por ovitrampa, depois da limpeza e organização de dados, foram calculados índices entomológicos referentes à presença de ovos. O Índice de Positividade de Ovitrampas (IPO) (@eq-ido), por exemplo, permite mensurar a infestação local pela presença de ovos nas armadilhas, e o Índice de Densidade de Ovos (IDO) (@eq-ido), serve como indicativo dos períodos de maior reprodutibilidade de fêmeas do mosquito, medindo a densidade de ovos capturados em cada armadilha instalada, por período considerado [@gomes1998].
+
+$$
+IDO = \frac{N_{ovos}}{N_{positivas}}
+$$ {#eq-ido}
+
+$$
+IPO = \left(\frac{N_{positivas}}{N_{instaladas}}\right) \cdot 100
+$$ {#eq-ipo}
+
+Onde:
+
+\begin{itemize}
+    \item $IDO$: Índice de Densidade de Ovos
+    \item $IPO$: Índice de Positividade de Ovitrampas
+    \item $N_{ovos}$: Número total de ovos coletados;
+    \item $N_{positivas}$: Número total de armadilhas ovitrampa que apresentaram positividade (pelo menos 1 ovo).
+    \item $N_{instaladas}$: Representa o número total de armadilhas inspecionadas no período.
+\end{itemize}
+
+Com base nos resultados dos IDO e IPO calculados mensalmente (agrupamento de dados de duas coletas mais recentes era considerado como representante do respectivo mês) para cada armadilha, foram gerados relatórios de divulgação mensais, utilizando Software QGis [@QGIS_software; @graser2025], para divulgação no município. Nestes relatórios, cada armadilha era individualizada e, considerada sua área de influência (250m), informações sobre o IDO foram disponibilizados. Para a melhor interpretação de dados do IDO, considerou-se a utilização de uma classificação de três níveis, sendo eles "Satisfatório" para infestação de ovos, "Alerta" para infestação de ovos e "Risco" de infestação de ovos.
+
+A classificação de "Satisfatória" se dava quando o IDO se encontrava abaixo de 20, já "Alerta" quando o IDO se encontrava no intervalo de 20 a 35, e "Risco" quando o IDO se encontrava acima de 35, seguindo metodologia de @alves2023. Cada relatório produzido mensalmente era então disponibilizado a Vigilância Epidemiológica e ao SERMUSA de Sertanópolis via nuvem (plataforma Google Drive), pelo endereço: <https://drive.google.com/drive/folders/1jceNS-I-CmwbIYNsyR_38qtu1_YopR33?usp=sharing>.
+
+<!-- tempo exgotado e eu ainda n consigo encaixar um modelo, mds... -->
+
+<!-- Para verificar o perfil da oviposição e sua flutuação temporal, os dados de ovos capturados pelas armadilhas foram agrupados mensalmente, onde foram avaliadas a série temporal do IDO mensal das armadilhas analisadas, verificando a estacionariedade da série com o teste de Kwiatkowski-Phillips-Schmidt-Shin (KPSS) [@kwiatkowski1992]. O teste tem como hipótese nula a estacionariedade dos dados, e utilizou-se como limiar de decisão, p-valor \< 0.05. Se verificado a não estacionariedade, os dados eram suavizados. Com base na série resultante, verificou-se o perfil temporal obtido.
+
+Também foi proposto a exploração dos dados de número de indivíduos identificados capturados ao longo do período de coleta. Esses dados foram organizando no ambiente R, gerando mapas e respectivas inferências.
+
+Os dados de número de casos de arboviroses identificados, extraídos com auxílio do pacote Microdatasus, foram organizados e passaram pelo processo de limpeza de dados, com o ferramental disponibilizado no pacote. Os dados resultantes foram organizados em dois bancos de dados, um para análises da quantificação de casos ao longo do período amostrado, e outro para análise do perfil individualizado de cada caso.
+
+Para o primeiro banco de dados, o número de casos registrados foi organizado por semanas epidemiológicas, dentro do ambiente R. Com base na série temporal resultante, foram realizados análises de série temporal, verificando também a estacionariedade com o teste de KPSS. E verificando uma não estacionariedade, os dados eram diferençados. Com o perfil checado, foi propósito diferentes modelos ARIMA com componente sazonal (SARIMA). O algoritmo de Hyndman-Khandakar [@hyndman2008] e suas variações foram utilizados para criar suposições de modelo série temporal do número de casos de dengue. Para a comparação entre os modelos, foi utilizados o Critério de Informação de Akaike corrigido pelo número de observações. Os resíduos do melhor modelo escolhido, em sequência, foram submetidos ao teste Ljung–Box, no qual verifica a hipótese nula de que, nesta situação, os resíduos são independentes e distribuídos de forma equivalente, sendo similares a um ruído branco, averiguando, através dos resíduos. -->
+
+<!-- Esse parágrafo precisa ser melhor descrito, porém ainda estou realizando as análises, por isso não consegui descreve-lo bem -->
+
+O banco de dados com as informações do perfil individualizado de cada caso de dengue e chikungunya foi utilizado para a realização de análises. Foi considerado o local de residência do indivíduo e classificação do tipo de vínculo empregatício registrado.
+
+As análises dos dados coletados foram realizadas em linguáguem R [@R-core], com auxílio de pacote do "Tidyverse" [@wickham2019], somados aos pacotes "Janitor" [@firke2024], "fpp3" (@hyndman2008), "readxl" [@wickham2025], "stars" [@PebesmaandBivand2023] e "sf" [@pebesma2018].
+
+\section{Análise viral (DENV, ZIKV, CHIKV)}
+
+O processo de detecção viral em fêmeas de *Aedes* capturada, foi realizado no Laboratório de Morfologia e Fisiologia de Culicidae e Chironomidae da Universidade Federal do Paraná. Os mosquitos adultos capturados pela aspiração foram organizados em *pools* formados por até 30 indivíduos, separados de acordo com o local de captura, reunindo todos os indivíduos capturados durante todo o tempo de pesquisa, desconsiderando a data de coleta. A extração do RNA viral foi realizada a partir dos *pools* formados, utilizando o kit de extração QIAamp Viral RNA® (Qiagem) seguindo as instruções do fabricante. A eluição dos ácidos nucleicos da membrana foi realizada utilizando 50 μL do tampão fornecido pelo kit. A concentração e qualidade dos ácidos nucleicos foi medida usando um espectrofotômetro Nanodrop-2000® (Thermo Fischer Scientific) e, em seguida, o material foi armazenados em -80°C, até a realização das posteriores análises.
+
+A identificação dos vírus Dengue (DENV), Zika (ZIKV) e Chikungunya (CHIKV) foi realizada a partir de 10 μL do RNA viral extraído, utilizando uma sonda multiplex para detecção simultânea destes arbovírus, por meio do kit IBMP Biomol ZDC-Zika, Dengue e Chikungunya INF-047® em reação de PCR em tempo real conduzida no termociclador Rotor-Gene Q (Qiagen)®. A deteção dos sorotipos DENV1 e DENV3 foi realizada por meio do fluoróforo VIC, com emissão a 550nm, enquanto os vírus DENV2, DENV4, ZIKV e CHIKV foram detectados pelo fluoróforo FAM, com emissão a 520 nm. Os Controles 1 e 2 foram monitorados pelos fluoróforos VIC e CY5 com emissão a 550nm e 660nm, respectivamente. Foram utilizados controles positivos específicos para os três arbovírus, incluindo os quatro sorotipos do vírus da dengue, bem como um controle negativo com o objetivo de monitorar possíveis contaminações e assegurar a confiabilidade dos resultados.
+
+Os parâmetros de ciclagem da reação de qPCR consistiram em uma etapa inicial de incubação a 51°C por 30 min, seguido de uma etapa de ativação inicial a 95°C por 15 minutos. Em seguida, foram realizados 40 ciclos, cada um composto por desnaturação a 95°C por 15 segundos e anelamento a 60°C por 1 minuto. As análises virais e separação dos *pools* foi realizada pela equipe do Laboratório de Morfologia e Fisiologia de Culicidae e Chironomidae, sob coordenação da Dra. Angela Maria Palacio Cortés e do Professor Dr. Mário Antônio Navarro da Silva.

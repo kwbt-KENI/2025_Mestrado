@@ -1,0 +1,73 @@
+tcc:
+  titulo: "Monitoramento Entomológico de Culicidae (Diptera) vetores e análise da circulação viral em Sertanópolis, Paraná, Brasil"
+  subtitulo: ""
+
+  titulo_ing: "Entomological monitoring of Culicidae (Diptera) vectors and analysis of viral circulation in Sertanópolis, Paraná, Brasil"
+  subtitulo_ing: ""
+
+  autor: "Edson Kenji Kawabata"
+  sobrenome: "Kawabata"
+  prenome: "Edson Kenji"
+  email: "edson.kawabata@uel.br"
+
+  tipo: "Dissertação (Mestrado em Ciências Biológicas)"
+  tipo_ing: "Dissertation (Master’s degree in Biological Sciences)"
+  curso: "Pós-Graduação em Ciências Biológicas"
+  universidade: "Universidade Estadual de Londrina"
+  depto: "Departamento de Biologia Animal e Vegetal"
+  area: "Ciências Biológicas"
+  ano: "2026"
+
+  preambulo: "Dissertação apresentada ao Programa de Pós-graduação em Ciências Biológicas da Universidade Estadual de Londrina, como requisito parcial para a obtenção do título de Mestre em Ciências Biológicas."
+
+  cidade: "Londrina"
+  cep: "12228-460"
+  uf: "PR"
+
+
+  palavra_chave_1_ingles: "Entomological Surveillance"
+  palavra_chave_2_ingles: "Arboviruses"
+  palavra_chave_3_ingles: "Public Health"
+  palavra_chave_4_ingles: "Viral Detection"
+  palavra_chave_5_ingles: "Ovitrap"
+
+  palavra_chave_1: "Vigilância Entomológica"
+  palavra_chave_2: "Arboviroses"
+  palavra_chave_3: "Saúde Pública"
+  palavra_chave_4: "Detecção Viral"
+  palavra_chave_5: "Ovitrampa"
+
+  orientador: "Prof\\. Dr\\. João Antonio Cyrino Zequi"
+  orientador_rosto: "Dr\\. João Antonio Cyrino Zequi"
+  orientador_rosto_rotulo: "Orientador\\: "
+
+  coorientador: ""
+  coorientador_rosto: ""
+  coorientador_rosto_rotulo: ""
+
+  CDU: "" #A verificar - na hora de gerar o pdf pela BC
+  dia_defesa: "13" # A executar
+  mes_defesa: "março" # A executar
+  ano_defesa: "2026"
+
+  n_folhas: "65"
+
+  banca_presidente: "Prof\\. Dr\\. João Antonio Cyrino Zequi"
+  instituicao_presidente: "Universidade Estadual de Londrina - UEL"
+  banca_membro_um: "Profª\\. Dra\\. Elisangela Aparecida da Silva Lizzi"
+  instituicao_membro_um: "Universidade Tecnológica Federal do Paraná - UTFPR"
+  banca_membro_dois: "Prof\\. Dra\\. Mário Antônio Navarro da Silva"
+  instituicao_membro_dois: "Universidade Federal do Paraná - UFPR"
+  banca_membro_tres: ""
+  instituicao_membro_tres: ""
+
+  dedicatoria: "Este trabalho é dedicado às crianças adultas que, quando pequenas, sonharam em se tornar cientistas."
+
+
+  texto_epigrafe: '\"No que diz respeito ao empenho, ao compromisso, ao esforço, à dedicação, não existe meio-termo. Ou você faz uma coisa bem-feita ou não faz.\"'
+  # realmente, queria não ter feito...
+  autor_epigrafe: "AYRTON SENNA"
+
+  resumo: "As espécies de Culicidae (Diptera) presentes nas regiões urbanas têm seu desenvolvimento favorecido pela disponibilidade de criadouros associados à urbanização e à sua crescente expansão. São insetos holometábolos com enorme plasticidade genética e valência ecológica, nos quais muitas espécies dependem da realização de hematofagia para produção de ovos. No ambiente urbano, muitos desses culicídeos tem grande relevância médica e entomológica pela capacidade de veicular patógenos em humanos e animais. Diante deste cenário, o presente trabalho tem por objetivo realizar ações de detecção precoce e monitoramento de vetores e arboviroses (DENV, CHIKV e ZIKV) no município de Sertanópolis, norte do Paraná. Para tanto, 50 armadilhas tipo Ovitrampas georreferenciadas foram analisadas a cada duas semanas, e foi realizada a coletas de Culicidae (Diptera) adultos com potencial vetorial utilizando aspirador de Nasci adaptados, para verificar presença viral. A flutuação populacional obtida ao longo do período amostrado foi divulgada mensalmente, junto a prefeitura e equipe de endemias do município de Sertanópolis. Espera-se, por meio deste trabalho, contribuir com a atividade de monitoramento e controle dos agentes de endemias do município de Sertanópolis, trazendo diferentes dados e ações de integração com educação ambiental, auxiliando na execução das Diretrizes Nacionais para Prevenção e Controle das Arboviroses Urbanas."
+
+  abstract: "The development of Culicidae (Diptera) species in urban areas is favored by the availability of breeding sites associated with urbanization and its continuous expansion. These are holometabolous insects with significant genetic plasticity and ecological valence, with many species relying on hematophagy for egg production. In the urban environment, many of these culicids are of great medical and entomological relevance due to their capacity to transmit pathogens to humans and animals. Given this scenario, the present study aims to carry out the early detection and monitoring of vectors and arboviruses (DENV, CHIKV, and ZIKV) in the municipality of Sertanópolis, northern Paraná. To this end, 50 georeferenced ovitraps were analyzed biweekly, and adult Culicidae (Diptera) with vector potential were collected using adapted Nasci aspirators to verify viral presence. The population fluctuation observed during the sampling period was reported monthly to the city hall and the endemic diseases control team of Sertanópolis. Through this study, we expect to contribute to the monitoring and control activities of local health agents in Sertanópolis by providing diverse data and integrating actions with environmental education, thereby assisting in the implementation of the National Guidelines for the Prevention and Control of Urban Arboviruses."

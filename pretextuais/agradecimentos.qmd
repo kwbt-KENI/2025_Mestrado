@@ -1,0 +1,26 @@
+\begin{agradecimentos}
+
+Agradeço minha família, principalmente meus pais, pelo apoio durante todos esses anos, por não terem medido esforços para proporcionar as condições para o meu sucesso na vida acadêmica, a firmeza com que me ensinaram a caminhar, as lições de responsabilidade, honestidade e humildade, e todo amor dedicado.
+
+Agradeço o Professor Dr. João Antonio Cyrino Zequi, meu orientador, pelo apoio e pelos ensinamentos em todos os anos ao qual fiz/faço parte do laboratório de Entomologia Geral e Média da Universidade Estadual de Londrina. Além de ser alguém a quem admiro muito, durante todos esses anos, propiciou-me diversas oportunidades para crescer como pesquisador e como indivíduo, seja durante os projetos do laboratório ou as atividades de educação ambiental junto à comunidade externa a universidade.
+
+Agradeço aos amigos Ma. Letícia Bernadete da Silva e Felipe Augusto Reche, pela amizade e por todo o auxílio durante a execução do projeto e demais atividades na Pós-Graduação. Pessoas que
+proporcionando conversas e situações que não somente contribuem para a vida acadêmica, mas também proporcionam alegrias e muitas risadas que tornam a vida no laboratório mais aconchegante, além da companhia na hora do café do laboratório.
+
+Agradecimento especial a Professora Dra. Flávia Fernandes, por toda a orientação recebida durante as etapas iniciais da escrita desta dissertação, e pelos ensinamentos e grandes contribuições na minha carreira acadêmica. Também por promover um ambiente que permitiu o crescimento acadêmico dos membros do laboratório, além de também fazer companhia na hora do café.
+
+Aos técnicos Aparecido Souza (Cidão), Edson Santana (Edsão) e Robson Rock, pelo apoio, pelas conversas descontraídas, e por terem nos auxiliado enormemente durante as coletas para este estudo. Sem essa ajuda, não somente este projeto, mas muitos outros executados dentro do laboratório de Entomologia não seriam possíveis.
+
+Aos membros do Laboratório de Morfologia e Fisiologia de Culicidae e Chironomidae (LAMFIC) da Universidade Federal do Paraná (UFPR) pelo carinho e parcerias que proporcionaram a execução das análises de presença viral, fundamentais para a realização deste trabalho. Um agradecimento especial para ao Prof. Dr. Mário Antônio Navarro da Silva da UFPR, por conceder o espaço em seu laboratório para a realização das atividades, pela orientação e auxílio durante a qualificação e pelas dicas durante todo o processo. Outro grande agradecimento a Dra. Angela Palacio da UFPR por dedicar seu precioso tempo e esforço nas execuções e triagem de material para a realização das análises de presença viral, além de toda a orientação ao longo do período.
+
+A Professora Dra. Elisangela Lizzi, a qual também, membro da banca de qualificação, pelas orientações, correções e por todo o auxílio na construção das etapas finais deste trabalho.
+
+Agradeço meus os grandes amigos Guilherme Akira Awane e José Otávio Pagliari dos Santos, não só pela amizade, mas também por proporcionarem conversas e experiências que fogem da minha área de pesquisa, e pelas dicas e ensinamentos que fizeram toda a diferença, contribuindo para o meu crescimento como pesquisador.
+
+A Universidade Estadual de Londrina e FAUEL, pela estrutura e fomentos fornecidos para realização das coletas do projeto, e ao CNPq pelo fomento da bolsa de mestrado.
+
+Por fim, porém não menos importante, um agradecimento especial a toda equipe da Secretaria de Saúde de Sertanópolis/PR e a equipe de Vigilância Entomológica do município, especialmente a Noeli, Rosana, Elieser e Gustavo, que tanto nos auxiliaram e proveram grande parte da logística por traz de todas as coletas realizadas. Também agradeço a todos os moradores do município que sempre foram receptivos e permitiram instalação de armadilhas e execução da aspiração em suas propriedades.
+
+A todos os envolvidos, espero um dia poder retribuir todo o carinho e amor recebidos ao longo desses anos de estudo.
+
+\end{agradecimentos}

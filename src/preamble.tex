@@ -1,0 +1,168 @@
+% ---
+% Pacotes básicos
+% ---
+\RequirePackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\RequirePackage{lastpage}           % Usado pela Ficha catalográfica
+\RequirePackage{indentfirst}        % Indenta o primeiro parágrafo de cada seção.
+\RequirePackage{color}              % Controle das cores
+\RequirePackage{graphicx}           % Inclusão de gráficos
+\RequirePackage{microtype}          % Para melhorias de justificação
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{upgreek}
+\RequirePackage{listings}           % Inclusão de código fonte
+\RequirePackage{ragged2e}           % Para referências, alin a esquerda
+\RequirePackage{etoolbox}           % Ferramentas para modificar comandos (patch)
+\RequirePackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Times New Roman}
+
+\usepackage[normalem]{ulem}
+% Por algum motivo que eu não sei, o pacote ulem ficou desconfigurado (talvez por conta de alguma configuração do flextable... não mudar, não esquecer, pq deu trabalho achar o motivo)
+
+
+% Pacotes de citações
+% \usepackage[brazilian,hyperpageref]{backref}
+\bibliography{references}
+
+% ---
+% CONFIGURAÇÕES DE APARÊNCIA
+% ---
+
+
+% Alterando o aspecto da cor dos links
+\definecolor{blue}{RGB}{0,0,0}
+\definecolor{black}{RGB}{0,0,0}
+
+% ---
+% AJUSTES DE COMANDOS DE ORIENTADOR (Mantidos do original)
+% ---
+% \usepackage{xcolor}
+% \usepackage{cancel}
+% \colorlet{oliveGreen}{blue!20!black!50!green}
+% \usepackage{soul}
+% \usepackage{soulutf8}
+% \setstcolor{red}
+%
+% \newcommand{\cito}[1]{\textsuperscript{\cite{#1}}}
+% \newcommand{\PROFESSOR}[1]{\textcolor{red}{\MakeUppercase{#1}}}
+% \newcommand{\PROFESSORDEL}[1]{\textcolor{red}{\st{#1}}}
+% \newcommand{\PROFESSORADD}[1]{\textcolor{oliveGreen}{#1}}
+% \newcommand{\PROFESSORREP}[2]{\PROFESSORDEL{#1}\PROFESSORADD{#2}}
+
+% ---
+% Config - para sobreescrever o arqui .cls e definições do memoir
+% ---
+
+\makeatletter
+% ---
+% 1. SUMÁRIO
+% ---
+
+% Ajuste este valor (4em) conforme necessário para caber o número mais longo
+\setlength{\cftlastnumwidth}{5em}
+
+% Redefine a largura do número para todos os níveis, garantindo alinhamento
+\cftsetindents{part}{0em}{\cftlastnumwidth}
+\cftsetindents{chapter}{0em}{\cftlastnumwidth}
+\cftsetindents{section}{0em}{\cftlastnumwidth}
+\cftsetindents{subsection}{0em}{\cftlastnumwidth}
+\cftsetindents{subsubsection}{0em}{\cftlastnumwidth}
+\cftsetindents{paragraph}{0em}{\cftlastnumwidth}
+
+% Garante que o comando dinâmico do abntex2 use a mesma medida
+\renewcommand{\tocprintchapter}{%
+  \addtocontents{toc}{\cftsetindents{chapter}{0em}{\cftlastnumwidth}}}
+
+% ---
+% 1.1 Título
+% ---
+
+% Fontes das entradas do sumario
+
+\renewcommand{\cftpartfont}{\bfseries\large}
+%
+\renewcommand{\cftchapterfont}{\bfseries\large}  % Capítulo
+\renewcommand{\cftchapterpagefont}{\cftchapterfont}
+%
+\renewcommand{\cftsectionfont}{\normalsize\scshape} % Seção
+\renewcommand{\cftsectionpagefont}{\normalsize}
+%
+\renewcommand{\cftsubsectionfont}{\normalsize} % Subseção
+\renewcommand{\cftsubsectionpagefont}{\cftsubsectionfont}
+%
+\renewcommand{\cftsubsubsectionfont}{\normalsize} % subsubseção
+\renewcommand{\cftsubsubsectionpagefont}{\cftsubsubsectionfont}
+%
+\renewcommand{\cftparagraphfont}{\normalsize\emph} % subsubsubseção
+\renewcommand{\cftparagraphpagefont}{\cftparagraphfont}
+
+
+% Centraliza e deixa em Caixa Alta o título "SUMÁRIO"
+\renewcommand{\printtoctitle}[1]{%
+   \ABNTEXchapterfont\bfseries\centering\MakeUppercase{Sumário}%
+}
+
+% ---
+% 1.2 Espaçamento
+% ---
+
+% Espaço antes de cada capítulo no sumário
+\setlength{\cftbeforechapterskip}{1.0\onelineskip}
+
+% Espaço entre o capítulo e a primeira seção e entre seções
+\setlength{\cftbeforesectionskip}{0.5pt}
+
+% Espaço entre seção e subseção
+\setlength{\cftbeforesubsectionskip}{0.5pt}
+
+% Espaço entre subseção e subsubseção
+\setlength{\cftbeforesubsubsectionskip}{0.5pt}
+
+% ---
+% 4. Configurações dos títulos de cada capítulo
+% ---
+
+% Definição de espaçamentos (pós capítulo, seção e etc)
+\setlength{\afterchapskip}{\onelineskip} % Capítulo
+\setaftersecskip{\onelineskip} % Seção
+% \setlength{\setaftersubsecskip{ definir aqui } % Subseção
+
+% % ---
+% % 2. Cabeçalho
+% % ---
+
+% % Redefine o cabeçalho para Capítulos
+\renewcommand{\chaptermark}[1]{%
+    \markboth{\thechapter\ -\ #1}{\thechapter\ -\ #1}%
+}
+
+
+\makeatother
+
+% ---
+% 3. Definições dos nomes
+% ---
+\AtBeginDocument{
+  \addto\captionsbrazil{
+    \renewcommand{\contentsname}{Sumário}
+    \renewcommand{\listfigurename}{Lista de Figuras}
+    \renewcommand{\listtablename}{Lista de Tabelas}
+    \renewcommand{\bibname}{Referências}
+  }
+  % Garante a alteração mesmo se o babel recarregar
+  \renewcommand{\contentsname}{Sumário}
+}
+
+% ---
+% ESPAÇAMENTOS
+% ---
+\setlength{\parskip}{0.2cm}
+
+% ---
+% Compila o índice remissivo
+% ---
+\makeindex
+\OnehalfSpacing

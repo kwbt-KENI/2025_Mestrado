@@ -1,0 +1,81 @@
+project:
+  title: "Dissertacao_edson"
+
+number-sections: true
+
+lang: pt-BR
+
+bibliography: "references.bib"
+csl: "./src/abnt2.csl"
+
+#lembrar - aqui eu configurei chapter como section, então, atenção
+format:
+  # docx:
+    # reference-doc: "./src/custom-reference-doc.docx"
+  pdf:
+    toc: false
+    pdf-engine: xelatex
+    include-in-header: "./src/preamble.tex"
+    documentclass:
+      "abntex2"
+    classoption:
+      - "12pt"
+      - "oneside"
+      - "a4paper"
+      - "chapter=TITLE"
+      - "section=title"
+      - "sumario=abnt-6027-2012"
+      - "brazilian"
+    geometry:
+      - top=30mm
+      - left=30mm
+      - right=20mm
+      - bottom=20mm
+    colorlinks: true
+    linkcolor: black
+    urlcolor: black
+    citecolor: black
+    code-block-bg: true
+    code-block-border-left: true
+    highlight-style: github
+    keep-tex: true
+
+link-citations: true
+
+fig-cap-location: top
+
+execute:
+  echo: false
+  warning: false
+  freeze: auto
+
+knitr:
+  opts_chunk:
+    out.width: "100%"
+
+# https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/language/_language-pt-BR.yml
+# dicionário para o Quarto, entrada separada por conta do conflito com bib Bable (LaTeX)
+crossref:
+  fig-title: "**Figura**"
+  fig-prefix : "Figura"
+  tbl-title: "**Tabela**"
+  lst-title: "Listagem"
+  thm-title: "**Teorema**"
+  lem-title: "Lema"
+  cor-title: "Corolário"
+  prp-title: "Proposição"
+  cnj-title: "Conjectura"
+  def-title: "Definição"
+  exm-title: "Exemplo"
+  exr-title: "Exercício"
+  sec-prefix: "Seção"
+  eq-prefix: "Equação"
+  lof-title: "LISTA DE FIGURAS"
+  lot-title: "LISTA DE TABELAS"
+  lol-title: "LISTA DE LISTAGENS"
+
+
+  # Notas para edição:
+  # 2º título em Versalet (/textsc{})
+  # 3º 1º letra em Maiúsculo, em todas as palavras
+  # Legendas com espaçamento simples

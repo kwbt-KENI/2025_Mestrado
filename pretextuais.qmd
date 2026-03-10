@@ -1,0 +1,62 @@
+\ABNTEXchapterfont\normalsize
+
+<!-- capa -->
+{{< include pretextuais/capa.qmd >}}
+
+<!-- folha de rosto -->
+{{< include pretextuais/folha_de_rosto.qmd >}}
+
+<!-- ficha catalografica -->
+<!-- {{< include pretextuais/ficha_catalografica.qmd >}} -->
+
+<!-- folha de aprovação -->
+{{< include pretextuais/folha_de_aprovacao.qmd >}}
+
+<!-- dedicatoria -->
+<!-- {{< include pretextuais/dedicatoria.qmd >}} -->
+<!-- dedicar um trabalho meia boca é foda... -->
+
+<!-- epigrafe -->
+<!-- {{< include pretextuais/epigrafe.qmd >}} -->
+
+<!-- agradecimentos -->
+{{< include pretextuais/agradecimentos.qmd >}}
+
+<!-- resumo -->
+\setlength\parindent{0pt}
+{{< var tcc.sobrenome >}}, {{< var tcc.prenome >}}.\textbf{ {{< var tcc.titulo >}}}{{< var tcc.subtitulo >}}. {{< var tcc.ano >}}. {{< var tcc.n_folhas >}} f. {{< var tcc.tipo >}} – {{< var tcc.universidade >}}, {{< var tcc.cidade >}}, {{< var tcc.ano >}}.
+{{< include pretextuais/resumo.qmd >}}
+
+<!-- abstract -->
+{{< var tcc.sobrenome >}}, {{< var tcc.prenome >}}.\textbf{ {{< var tcc.titulo_ing >}}}{{< var tcc.subtitulo_ing >}}. {{< var tcc.ano >}}. {{< var tcc.n_folhas >}} p. {{< var tcc.tipo_ing >}} – {{< var tcc.universidade >}}, {{< var tcc.cidade >}}, {{< var tcc.ano >}}.
+{{< include pretextuais/abstract.qmd >}}
+
+{{< pagebreak >}}
+
+\pdfbookmark[0]{Lista de Figuras}{lof}
+\listoffigures*
+
+{{< pagebreak >}}
+
+\pdfbookmark[0]{Lista de Tabelas}{lot}
+\listoftables*
+
+{{< pagebreak >}}
+
+<!-- Lista de listagens -->
+<!-- {{< pagebreak >}}
+\listoflistings* -->
+
+<!-- lista de abreviaturas e siglas -->
+{{< include pretextuais/lista_de_abreviaturas_siglas.qmd >}}
+
+<!-- lista de símbolos -->
+<!-- {{< include pretextuais/lista_de_simbolos.qmd >}} -->
+
+<!-- sumario -->
+<!-- Definição do bookmark é manual aqui, por erros do quarto -->
+\pdfbookmark[0]{Sumário}{toc}
+\tableofcontents*
+\cleardoublepage
+
+{{< pagebreak >}}

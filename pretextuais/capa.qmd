@@ -1,0 +1,33 @@
+\begin{capa}
+\begin{center}
+
+    \includegraphics[width=0.7\textwidth]{fig_comp/Image001.jpg}
+
+    \includegraphics[width=1\textwidth]{fig_comp/faixa.pdf}
+
+    \vspace{0.3cm}
+
+    \large{\textbf{\uppercase{  {{< var tcc.autor >}} }}}
+
+    \begin{DoubleSpace}
+
+        \begin{vplace}[0.6]
+
+            \Large{\textbf{\uppercase{ {{< var tcc.titulo >}} {{< var tcc.subtitulo >}}}}}
+
+        \end{vplace}
+
+    \end{DoubleSpace}
+
+
+\includegraphics[width=1\textwidth]{fig_comp/faixa.pdf}
+
+\setlength{\parskip}{0.0cm}
+\uppercase{ {{< var tcc.cidade >}} }
+\par
+{{< var tcc.ano >}}
+
+\end{center}
+\end{capa}
+
+{{< pagebreak >}}
