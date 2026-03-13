@@ -3,7 +3,7 @@
 
 <!-- Anotar 1º aparição de Spp e Gen, para colocar descritor -->
 
-## Breve contexto global no cenário das emergências de zoonoses
+# Breve contexto global no cenário das emergências de zoonoses
 
 O século XXI testemunha uma onda de epidemias em diferentes escalas e locais, algumas emergentes e outras reemergentes que, em diferentes intervalos, vêm se espalhando rapidamente [@morens2020]. Ao comparar o cenário atual com outros períodos históricos há um aumento da frequência de ocorrências de epidemias, o que vem impondo um fardo severo aos sistemas de saúde e à economia global [@baker2022]. Essa dinâmica pode ser explicada pelo crescimento da conectividade e pelo intenso deslocamento humano na era da globalização [@chouin-carneiro2017; @baker2022].
 
@@ -23,7 +23,7 @@ Na transmissão mediada por vetores, além do estudo dos mecanismos de infecçã
 
 Das 700 mil mortes anuais associadas à arboviroses no cenário global, pelo menos 17% relacionam-se ao vírus da dengue. Só no continente Americano, em 2025, foram notificados mais de 4,4 milhões de casos da doença [@paho_who2025; @whowor2024]. A veiculação da maioria destes patógenos é dada pela picada de insetos da ordem Diptera, subordem Culicomorpha, família Culicidae. E, no caso da dengue, se tem destaque para vetores do gênero *Aedes* Meigen, 1818 [@harbach2024; @wilkerson2021].
 
-## Biologia e Ecologia de Culicídeos Vetores
+# Biologia e Ecologia de Culicídeos Vetores
 
 A família Culicidae compreende um total de 3.726 espécies reconhecidas [@harbach2024]. Em sua maioria, esses insetos são popularmente conhecidos como mosquitos e pernilongos, possuindo presença marcante em muitos ecossistemas, incluindo os antrópicos. Segundo Silva [-@silva2002], a presença de culicídeos em diferentes ambientes está relacionada à sua capacidade de transitar e povoar distintos habitats por conta de sua valência ecológica, possibilitando também a utilização de uma gama de criadouros para os imaturos, tanto naturais quanto artificiais. Considerando o ciclo de vida holometábolo dos Culicidae, onde é dividido em quatro estágios: ovo, larva, pupa e adulto, diferentes nichos são utilizados em cada fase ao longo do seu desenvolvimento [@rueda2008; @silva2002].
 
@@ -33,7 +33,7 @@ A postura dos ovos de Culicidae está intimamente relacionada à água, onde pod
 
 <!-- Aut_Spp[Aedes aegypti] -->
 
-Em Culicidae, os ovos apresentam um formato elíptico ou oval, comumente alongados, e de coloração escurecida. O cório dos ovos tem grande relevância, ao considerar os mecanismos adaptativos. Nas espécies que depositam ovos fora da água, por exemplo, além de prover resistência mecânica, a estrutura também garante resistência à dessecação. No caso da espécie *Aedes (Stegomyia)aegypti* Linnaeus, 1762, essa resistência também permite que ovos fiquem viáveis por períodos prolongados, podendo chegar a até mais de um ano. Além de serem resistentes, também permitem a passagem de gases respiratórios, possuindo também uma membrana vitelina interna, o cório formado por um endocório grosso e endurecido, e um envoltório externo, fino e transparente denominada exocório [@consoli1994].
+Em Culicidae, os ovos apresentam um formato elíptico ou oval, comumente alongados, e de coloração escurecida. O cório dos ovos tem grande relevância, ao considerar os mecanismos adaptativos. Nas espécies que depositam ovos fora da água, por exemplo, além de prover resistência mecânica, a estrutura também garante resistência à dessecação. No caso da espécie *Aedes* (*Stegomyia*) *aegypti* Linnaeus, 1762, essa resistência também permite que ovos fiquem viáveis por períodos prolongados, podendo chegar a até mais de um ano. Além de serem resistentes, também permitem a passagem de gases respiratórios, possuindo também uma membrana vitelina interna, o cório formado por um endocório grosso e endurecido, e um envoltório externo, fino e transparente denominada exocório [@consoli1994].
 
 Além da estrutura, é relevante destacar que há um elevado número de ovos produzidos e depositados por cada fêmea, ao longo dos ciclos gonotróficos. Em *Ae. aegypti*, já foi registrada uma oviposição que variava de 49 a 68 ovos por cada ciclo [@reinbold-wasson2021]. O número total de ovos produzidos durante a vida de uma fêmea pode variar entre 50 a 500 ovos, a depender de condições ambientais, da espécie e do tempo em que a fêmea sobrevive [@wilkerson2021]. Durante a postura, algumas espécies, principalmente as sinantrópicas, podem adotar um comportamento de oviposição em saltos, permitindo a dispersão de ovos em diferentes criadouros [@wilkerson2021; @rueda2008].
 
@@ -54,7 +54,7 @@ Na fase adulta, os culicídeos dependem da ingestão de carboidratos oriundos de
 
 As estratégias de alimentação sanguínea são de grande interesse entomológico e epidemiológico, quando considerada a exposição das fêmeas de Culicidae ao sangue e fluidos de outras espécies durante o repasto sanguíneo [@chambers1994; @consoli1994]. Durante esse processo, além de gerar uma estimulação hormonal e obtenção de nutrientes para formação de ovócitos, a ingestão de sangue também pode estimular uma maior produção de ovos, mas as expõe a diferentes patógenos durante o processo (sejam vírus, protozoários ou nematoides) [@chambers1994; @consoli1994; @foster2019; @harris1969]. Ainda considerando que fêmeas podem se alimentar de diferentes indivíduos e espécies ao longo do seu tempo de vida, a veiculação de agentes etiológicos entre esses hospedeiros, durante a sua alimentação, é potencializada [@wilkerson2015; @guedes2017].
 
-### Generos *Culex* e *Aedes* vetores no Brasil
+## Gêneros *Culex* e *Aedes* vetores no Brasil
 
 Nas Américas, dentre os culicídeos da subfamília Culicinae, os gêneros *Aedes* e *Culex* se sobressaem por serem vetores de arbovírus, como os da família Togaviridae (*e.g.* vírus causadores da encefalite equina e vírus da chikungunya) e família Flaviviridae (*e.g.* vírus da dengue, febre amarela, encefalite de Saint Louis, febre do Nilo Ocidental e Zika) [@foster2019; @gorris2024].
 
@@ -63,7 +63,7 @@ Em um mesmo local, diferentes espécies de vetores podem ocorrer simultaneamente
 Projeções matemáticas, levando em consideração cenários futuros frente às mudanças climáticas, indicam que as áreas de ocupação e ocorrência de algumas espécies vetoras aumentará a cada passar de ano, dado suas características biológicas. Iwamura, Guzman-Holst e Murray [-@iwamura2020] preveem expansões de até 6km/ano para *Ae. aegypti* até 2050. Já Gorris *et al* [-@gorris2024] estimam que, no continente americano, espécies do gênero *Culex* colonizarão o norte do Canadá, por conta de futuras alterações do clima local, já *Aedes* expandirá sua área de ocupação, rumo aos polos do planeta.
 
 
-#### *Culex quinquefasciatus* Say, 1823.
+### *Culex quinquefasciatus* Say, 1823.
 
 <!-- Aut_Spp[Culex quinquefasciatus]; Aut_Spp[Wuchereria bancrofti] -->
 Ao abordar esses culicídeos vetores, algumas espécies no cenário brasileiro tem destaque. O gênero *Culex*, em especial o *Culex* (*Culex*) *quinquefasciatus* Say, 1823, é caracterizado por possuir corpo com escamas de coloração marrom ou clara, sem brilho metálico e, principalmente, escamas com padrão de faixas claras distribuídas no abdômen (@fig-plano-quinquefasciatus). É uma das espécies com notória relevância, sendo essencialmente noturna, podendo se alimentar do sangue de aves e mamíferos, incluindo humanos. Essa espécie foi reconhecida, no Brasil, como um dos vetores do nematódeo *Wuchereria bancrofti* (Cobbold, 1877), responsável pela filariose linfática [@consoli1994; @wilkerson2021].
@@ -81,7 +81,7 @@ Atualmente, no Brasil, a espécie *Cx. quinquefasciatus* é associada a veicula�
 
 Além da relevância vetorial, essa espécie muitas vezes se encontra associada a grandes criadouros artificiais com contaminação orgânica, incluindo fossas sépticas, canaletas de drenagem e esgotos abertos [@consoli1994; @farajollahi2011]. Assim, sua presença no ambiente pode ser indicativa de problemas na infraestrutura de redes de esgoto e falta de saneamento básico local. Portanto, a presença de *Cx. quinquefasciatus*, além de indicativos de problemas sanitários, também tem potencial como vetor de diferentes patógenos e pode mantem o ciclo de transmissão entre a fauna silvestre  [@consoli1994; @lara2021; @farajollahi2011].
 
-#### *Aedes aegypti* Linnaeus, 1762 e *Aedes albopictus* Skuse, 1894
+### *Aedes aegypti* Linnaeus, 1762 e *Aedes albopictus* Skuse, 1894
 
 <!-- Aut_Spp[Aedes albopictus] -->
 Outras espécies com notória relevância são os culicídeos do gênero *Aedes*, muito associados à grandes epidemias de arboviroses. No contexto do Brasil, se destacam as espécies *Ae. aegypti* e *Aedes albopictus* Skuse, 1894, sendo *Ae. albopictus* geralmente associado a áreas com maior cobertura vegetal ou áreas de mata próximas a habitações [@consoli1994; @forattini2002; @lima-camara2006].
@@ -114,7 +114,7 @@ Considerando a importância das populações de vetores nas taxas de infecção 
 
 O estudo de Santo [-@santos2017] considera, na propagação da DENV, as dinâmicas de movimento das populações humanas, relacionando populações suscetíveis, infectadas e recuperadas, e a presença de vetores (tanto na fase aquática quanto na fase alada), sendo essas populações de vetores também subdividas em suscetíveis a infecção e infectadas. Com os resultados dos movimentos migratórios criados, o autor concluiu que o movimento de populações humanas infectadas foi capaz de infectar a população de mosquitos suscetíveis em outras regiões, indicando a importância do movimento humano na propagação viral [@santos2017].
 
-## Políticas de Controle e Monitoramento de Vetores no Brasil
+# Políticas de Controle e Monitoramento de Vetores no Brasil
 
 Os impactos das arboviroses em território nacional se somam em diferentes perfis. No ponto de vista econômico e social, custos com controle do vetor, campanhas midiáticas, insumos médicos e a perda de produtividade de pacientes acometidos pelos sintomas são os de maior relevância. Teich, Arinelli e Fahham [-@teich2017] estimaram, no cenário do Brasil de 2016, um custo total de R\$2,3 bilhões de reais aos cofres públicos, um ano que somou um total de 1,12 milhão de casos notificados de dengue, 270 mil casos de chikungunya e 215 mil casos de Zika [@teich2017]. Ao olhar para os dados dos ultimos anos, somente em 2024 o País registrou um total de 10.266.017 casos de dengue, 425.773 casos de chikungunya e 43.234 casos de Zika, em números absolutos, quase sete vezes maior que 2016. Já em 2025, foram registrados um total de 3.802.091 casos de dengue, 250.213 casos de chikungunya e 25.042 casos de Zika, mais que o dobro do número de 2016 [@paho_who2025].
 
@@ -124,7 +124,7 @@ Em 1996, houve a publicação do Plano de Erradicação do *Aedes aegypti*, e na
 
 O documento das Diretrizes Nacionais para Prevenção e Controle das Arboviroses Urbanas foi implementado em 2025, tendo em vista as mudanças no cenário global e nacional, como as mudanças climáticas e a emergência de novas arboviroses, onde foi reconhecida a necessidade da utilização de diferentes técnicas e tecnologias para o controle e monitoramento dos vetores de arboviroses. Também há destaque na necessidade de investimento em pesquisa e estudos das técnicas, buscando, segundo as Diretrizes, ampliar o rol de estratégias para controle das populações de vetores (com destaque ao *Ae. aegypti*) [Brasil, -@diretriz2025].
 
-### Vigilância entomológica e viral
+## Vigilância entomológica e viral
 
 A fim de identificar e mensurar o nível de infestação de vetores nas cidades brasileiras, diferentes metodologias de monitoramento vêm sendo desenvolvidas e aplicadas. Nas Diretrizes Nacionais para Prevenção e Controle das Arboviroses Urbanas de 2025, como exemplo, se preconiza o monitoramento através de ferramentas como armadilhas ovitrampas para verificar a presença e mensurar o número de ovos de *Ae. aegypti* e *Ae. albopictus*, somadas a outros métodos que auxiliam o monitoramento da população de vetores e permitam trabalhar no seu controle, como o Levantamento de Índices Larvários [Brasil, -@diretriz2025].
 

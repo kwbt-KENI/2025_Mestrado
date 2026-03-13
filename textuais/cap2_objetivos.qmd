@@ -3,19 +3,19 @@
 
 \section{Objetivo Geral}
 
-Realizar ações de detecção precoce, monitoramento dos vetores e de arboviroses (DENV, CHIKV e ZIKV), acompanhando a flutuação populacional de Culicidae (Diptera) vetores e monitoramento de arboviroses no município de Sertanópolis, norte do Paraná.
+Realizar ações de detecção precoce e monitoramento de Culicidae (Diptera) vetores de arbovírus (DENV, CHIKV e ZIKV), acompanhando sua flutuação populacional por meio de armadilhas ovitrampa e realizar o monitoramento de arboviroses no município de Sertanópolis, norte do Paraná.
 
 \subsection{Objetivo Específico}
 
-* Realizar o constante monitoramento entomológico de *Aedes* spp., utilizando armadilhas ovitrampas, na área urbana do município de Sertanópolis-PR.
+* Realizar o monitoramento da presença e flutuação do número de ovos de *Aedes* (*Stegomyia*) *aegypti* (Linnaeus, 1762) e *Aedes* (*Stegomyia*) *albopictus* (Skuse, 1894), utilizando armadilhas ovitrampas na área urbana do município de Sertanópolis-PR.
 
-* Caracterizar e divulgar índices entomológicos baseados nos resultados da captura de ovos pelas armadilhas ovitrampas (Índice de Densidade de Ovos e Índice de Positividade de Ovitrampas) do município de Sertanópolis-PR.
+* Caracterizar e divulgar Índice de Densidade de Ovos e Índice de Positividade de Ovitrampas baseados nos resultados da captura de ovos de *Aedes* (*Stegomyia*) *aegypti* (Linnaeus, 1762) e *Aedes* (*Stegomyia*) *albopictus* (Skuse, 1894) por armadilhas ovitrampa do município de Sertanópolis-PR.
 
-* Verificar a flutuação da oviposição de *Aedes* spp., monitorada por armadilhas ovitrampas, ao longo de dois anos de estudo, realizado no município de Sertanópolis-PR.
+* Analisar a diversidade e abundância de Culicidae (Diptera) adultos capturados mensalmente em três Unidades Básicas de Saúde e cinco localidades de relevância epidemiológica na área urbana do município de Sertanópolis-PR, por aspiradores de Nasci adaptados.
 
 * Realizar a captura de Culicidae (Diptera) adultos mensalmente, com auxílio de aspiradores de Nasci, em diferentes pontos estratégicos, como Unidades Básicas de Saúde na área urbana do município de Sertanópolis-PR.
 
-* Detectar, por meio de técnicas de Reação em Cadeia da Polimerase Quantitativa em Tempo Real, a presença vírus DENV (e seus sorotipos), CHIKV e ZIKV em *Aedes* spp. adultos fêmeas capturadas por aspiração no município de Sertanópolis-PR.
+* Detectar, em fêmeas de *Aedes* (*Stegomyia*) *aegypti* (Linnaeus, 1762) e *Aedes* (*Stegomyia*) *albopictus* (Skuse, 1894) adultos, capturados no município de Sertanópolis-PR, a presença de arbovírus DENV (e seus sorotipos), ZIKV e CHIKV, por meio de técnicas de Reação em Cadeia da Polimerase Quantitativa em Tempo Real.
 
 <!-- considerar? difícil definir por conta da falta de dados meteriológicos -->
 
