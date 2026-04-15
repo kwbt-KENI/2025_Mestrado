@@ -18,18 +18,27 @@
 %% This work consists of the file abntex2.cls.
 %%
 %%
-%% Changelog:
+%% Changelog: --
 %%
+%%%%%%
+%% Arquivo original editado e alterado
 %% Arquivo copiado do repositório git para edição
 %% Data da cópia: 2025-10-02
-%% Ultima modificação: 2025-10-02
-%% Autor: Edson Kawabata
+%% Ultima modificação: 2025-12-02
+%% Autor das modificações: Edson Kawabata
+%%
+%% Projeto não oficial para trabalhos acadêmicos da
+%% Universidade Estadual de Londrina.
 %%
 %% Changelog:
 %% 2025-10-02 - (V.01) Adaptação e implementação inicial
 %% 2025-10-02 - (V.02) Aplicação dos ajustes dos pull-request do Github (270, 269, 220)
+%% 2025-10-02 - (V.02.1) Adaptação para trabalhos com 1 capítulo
+%% 2026-03-18 - (V.03) Alterações e ajustes para melhor representarem as normas ABNT-UEL e adequação ao projeto em Quarto (https://quarto.org)
+%% 2026-03-29 - (V.03.1) Correções de bugs com renderização de projeto Quarto
+
 % ------------------------------------------------------------------------
-% ------------------------------------------------------------------------
+% -----------------------------------------------------------------------
 % Declaracao da classe abntex2 como uma extensao da classe memoir
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
@@ -145,7 +154,10 @@
 % ---
 % Hifenizacao e caracteres especiais portugues-brasil por padrao
 % ---
-\RequirePackage[brazilian, bidi=default]{babel}
+% \RequirePackage[brazilian, bidi=default]{babel}
+% removido por causar conflitos em projeto Quarto
+% ajustando para:
+\RequirePackage{babel}
 %
 % Nomes constantes do abnTeX2 em portugues (definicoes padroes)
 \newcommand{\folhaderostoname}{Folha de rosto}
@@ -165,48 +177,6 @@
 \newcommand{\listadesimbolosname}{Lista de s\'imbolos}
 \newcommand{\fontename}{Fonte}
 \newcommand{\notaname}{Nota}
-%
-\addto\captionsbrazil{% portugues-brasil
-  %% ajusta nomes padroes do babel
-  \renewcommand{\bibname}{Refer\^encias}
-  \renewcommand{\indexname}{\'Indice}
-  \renewcommand{\listfigurename}{Lista de ilustra\c{c}\~{o}es}
-  \renewcommand{\listtablename}{Lista de tabelas}
-  \renewcommand{\contentsname}{Sum\'ario}
-  %% ajusta nomes usados com a macro \autoref
-  \renewcommand{\pageautorefname}{p\'agina}
-  \renewcommand{\sectionautorefname}{se{\c c}\~ao}
-  \renewcommand{\subsectionautorefname}{subse{\c c}\~ao}
-  \renewcommand{\subsubsectionautorefname}{subse{\c c}\~ao}
-  \renewcommand{\paragraphautorefname}{subse{\c c}\~ao}
-}
-\addto\captionsenglish{% ingles
-  %% adjusts names from abnTeX2
-  \renewcommand{\folhaderostoname}{Title page}
-  \renewcommand{\epigraphname}{Epigraph}
-  \renewcommand{\dedicatorianame}{Dedication}
-  \renewcommand{\errataname}{Errata sheet}
-  \renewcommand{\agradecimentosname}{Acknowledgements}
-  \renewcommand{\anexoname}{ANNEX}
-  \renewcommand{\anexosname}{Annex}
-  \renewcommand{\apendicename}{APPENDIX}
-  \renewcommand{\apendicesname}{Appendix}
-  \renewcommand{\orientadorname}{Supervisor:}
-  \renewcommand{\coorientadorname}{Co-supervisor:}
-  \renewcommand{\folhadeaprovacaoname}{Approval}
-  \renewcommand{\resumoname}{Abstract}
-  \renewcommand{\listadesiglasname}{List of abbreviations and acronyms}
-  \renewcommand{\listadesimbolosname}{List of symbols}
-  \renewcommand{\fontename}{Source}
-  \renewcommand{\notaname}{Note}
-   %% adjusts names used by \autoref
-  \renewcommand{\pageautorefname}{page}
-  \renewcommand{\sectionautorefname}{section}
-  \renewcommand{\subsectionautorefname}{subsection}
-  \renewcommand{\subsubsectionautorefname}{subsubsection}
-  \renewcommand{\paragraphautorefname}{subsubsubsection}
-}
-% ---
 
 % ---
 % Customiza listas
@@ -460,7 +430,7 @@
 % leaders para os capitulos
 \renewcommand*{\cftchapterdotsep}{\cftdotsep}
 
-% suprime espaço entre os itens de listings de diferentes capítulos
+% suprime espaço entre os itens de listings de diferentes capítulos - definição de espaco no preamble
 \setlength{\cftbeforechapterskip}{0pt plus 0pt}
 \renewcommand*{\insertchapterspace}{}
 
@@ -539,29 +509,30 @@
   \renewcommand{\cftchapterfont}{\large}
   \renewcommand{\cftchapterpagefont}{\normalsize\cftchapterfont}
   %
-  \renewcommand{\cftsectionfont}{\bfseries}
+  \renewcommand{\cftsectionfont}{\normalsize\scshape}
   \renewcommand{\cftsectionpagefont}{\cftsectionfont}
   %
   \renewcommand{\cftsubsectionfont}{\normalsize}
   \renewcommand{\cftsubsectionpagefont}{\cftsubsectionfont}
   %
-  \renewcommand{\cftsubsubsectionfont}{\small}
+  \renewcommand{\cftsubsubsectionfont}{\normalsize}
   \renewcommand{\cftsubsubsectionpagefont}{\cftsubsubsectionfont}
   %
-  \renewcommand{\cftparagraphfont}{\footnotesize}
+  \renewcommand{\cftparagraphfont}{\normalsize\emph}
   \renewcommand{\cftparagraphpagefont}{\cftparagraphfont}
+
   %
-  % Ajusta entrada Referencias
+  % Ajusta entrada Referencias - removido (quarto cuida dessa parte)
   %
-  \renewcommand{\bibsection}{%
-    \chapter*{\bibname}
-    \bibmark
-    \ifnobibintoc\else
-    \phantomsection
-    \addcontentsline{toc}{chapter}{\texorpdfstring{\MakeTextUppercase{\bibname}}{\bibname}}
-    \fi
-    \prebibhook
-}
+%   \renewcommand{\bibsection}{%
+%     \chapter*{\bibname}
+%     \bibmark
+%     \ifnobibintoc\else
+%     \phantomsection
+%     \addcontentsline{toc}{chapter}{\texorpdfstring{\MakeTextUppercase{\bibname}}{\bibname}}
+%     \fi
+%     \prebibhook
+% }
 
 }{}
 
@@ -700,7 +671,10 @@
 
 % ---
 % Configura layout para elementos pos-textuais
-\newcommand{\postextual}{\phantompart}
+\newcommand{\postextual}{
+    \phantompart
+    \pagestyle{abntchapfirst}
+    \aliaspagestyle{chapter}{abntchapfirst}}
 \renewcommand{\backmatter}{\postextual}
 % -----
 

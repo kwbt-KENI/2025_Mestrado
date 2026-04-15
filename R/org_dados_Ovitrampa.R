@@ -299,7 +299,7 @@ df_cal_ts_quin_mes <- df_cal_ts_quin |>
     ),
     data = unique(df_cal_ts_quin$data)
   )) |>
-  mutate(data_trans = format(data, "%d/%m/%Y")) |>
+  mutate(data_trans = format(data, "%d/%m/%y")) |>
   glimpse()
 
 saveRDS(df_cal_ts_quin_mes, "./data/df_ovos_cal_sem_corrigido.RDS")

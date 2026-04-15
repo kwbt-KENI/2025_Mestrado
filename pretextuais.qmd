@@ -7,6 +7,9 @@
 {{< include pretextuais/folha_de_rosto.qmd >}}
 
 <!-- ficha catalografica -->
+\newpage
+\includepdf[pages={1}]{./fig_comp/ficha.pdf}
+\newpage
 <!-- {{< include pretextuais/ficha_catalografica.qmd >}} -->
 
 <!-- folha de aprovação -->
@@ -55,6 +58,7 @@
 
 <!-- sumario -->
 <!-- Definição do bookmark é manual aqui, por erros do quarto -->
+\renewcommand{\contentsname}{\MakeUppercase{Sumário}}
 \pdfbookmark[0]{Sumário}{toc}
 \tableofcontents*
 \cleardoublepage

@@ -1,0 +1,11 @@
+"0","#| label: fig-graf_casos_denv_regional"
+"0","#| fig-cap: ""Gráfico de casos registrados de Dengue na 17º Regiaonal de Saúde do Paraná, constituído pelos municípios de Alvorada do Sul, Assaí, Bela Vista do Paraíso, Cafeara, Cambé, Centenário do Sul, Florestópolis, Guaraci, Ibiporã, Jaguapitã, Jataizinho, Londrina, Lupionópolis, Miraselva, Pitangueiras, Porecatu, Prado Ferreira, Primeiro de Maio, Rolândia, Sertanópolis e Tamarana, no período de dezembro de 2021 à dezembro de 2025."""
+"0","#| echo: false"
+"0","#| error: false"
+"0","#| warning: false"
+"0","#| fig-width: 9"
+"0","# #| results: asis"
+"0",""
+"0","cal_regional_cap <- readRDS(""C:/dados/projetos/2025_Mestrado/2025_Mestrado_no_git/ggplot/den_sus_cal_regional_cap.RDS"")"
+"2","Error in gzfile(file, ""rb"") : não é possível abrir a conexão
+"

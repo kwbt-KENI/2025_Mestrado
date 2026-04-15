@@ -22,6 +22,7 @@ d_regional <- d_geral |>
 saveRDS(d_regional, "data/den_2015_2026_fil_Regional_sem.RDS")
 
 d_regional = readRDS("data/den_2015_2026_fil_Regional_sem.RDS")
+
 #
 info_pop <- read.delim("data/pop_regional.txt", sep = ";")
 #
@@ -71,9 +72,77 @@ cal_sertanopolis <- d_regional |>
   distinct() |>
   as_tsibble(index = ano_sem)
 
-saveRDS(cal_sertanopolis, "data/den_2015_2026_calc_sertanopolis_sem.RDS")
+cal_sertanopolis_ref <- d_regional |>
+  filter(ID_MUNICIP == 412650) |>
+  filter(!CLASSI_FIN == "Descartado") |>
+  group_by(ano_sem) |>
+  summarise(total_casos_serta = n()) |>
+  as_tsibble(index = ano_sem) |>
+  fill_gaps() |>
+  mutate(total_casos_serta = replace_na(total_casos_serta, 0)) |>
+  mutate(
+    total_pop = pop_total_regional,
+    porcent_serta = ((total_casos_serta * 100) /
+      total_pop),
+  ) |>
+  distinct() |>
+  as_tsibble(index = ano_sem)
 
-cal_sertanopolis = readRDS("data/den_2015_2026_calc_sertanopolis_sem.RDS")
+saveRDS(cal_sertanopolis, "data/den_2015_2026_calc_sertanopolis_sem.RDS")
+saveRDS(
+  cal_sertanopolis_ref,
+  "data/den_2015_2026_calc_sertanopolis_sem_ref.RDS"
+)
+
+# temp <- d_regional |>
+#   filter(ID_MUNICIP == 412650) |>
+#   filter(!CLASSI_FIN == "Descartado") |>
+#   filter(CRITERIO == "Laboratório")
+
+# temp2 <- temp |>
+#   group_by(ano_sem) |>
+#   summarise(total_casos_serta = n()) |>
+#   as_tsibble(index = ano_sem) |>
+#   fill_gaps() |>
+#   mutate(total_casos_serta = replace_na(total_casos_serta, 0)) |>
+#   mutate(
+#     total_pop = pop_total_regional,
+#     porcent_serta = ((total_casos_serta * 100) /
+#       total_pop),
+#   ) |>
+#   distinct() |>
+#   as_tsibble(index = ano_sem) |>
+#   filter(ano_sem > yearweek("2021 W44", week_start = 7)) |>
+#   as_tsibble(index = ano_sem) |>
+#   fill_gaps() |>
+#   mutate(
+#     total_casos_serta = replace_na(total_casos_serta, 0),
+#     status_proj = if_else(
+#       ano_sem < yearweek("2023 W41", week_start = 7),
+#       "antes",
+#       "depois"
+#     ),
+#     total_casos_serta = as.numeric(total_casos_serta),
+#     data = as_date(ano_sem)
+#   ) |>
+#   filter(status_proj == "depois")
+
+# sum(temp2$total_casos_serta)
+
+sertanopolis_ref <- d_regional |>
+  filter(ID_MUNICIP == 412650) |>
+  filter(!CLASSI_FIN == "Descartado")
+
+d_regional |>
+  filter(ID_MUNICIP == 412650) |>
+  filter(CLASSI_FIN == "Descartado")
+
+
+saveRDS(
+  cal_sertanopolis_ref,
+  "data/den_2015_2026_sertanopolis_ref.RDS"
+)
+
 
 cal_sertanopolis_sorotipo <- d_regional |>
   filter(ID_MUNICIP == 412650) |>
@@ -186,7 +255,7 @@ fig_cal_sertanopolis_cap <- cal_sertanopolis_cap |>
 
 plot(fig_cal_sertanopolis_cap)
 
-cal_sertanopolis_cap <- cal_sertanopolis |>
+cal_sertanopolis_cap <- cal_sertanopolis_ref |>
   filter(ano_sem > yearweek("2021 W44", week_start = 7)) |>
   as_tsibble(index = ano_sem) |>
   fill_gaps() |>
@@ -200,6 +269,23 @@ cal_sertanopolis_cap <- cal_sertanopolis |>
     total_casos_serta = as.numeric(total_casos_serta),
     data = as_date(ano_sem)
   )
+
+cal_sertanopolis_cap_not <- cal_sertanopolis |>
+  filter(ano_sem > yearweek("2021 W44", week_start = 7)) |>
+  as_tsibble(index = ano_sem) |>
+  fill_gaps() |>
+  mutate(
+    total_casos_serta = replace_na(total_casos_serta, 0),
+    status_proj = if_else(
+      ano_sem < yearweek("2023 W41", week_start = 7),
+      "antes",
+      "depois"
+    ),
+    total_casos_serta = as.numeric(total_casos_serta),
+    data = as_date(ano_sem)
+  )
+
+View(cal_sertanopolis_cap)
 
 # autoplot(cal_sertanopolis_cap, .vars = total_casos_serta, color = "red") +
 #   geom_rect(
@@ -219,6 +305,10 @@ cal_sertanopolis_cap <- cal_sertanopolis |>
 
 # Plot_sertanópolis -------------------------------------------------------
 
+saveRDS(
+  cal_sertanopolis_cap_not,
+  "./data/den_sus_cal_sertanopolis_cap_2023_2026_notificados.RDS"
+)
 saveRDS(
   cal_sertanopolis_cap,
   "./data/den_sus_cal_sertanopolis_cap_2023_2026.RDS"

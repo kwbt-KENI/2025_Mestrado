@@ -1,0 +1,67 @@
+{
+    "entries": [
+        {
+            "file": "textuais/cap4_resultado_discussao.qmd",
+            "type": "fig",
+            "id": "ovos-ciclos",
+            "suffix": "",
+            "title": "Gráfico de calor do número de ovos comtabilizados por coleta de armadilha ovitrampa realizada no município de Sertanópolis-PR, no período de outubro de 2023 a dezembro de 2025, distribuído por cada ciclo de coleta realizado."
+        },
+        {
+            "file": "textuais/cap4_resultado_discussao.qmd",
+            "type": "fig",
+            "id": "mapas-influencia",
+            "suffix": "-2023",
+            "title": "Mapa de infestação de Aedes aegypti em Sertanópolis/PR (Outubro a Dezembro de 2023)."
+        },
+        {
+            "file": "textuais/cap4_resultado_discussao.qmd",
+            "type": "fig",
+            "id": "dist-pontos",
+            "suffix": "",
+            "title": "Distribuição das 50 armadilhas ovitrampa instaladas no município de Sertanópolis para amostragem de ovos, com destaque para armadilhas com proximidade menor que 250m. Coordenadas retiradas em outubro de 2025."
+        },
+        {
+            "file": "textuais/cap4_resultado_discussao.qmd",
+            "type": "tbl",
+            "id": "tempo-coleta",
+            "suffix": "",
+            "title": "Tabela com as datas de coleta e instalação das armadilhas ovitrampa em Sertanópolis-PR."
+        },
+        {
+            "file": "textuais/cap4_resultado_discussao.qmd",
+            "type": "fig",
+            "id": "comparacao-ido-sem",
+            "suffix": "",
+            "title": "Flutuação de Índice de Densidade de Ovos (IDO) por coleta de armadilha ovitrampa instalada no município de Sertanópolis-PR, no período de outubro/2023 a dezembro/2025, apresentando o IDO calculado para cada semana amostrada."
+        },
+        {
+            "file": "textuais/cap4_resultado_discussao.qmd",
+            "type": "fig",
+            "id": "comparacao-ido-ano",
+            "suffix": "",
+            "title": ""
+        },
+        {
+            "file": "textuais/cap4_resultado_discussao.qmd",
+            "type": "fig",
+            "id": "total-ovos",
+            "suffix": "",
+            "title": "Flutuação do número total de ovos coltados de armadilha ovitrampa instalada no município de Sertanópolis-PR, agrupados pelo número de armadilhas em campo no período. Amostras de 23/10/2023 à 21/10/2025."
+        },
+        {
+            "file": "textuais/cap4_resultado_discussao.qmd",
+            "type": "tbl",
+            "id": "dados-ido-coleta-ano",
+            "suffix": "",
+            "title": "Tabela com resumo dos dados coletados por armadilhas ovitrampa, agrupados por ano, em Sertanópolis-PR, de outubro de 2023 a dezembro de 2025."
+        },
+        {
+            "file": "textuais/cap4_resultado_discussao.qmd",
+            "type": "fig",
+            "id": "dist-ovos",
+            "suffix": "",
+            "title": "Painel de gráficos da distribuição de ovos obtido de 2489 armadilhas ovitrampa, ao longo do projeto de monitoramento realizado na cidade de Sertanópolis-PR, de outubro de 2023 a dezembro de 2025. A: Histograma da distribuição de ovos; B: Gráfico de caixas dos valores de ovos contados."
+        }
+    ]
+}

@@ -7,7 +7,7 @@ Realizar ações de detecção precoce e monitoramento de Culicidae (Diptera) ve
 
 \subsection{Objetivo Específico}
 
-* Realizar o monitoramento da presença e flutuação do número de ovos de *Aedes* (*Stegomyia*) *aegypti* (Linnaeus, 1762) e *Aedes* (*Stegomyia*) *albopictus* (Skuse, 1894), utilizando armadilhas ovitrampas na área urbana do município de Sertanópolis-PR.
+<!-- Realizar o monitoramento da presença e flutuação do número de ovos de *Aedes* (*Stegomyia*) *aegypti* (Linnaeus, 1762) e *Aedes* (*Stegomyia*) *albopictus* (Skuse, 1894), utilizando armadilhas ovitrampas na área urbana do município de Sertanópolis-PR. -->
 
 * Caracterizar e divulgar Índice de Densidade de Ovos e Índice de Positividade de Ovitrampas baseados nos resultados da captura de ovos de *Aedes* (*Stegomyia*) *aegypti* (Linnaeus, 1762) e *Aedes* (*Stegomyia*) *albopictus* (Skuse, 1894) por armadilhas ovitrampa do município de Sertanópolis-PR.
 
@@ -15,10 +15,14 @@ Realizar ações de detecção precoce e monitoramento de Culicidae (Diptera) ve
 
 * Realizar a captura de Culicidae (Diptera) adultos mensalmente, com auxílio de aspiradores de Nasci, em diferentes pontos estratégicos, como Unidades Básicas de Saúde na área urbana do município de Sertanópolis-PR.
 
-* Detectar, em fêmeas de *Aedes* (*Stegomyia*) *aegypti* (Linnaeus, 1762) e *Aedes* (*Stegomyia*) *albopictus* (Skuse, 1894) adultos, capturados no município de Sertanópolis-PR, a presença de arbovírus DENV (e seus sorotipos), ZIKV e CHIKV, por meio de técnicas de Reação em Cadeia da Polimerase Quantitativa em Tempo Real.
+* Detectar, em fêmeas de *Aedes* (*Stegomyia*) *aegypti* (Linnaeus, 1762) e *Aedes* (*Stegomyia*) *albopictus* (Skuse, 1894) adultos, capturados no município de Sertanópolis-PR, a presença de arbovírus DENV (e seus sorotipos), ZIKV e CHIKV.
+
+<!-- trecho removido do objetivo específico por sugestão -->
+<!-- , por meio de técnicas de Reação em Cadeia da Polimerase Quantitativa em Tempo Real. -->
+
 
 <!-- considerar? difícil definir por conta da falta de dados meteriológicos -->
 
-<!-- * Verificar a relação, considerando a variação temporal, de diferentes fenômenos climática registrados na região (como variação da temperatura, umidade e precipitação) com as atividades de Culicidae (Diptera) vetores, representados pelo número de ovos coletados em armadilhas ovitrampas, número de adultos capturados em aspiração, e demais técnicas de detecção e amostragem entomológica realizadas no município, durante o período do presente estudo. -->
+<!-- Verificar a relação, considerando a variação temporal, de diferentes fenômenos climática registrados na região (como variação da temperatura, umidade e precipitação) com as atividades de Culicidae (Diptera) vetores, representados pelo número de ovos coletados em armadilhas ovitrampas, número de adultos capturados em aspiração, e demais técnicas de detecção e amostragem entomológica realizadas no município, durante o período do presente estudo. -->
 
-<!-- * Verificar a relação da detecção viral de DENV, CHIKV e ZIKV e o número de enfermos acometidos pelas mesmas, com a presença e abundância de possíveis vetores, amostradas por armadilhas ovitrampas e aspiração, considerando a variação temporal e espacial dos dados. -->
+<!-- Verificar a relação da detecção viral de DENV, CHIKV e ZIKV e o número de enfermos acometidos pelas mesmas, com a presença e abundância de possíveis vetores, amostradas por armadilhas ovitrampas e aspiração, considerando a variação temporal e espacial dos dados. -->

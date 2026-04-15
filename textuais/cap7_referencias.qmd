@@ -1,10 +1,9 @@
+\setlength{\afterchapskip}{0pt}
 \cleardoublepage
-\markboth{Referências}{Referências}
-\chapter*{Referência}
-\addcontentsline{toc}{chapter}{Referências}
-\postextual
+\markboth{}{}
+\chapter*{\bfseries{\MakeUppercase{Referências}}}
+\addcontentsline{toc}{chapter}{\texorpdfstring{\bfseries{\MakeTextUppercase{Refer\^encias}}}{Refer\^encias}}
 \RaggedRight
 \SingleSpacing
-
 ::: {#refs}
 :::

@@ -1,0 +1,4828 @@
+{
+    "sources": [
+        {
+            "DOI": "10.1079/9781800628014.0000",
+            "URL": "http://www.cabidigitallibrary.org/doi/book/10.1079/9781800628014.0000",
+            "author": [
+                {
+                    "family": "Harbach",
+                    "given": "Ralph E"
+                }
+            ],
+            "id": "harbach2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024,
+                        10,
+                        31
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "DOI: 10.1079/9781800628014.0000",
+            "publisher": "CABI",
+            "publisher-place": "GB",
+            "title": "Composition and Nature of the Culicidae (Mosquitoes)",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1007/s10750-007-9037-x",
+            "author": [
+                {
+                    "family": "Rueda",
+                    "given": "Leopoldo M."
+                }
+            ],
+            "container-title": "Hydrobiologia",
+            "id": "rueda2007",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "page": "477-487",
+            "title": "Global diversity of mosquitoes (insecta: Diptera: Culicidae) in freshwater",
+            "title-short": "Global diversity of mosquitoes (insecta",
+            "type": "article-journal",
+            "volume": "595"
+        },
+        {
+            "DOI": "10.5772/66946",
+            "URL": "http://www.intechopen.com/books/biological-control-of-pest-and-vector-insects/transmission-of-major-arboviruses-in-brazil-the-role-of-aedes-aegypti-and-aedes-albopictus-vectors",
+            "author": [
+                {
+                    "family": "Chouin-Carneiro",
+                    "given": "Thais"
+                },
+                {
+                    "family": "Dos Santos",
+                    "given": "Flavia Barreto"
+                }
+            ],
+            "editor": [
+                {
+                    "family": "Shields",
+                    "given": "Vonnie D. C."
+                }
+            ],
+            "id": "chouin-carneiro2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        4,
+                        5
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "DOI: 10.5772/66946",
+            "publisher": "Intelliz Press",
+            "publisher-place": "New York",
+            "title": "Transmission of Major Arboviruses in Brazil: The Role of <i>Aedes aegypti</i> and <i>Aedes albopictus</i> Vectors",
+            "title-short": "Transmission of Major Arboviruses in Brazil",
+            "type": "chapter"
+        },
+        {
+            "URL": "https://www.who.int/news-room/fact-sheets/detail/vector-borne-diseases",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        9,
+                        26
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "WHO"
+                }
+            ],
+            "id": "whowor2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "language": "en",
+            "publisher": "World Health Organization",
+            "title": "Vector-borne diseases",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://www.paho.org/en/arbo-portal",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "PAHO"
+                }
+            ],
+            "id": "paho_who2025",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026,
+                        2,
+                        28
+                    ]
+                ]
+            },
+            "publisher": "Pan American Health Organization",
+            "title": "ARBO portal - PAHO/WHO | pan american health organization",
+            "type": "webpage"
+        },
+        {
+            "author": [
+                {
+                    "family": "Consoli",
+                    "given": "Rotraut A. G. B."
+                },
+                {
+                    "dropping-particle": "de",
+                    "family": "Oliveira",
+                    "given": "Ricardo Lourenço"
+                }
+            ],
+            "id": "consoli1994",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "language": "pt-BR",
+            "publisher": "Fiocruz",
+            "publisher-place": "Rio de Janeiro",
+            "title": "Principais Mosquitos De Importancia Sanitaria No Brasil",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1371/journal.pone.0133602",
+            "author": [
+                {
+                    "family": "Wilkerson",
+                    "given": "Richard C."
+                },
+                {
+                    "family": "Linton",
+                    "given": "Yvonne-Marie"
+                },
+                {
+                    "family": "Fonseca",
+                    "given": "Dina M."
+                },
+                {
+                    "family": "Schultz",
+                    "given": "Ted R."
+                },
+                {
+                    "family": "Price",
+                    "given": "Dana C."
+                },
+                {
+                    "family": "Strickman",
+                    "given": "Daniel A."
+                }
+            ],
+            "container-title": "PLOS ONE",
+            "editor": [
+                {
+                    "family": "Liu",
+                    "given": "Zhong-Jian"
+                }
+            ],
+            "id": "wilkerson2015",
+            "issue": "7",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "e0133602",
+            "title": "Making mosquito taxonomy useful: A stable classification of tribe aedini that balances utility with current knowledge of evolutionary relationships",
+            "title-short": "Making mosquito taxonomy useful",
+            "type": "article-journal",
+            "volume": "10"
+        },
+        {
+            "DOI": "10.1016/j.actatropica.2016.11.020",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0001706X16306246",
+            "author": [
+                {
+                    "family": "Mayer",
+                    "given": "Sandra V."
+                },
+                {
+                    "family": "Tesh",
+                    "given": "Robert B."
+                },
+                {
+                    "family": "Vasilakis",
+                    "given": "Nikos"
+                }
+            ],
+            "container-title": "Acta Tropica",
+            "id": "mayer2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        2
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "155-163",
+            "title": "The emergence of arthropod-borne viral diseases: A global prospective on dengue, chikungunya and zika fevers",
+            "title-short": "The emergence of arthropod-borne viral diseases",
+            "type": "article-journal",
+            "volume": "166"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wilkerson",
+                    "given": "Richard C"
+                },
+                {
+                    "family": "Linton",
+                    "given": "Yvonne-Marie"
+                },
+                {
+                    "family": "Strickman",
+                    "given": "Daniel"
+                }
+            ],
+            "id": "wilkerson2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "publisher": "Johns Hopkins University Press",
+            "publisher-place": "Baltimore",
+            "title": "Mosquitoes of the world",
+            "type": "book",
+            "volume": "1 e 2"
+        },
+        {
+            "DOI": "https://doi.org/10.1590/S0101-81751997000300007",
+            "URL": "https://www.scielo.br/j/rbzool/a/dfMd67Hpnf4Y7ChNP6PW4jd/?lang=pt",
+            "author": [
+                {
+                    "family": "Lopes",
+                    "given": "José"
+                }
+            ],
+            "container-title": "Revista Brasileira de Zoologia",
+            "id": "lopes1997",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1997
+                    ]
+                ]
+            },
+            "language": "pt",
+            "note": "Publisher: Sociedade Brasileira de Zoologia",
+            "page": "571-578",
+            "title": "Ecologia de mosquitos (Diptera, Culicidae) em criadouros naturais e artificiais de área rural do norte do estado do Paraná, Brasil: VI. Coletas de larvas no peridomicílio",
+            "title-short": "Ecologia de mosquitos (Diptera, Culicidae) em criadouros naturais e artificiais de área rural do norte do estado do Paraná, Brasil",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "author": [
+                {
+                    "family": "Forattini",
+                    "given": "Oswaldo Paulo"
+                }
+            ],
+            "id": "forattini2002",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "Edusp",
+            "publisher-place": "São Paulo, SP",
+            "title": "Culicidologia médica: Identificação, biologia e epidemiologia",
+            "title-short": "Culicidologia médica",
+            "type": "book",
+            "volume": "2"
+        },
+        {
+            "DOI": "10.1038/s41467-020-16010-4",
+            "URL": "https://www.nature.com/articles/s41467-020-16010-4",
+            "author": [
+                {
+                    "family": "Iwamura",
+                    "given": "Takuya"
+                },
+                {
+                    "family": "Guzman-Holst",
+                    "given": "Adriana"
+                },
+                {
+                    "family": "Murray",
+                    "given": "Kris A."
+                }
+            ],
+            "container-title": "Nature Communications",
+            "id": "iwamura2020",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 1",
+            "page": "2130",
+            "title": "Accelerating invasion potential of disease vector <i>Aedes aegypti</i> under climate change",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "DOI": "10.1016/j.joclim.2024.100317",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2667278224000208",
+            "author": [
+                {
+                    "family": "Gorris",
+                    "given": "Morgan E."
+                },
+                {
+                    "family": "Bartlow",
+                    "given": "Andrew W."
+                },
+                {
+                    "family": "Pitts",
+                    "given": "Travis"
+                },
+                {
+                    "family": "Manore",
+                    "given": "Carrie A."
+                }
+            ],
+            "container-title": "The Journal of Climate Change and Health",
+            "id": "gorris2024",
+            "issue": "2667-2782",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024,
+                        5
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 2667-2782",
+            "page": "100317",
+            "title": "Projections of <i>Aedes</i> and <i>Culex</i> mosquitoes across North and South America in response to climate change",
+            "type": "article-journal",
+            "volume": "17"
+        },
+        {
+            "author": [
+                {
+                    "literal": "Brasil. Ministério da Saúde. Secretaria De Vigilância em Saúde"
+                }
+            ],
+            "id": "diretriz2025",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025,
+                        10,
+                        9
+                    ]
+                ]
+            },
+            "language": "pt-BR",
+            "publisher": "Ministério da Saúde",
+            "publisher-place": "Brasília, DF",
+            "title": "Diretrizes Nacionais para Prevenção e Controle das Arboviroses Urbanas: Vigilância Entomológica e Controle Vetorial",
+            "title-short": "Diretrizes Nacionais para Prevenção e Controle das Arboviroses Urbanas",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "literal": "Brasil. Ministério da Saúde. Secretaria De Vigilância Em Saúde"
+                }
+            ],
+            "id": "diretriz2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009,
+                        6,
+                        15
+                    ]
+                ]
+            },
+            "language": "pt-BR",
+            "page": "160",
+            "publisher": "Ministério da Saúde",
+            "publisher-place": "Brasília, DF",
+            "title": "Diretrizes nacionais para prevenção e controle de epidemias de dengue",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Silva",
+                    "given": "Karina Rossi Da"
+                }
+            ],
+            "genre": "Master’s thesis",
+            "id": "silvak.2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "language": "pt-BR",
+            "publisher": "Universidade Estadual de Londrina",
+            "publisher-place": "Londrina",
+            "title": "Diversidade de Culicidae (Diptera) e análise da circulação viral em estabelecimento públicos e fragmentos de vegetação ripária urbana no Norte do Paraná, Brasil",
+            "type": "thesis"
+        },
+        {
+            "URL": "https://cidades.ibge.gov.br/brasil/pr/sertanopolis/panorama",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2025,
+                        11,
+                        25
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "IBGE"
+                }
+            ],
+            "id": "sertanóp2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "publisher": "Instituto Brasileiro de Geografia e Estatística",
+            "title": "Sertanópolis: panorama",
+            "title-short": "Sertanópolis",
+            "type": "webpage"
+        },
+        {
+            "author": [
+                {
+                    "family": "Nitsche",
+                    "given": "Pablo Ricardo"
+                },
+                {
+                    "family": "Caramori",
+                    "given": "Paulo Henrique"
+                },
+                {
+                    "family": "Ricce",
+                    "given": "Wilian da Silva"
+                },
+                {
+                    "family": "Pinto",
+                    "given": "Larissa Fernandes Dias"
+                }
+            ],
+            "editor": [
+                {
+                    "family": "Gil",
+                    "given": "Luciano Grillo"
+                }
+            ],
+            "id": "nitsche2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "publisher": "Instituto Agronômico do Paraná",
+            "publisher-place": "Paraná",
+            "title": "Atlas climático do estado do paraná",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Alves",
+                    "given": "Ana Carolina Felicio"
+                }
+            ],
+            "genre": "Master’s thesis",
+            "id": "alves2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "publisher": "Universidade Federal do Paraná",
+            "publisher-place": "Curitiba, PR",
+            "title": "Integração de ferramentas de detecção precoce e monitoramento de circulação de arbovírus em culicídeos vetores em área urbana no norte do paraná",
+            "type": "thesis"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fay",
+                    "given": "RW"
+                },
+                {
+                    "family": "Eliason",
+                    "given": "Donald A"
+                }
+            ],
+            "id": "fay1966preferred",
+            "issued": {
+                "date-parts": [
+                    [
+                        1966
+                    ]
+                ]
+            },
+            "title": "A preferred oviposition site as a surveillance method for <i>Aedes aegypti</i>.",
+            "type": "article-journal"
+        },
+        {
+            "URL": "https://www.biodiversitylibrary.org/part/131591",
+            "author": [
+                {
+                    "family": "Nasci",
+                    "given": "Roger S."
+                }
+            ],
+            "container-title": "Mosquito News",
+            "id": "nasci1981",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1981
+                    ]
+                ]
+            },
+            "title": "A lightweight batterypowered aspirator for collecting resting mosquitoes in the field.",
+            "type": "article-journal",
+            "volume": "41"
+        },
+        {
+            "DOI": "10.1016/j.cageo.2006.12.001",
+            "URL": "http://dx.doi.org/10.1016/j.cageo.2006.12.001",
+            "author": [
+                {
+                    "family": "Feidas",
+                    "given": "Haralambos"
+                },
+                {
+                    "family": "Kontos",
+                    "given": "Themistoklis"
+                },
+                {
+                    "family": "Soulakellis",
+                    "given": "Nikolaos"
+                },
+                {
+                    "family": "Lagouvardos",
+                    "given": "Konstantinos"
+                }
+            ],
+            "container-title": "Computers & Geosciences",
+            "id": "feidas2007",
+            "issue": "8",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007,
+                        8
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "989-1007",
+            "title": "A GIS tool for the evaluation of the precipitation forecasts of a numerical weather prediction model using satellite data",
+            "type": "article-journal",
+            "volume": "33"
+        },
+        {
+            "DOI": "10.1002/qj.4121",
+            "URL": "http://dx.doi.org/10.1002/qj.4121",
+            "author": [
+                {
+                    "family": "Casellas",
+                    "given": "Enric"
+                },
+                {
+                    "family": "Bech",
+                    "given": "Joan"
+                },
+                {
+                    "family": "Veciana",
+                    "given": "Roger"
+                },
+                {
+                    "family": "Pineda",
+                    "given": "Nicolau"
+                },
+                {
+                    "family": "Miró",
+                    "given": "Josep Ramon"
+                },
+                {
+                    "family": "Moré",
+                    "given": "Jordi"
+                },
+                {
+                    "family": "Rigo",
+                    "given": "Tomeu"
+                },
+                {
+                    "family": "Sairouni",
+                    "given": "Abdel"
+                }
+            ],
+            "container-title": "Quarterly Journal of the Royal Meteorological Society",
+            "id": "casellas2021",
+            "issue": "739",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        7
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "3135-3153",
+            "title": "Nowcasting the precipitation phase combining weather radar data, surface observations, and NWP model forecasts",
+            "type": "article-journal",
+            "volume": "147"
+        },
+        {
+            "DOI": "10.1145/3292500.3330762",
+            "URL": "http://dx.doi.org/10.1145/3292500.3330762",
+            "author": [
+                {
+                    "family": "Lebedev",
+                    "given": "Vadim"
+                },
+                {
+                    "family": "Ivashkin",
+                    "given": "Vladimir"
+                },
+                {
+                    "family": "Rudenko",
+                    "given": "Irina"
+                },
+                {
+                    "family": "Ganshin",
+                    "given": "Alexander"
+                },
+                {
+                    "family": "Molchanov",
+                    "given": "Alexander"
+                },
+                {
+                    "family": "Ovcharenko",
+                    "given": "Sergey"
+                },
+                {
+                    "family": "Grokhovetskiy",
+                    "given": "Ruslan"
+                },
+                {
+                    "family": "Bushmarinov",
+                    "given": "Ivan"
+                },
+                {
+                    "family": "Solomentsev",
+                    "given": "Dmitry"
+                }
+            ],
+            "container-title": "Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining",
+            "id": "lebedev2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        7,
+                        25
+                    ]
+                ]
+            },
+            "page": "2680-2688",
+            "title": "Precipitation nowcasting with satellite imagery",
+            "type": "article-journal"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=janitor",
+            "author": [
+                {
+                    "family": "Firke",
+                    "given": "Sam"
+                }
+            ],
+            "id": "firke2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "DOI: 10.32614/CRAN.package.janitor",
+            "title": "Janitor: Simple tools for examining and cleaning dirty data",
+            "title-short": "Janitor",
+            "type": "report"
+        },
+        {
+            "DOI": "10.18637/jss.v027.i03",
+            "URL": "http://www.jstatsoft.org/v27/i03/",
+            "author": [
+                {
+                    "family": "Hyndman",
+                    "given": "Rob J."
+                },
+                {
+                    "family": "Khandakar",
+                    "given": "Yeasmin"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "hyndman2008",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Publisher: Foundation for Open Access Statistic",
+            "title": "Automatic Time Series Forecasting: The<b>forecast</b>Package for<i>R</i>",
+            "title-short": "Automatic Time Series Forecasting",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "DOI": "10.21105/joss.01686",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Averick",
+                    "given": "Mara"
+                },
+                {
+                    "family": "Bryan",
+                    "given": "Jennifer"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "McGowan",
+                    "given": "Lucy D’Agostino"
+                },
+                {
+                    "family": "François",
+                    "given": "Romain"
+                },
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                },
+                {
+                    "family": "Hayes",
+                    "given": "Alex"
+                },
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Hester",
+                    "given": "Jim"
+                },
+                {
+                    "family": "Kuhn",
+                    "given": "Max"
+                },
+                {
+                    "family": "Pedersen",
+                    "given": "Thomas Lin"
+                },
+                {
+                    "family": "Miller",
+                    "given": "Evan"
+                },
+                {
+                    "family": "Bache",
+                    "given": "Stephan Milton"
+                },
+                {
+                    "family": "Müller",
+                    "given": "Kirill"
+                },
+                {
+                    "family": "Ooms",
+                    "given": "Jeroen"
+                },
+                {
+                    "family": "Robinson",
+                    "given": "David"
+                },
+                {
+                    "family": "Seidel",
+                    "given": "Dana Paige"
+                },
+                {
+                    "family": "Spinu",
+                    "given": "Vitalie"
+                },
+                {
+                    "family": "Takahashi",
+                    "given": "Kohske"
+                },
+                {
+                    "family": "Vaughan",
+                    "given": "Davis"
+                },
+                {
+                    "family": "Wilke",
+                    "given": "Claus"
+                },
+                {
+                    "family": "Woo",
+                    "given": "Kara"
+                },
+                {
+                    "family": "Yutani",
+                    "given": "Hiroaki"
+                }
+            ],
+            "container-title": "Journal of Open Source Software",
+            "id": "wickham2019",
+            "issue": "43",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "1686",
+            "title": "Welcome to the tidyverse",
+            "type": "article-journal",
+            "volume": "4"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=readxl",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Bryan",
+                    "given": "Jennifer"
+                }
+            ],
+            "id": "wickham2025",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "note": "DOI: 10.32614/CRAN.package.readxl",
+            "title": "Readxl: Read excel files",
+            "title-short": "Readxl",
+            "type": "report"
+        },
+        {
+            "URL": "https://www.R-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "R-core",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A language and environment for statistical computing",
+            "title-short": "R",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1201/9780429459016",
+            "URL": "https://r-spatial.org/book/",
+            "author": [
+                {
+                    "family": "Pebesma",
+                    "given": "Edzer"
+                },
+                {
+                    "family": "Bivand",
+                    "given": "Roger"
+                }
+            ],
+            "id": "PebesmaandBivand2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "page": "352",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "London",
+            "title": "Spatial Data Science: With applications in R",
+            "type": "book"
+        },
+        {
+            "DOI": "10.32614/rj-2018-009",
+            "URL": "http://dx.doi.org/10.32614/RJ-2018-009",
+            "author": [
+                {
+                    "family": "Pebesma",
+                    "given": "Edzer"
+                }
+            ],
+            "container-title": "The R Journal",
+            "id": "pebesma2018",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "439",
+            "title": "Simple Features for R: Standardized Support for Spatial Vector Data",
+            "title-short": "Simple Features for R",
+            "type": "article-journal",
+            "volume": "10"
+        },
+        {
+            "URL": "https://www.qgis.org",
+            "author": [
+                {
+                    "literal": "QGIS Development Team"
+                }
+            ],
+            "id": "QGIS_software",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "publisher": "QGIS Association; QGIS Association",
+            "title": "QGIS geographic information system",
+            "type": "book"
+        },
+        {
+            "DOI": "https://doi.org/10.1016/j.patter.2025.101265",
+            "ISSN": "2666-3899",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S2666389925001138",
+            "author": [
+                {
+                    "family": "Graser",
+                    "given": "Anita"
+                },
+                {
+                    "family": "Sutton",
+                    "given": "Tim"
+                },
+                {
+                    "family": "Bernasocchi",
+                    "given": "Marco"
+                }
+            ],
+            "container-title": "Patterns",
+            "id": "graser2025",
+            "issue": "7",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "page": "101265",
+            "title": "The QGIS project: Spatial without compromise",
+            "title-short": "The QGIS project",
+            "type": "article-journal",
+            "volume": "6"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gomes",
+                    "given": "Almério de Castro"
+                }
+            ],
+            "container-title": "Informes Epidemiológicos do SUS",
+            "id": "gomes1998",
+            "issued": {
+                "date-parts": [
+                    [
+                        1998
+                    ]
+                ]
+            },
+            "page": "49-57",
+            "title": "Medidas dos níveis de infestação urbana para <i>Aedes (Stegomyia) aegypti</i> e <i>Aedes (Stegomyia) albopictus</i> em programa de vigilância entomológica",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.1016/0304-4076(92)90104-Y",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/030440769290104Y",
+            "author": [
+                {
+                    "family": "Kwiatkowski",
+                    "given": "Denis"
+                },
+                {
+                    "family": "Phillips",
+                    "given": "Peter C. B."
+                },
+                {
+                    "family": "Schmidt",
+                    "given": "Peter"
+                },
+                {
+                    "family": "Shin",
+                    "given": "Yongcheol"
+                }
+            ],
+            "container-title": "Journal of Econometrics",
+            "id": "kwiatkowski1992",
+            "issue": "1-3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1992,
+                        10
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "159-178",
+            "title": "Testing the null hypothesis of stationarity against the alternative of a unit root",
+            "type": "article-journal",
+            "volume": "54"
+        },
+        {
+            "DOI": "10.1590/S0073-47212002000400005",
+            "URL": "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0073-47212002000400005&lng=pt&tlng=pt",
+            "author": [
+                {
+                    "family": "Silva",
+                    "given": "Allan Martins Da"
+                }
+            ],
+            "container-title": "Iheringia. Série Zoologia",
+            "id": "silva2002",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002,
+                        12,
+                        30
+                    ]
+                ]
+            },
+            "note": "Number: 4",
+            "page": "31-36",
+            "title": "Imaturos de mosquito (diptera, culicidae) de áreas urbana e rural no norte do estado do paraná, brasil",
+            "type": "article-journal",
+            "volume": "92"
+        },
+        {
+            "DOI": "10.1007/s10750-007-9037-x",
+            "URL": "http://link.springer.com/10.1007/s10750-007-9037-x",
+            "author": [
+                {
+                    "family": "Rueda",
+                    "given": "Leopoldo M."
+                }
+            ],
+            "container-title": "Hydrobiologia",
+            "id": "rueda2008",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 1",
+            "page": "477-487",
+            "title": "Global diversity of mosquitoes (Insecta: Diptera: Culicidae) in freshwater",
+            "title-short": "Global diversity of mosquitoes (Insecta",
+            "type": "article-journal",
+            "volume": "595"
+        },
+        {
+            "author": [
+                {
+                    "family": "Service",
+                    "given": "M W"
+                }
+            ],
+            "edition": "2",
+            "id": "service1995",
+            "issued": {
+                "date-parts": [
+                    [
+                        1995
+                    ]
+                ]
+            },
+            "language": "eng",
+            "publisher": "Chapman & Hall",
+            "publisher-place": "Dordrecht, the Netherlands",
+            "title": "Mosquito ecology : field sampling methods",
+            "title-short": "Mosquito ecology ",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1590/s0101-81752005000300021",
+            "author": [
+                {
+                    "family": "Zequi",
+                    "given": "João Antonio Cyrino"
+                },
+                {
+                    "family": "Lopes",
+                    "given": "José"
+                },
+                {
+                    "family": "Medri",
+                    "given": "Ísis Meri"
+                }
+            ],
+            "container-title": "Revista Brasileira De Zoologia",
+            "id": "zequi2005",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "note": "Publisher: Sociedade Brasileira de Zoologia",
+            "page": "656-661",
+            "title": "Imaturos de culicidae (diptera) encontrados em recipientes instalados em mata residual no munícipio de londrina, paraná, brasil",
+            "type": "article-journal",
+            "volume": "22"
+        },
+        {
+            "author": [
+                {
+                    "family": "Silver",
+                    "given": "John B."
+                },
+                {
+                    "family": "Service",
+                    "given": "M. W."
+                }
+            ],
+            "edition": "3rd ed",
+            "id": "silver2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "language": "eng",
+            "publisher": "Springer",
+            "publisher-place": "Dordrecht, the Netherlands",
+            "title": "Mosquito ecology: field sampling methods",
+            "title-short": "Mosquito ecology",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Forattini",
+                    "given": "Oswaldo Paulo"
+                }
+            ],
+            "id": "forattini1996",
+            "issued": {
+                "date-parts": [
+                    [
+                        1996
+                    ]
+                ]
+            },
+            "publisher": "Edusp",
+            "title": "Culicidologia médica: Princípios gerais, morfologia, glossário taxonômico.",
+            "title-short": "Culicidologia médica",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "URL": "https://books.google.com.br/books?id=_L0wAAAAIAAJ",
+            "author": [
+                {
+                    "family": "Forattini",
+                    "given": "Oswaldo Paulo"
+                }
+            ],
+            "collection-title": "Entomologia médica",
+            "id": "forattini1962",
+            "issued": {
+                "date-parts": [
+                    [
+                        1962
+                    ]
+                ]
+            },
+            "language": "pt-BR",
+            "note": "Citation Key: forattini1962entomologia Number: v. 1 tex.lccn: 67077463",
+            "publisher": "Universidade de São Paulo",
+            "publisher-place": "São Paulo",
+            "title": "Entomologia médica",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "DOI": "10.1590/s0034-89101990000200003",
+            "author": [
+                {
+                    "family": "Bergo",
+                    "given": "Eduardo Sterlino"
+                },
+                {
+                    "family": "Buralli",
+                    "given": "Geraldo Magela"
+                },
+                {
+                    "family": "Santos",
+                    "given": "Jair Licio Ferreira"
+                },
+                {
+                    "family": "Gurgel",
+                    "given": "Sergio Mello"
+                }
+            ],
+            "container-title": "Revista de Saúde Pública",
+            "id": "bergo1990",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "note": "Number: 2",
+            "page": "95-100",
+            "title": "Avaliação do desenvolvimento larval de anopheles darlingi criado em laboratório sob diferentes dietas",
+            "type": "article-journal",
+            "volume": "24"
+        },
+        {
+            "DOI": "10.1590/s0085-56262012005000005",
+            "author": [
+                {
+                    "family": "Zequi",
+                    "given": "Antonio C"
+                },
+                {
+                    "family": "Lopes",
+                    "given": "José"
+                }
+            ],
+            "container-title": "Revista brasileira de entomologia",
+            "id": "zequi2012",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "note": "Number: 1 Publisher: Entomological Society of Brazil",
+            "page": "106-110",
+            "title": "Development of the immature stages of <i>Culex</i> (<i>Culex</i>) <i>saltanensis</i> dyar (diptera, culicidae) under laboratory conditions",
+            "type": "article-journal",
+            "volume": "56"
+        },
+        {
+            "DOI": "10.1590/S0102-311X2006001000013",
+            "URL": "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0102-311X2006001000013&lng=pt&tlng=pt",
+            "author": [
+                {
+                    "family": "Lima-Camara",
+                    "given": "Tamara Nunes De"
+                },
+                {
+                    "family": "Honório",
+                    "given": "Nildimar Alves"
+                },
+                {
+                    "family": "Lourenço-de-Oliveira",
+                    "given": "Ricardo"
+                }
+            ],
+            "container-title": "Cadernos de Saúde Pública",
+            "id": "lima-camara2006",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006,
+                        10
+                    ]
+                ]
+            },
+            "note": "Number: 10",
+            "page": "2079-2084",
+            "title": "Freqüência e distribuição espacial de <i>Aedes aegypti</i> e <i>Aedes albopictus</i> (diptera, culicidae) no rio de janeiro, brasil",
+            "type": "article-journal",
+            "volume": "22"
+        },
+        {
+            "DOI": "10.1098/rsif.2012.0138",
+            "URL": "https://royalsocietypublishing.org/doi/10.1098/rsif.2012.0138",
+            "author": [
+                {
+                    "family": "Caminade",
+                    "given": "Cyril"
+                },
+                {
+                    "family": "Medlock",
+                    "given": "Jolyon M."
+                },
+                {
+                    "family": "Ducheyne",
+                    "given": "Els"
+                },
+                {
+                    "family": "McIntyre",
+                    "given": "K. Marie"
+                },
+                {
+                    "family": "Leach",
+                    "given": "Steve"
+                },
+                {
+                    "family": "Baylis",
+                    "given": "Matthew"
+                },
+                {
+                    "family": "Morse",
+                    "given": "Andrew P."
+                }
+            ],
+            "container-title": "Journal of The Royal Society Interface",
+            "id": "caminade2012",
+            "issue": "75",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012,
+                        10,
+                        7
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "2708-2717",
+            "title": "Suitability of European climate for the Asian tiger mosquito <i>Aedes albopictus</i> : recent trends and future scenarios",
+            "title-short": "Suitability of European climate for the Asian tiger mosquito <i>Aedes albopictus</i> ",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "DOI": "10.1186/s13071-022-05413-5",
+            "author": [
+                {
+                    "family": "Swan",
+                    "given": "Tom"
+                },
+                {
+                    "family": "Russell",
+                    "given": "Tanya L."
+                },
+                {
+                    "family": "Staunton",
+                    "given": "Kyran M."
+                },
+                {
+                    "family": "Field",
+                    "given": "Matt A."
+                },
+                {
+                    "family": "Ritchie",
+                    "given": "Scott A."
+                },
+                {
+                    "family": "Burkot",
+                    "given": "Thomas R."
+                }
+            ],
+            "container-title": "Parasites & Vectors",
+            "id": "swan2022",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "title": "A literature review of dispersal pathways of <i>Aedes albopictus</i> across different spatial scales: Implications for vector surveillance",
+            "title-short": "A literature review of dispersal pathways of <i>Aedes albopictus</i> across different spatial scales",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
+            "DOI": "10.1590/0074-0276130395",
+            "URL": "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0074-02762013000900011&lng=en&tlng=en",
+            "author": [
+                {
+                    "family": "Powell",
+                    "given": "Jeffrey R"
+                },
+                {
+                    "family": "Tabachnick",
+                    "given": "Walter J"
+                }
+            ],
+            "container-title": "Memórias do Instituto Oswaldo Cruz",
+            "id": "powell2013",
+            "issue": "suppl 1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "note": "Number: suppl 1",
+            "page": "11-17",
+            "title": "History of domestication and spread of <i>Aedes aegypti</i> - a review",
+            "type": "article-journal",
+            "volume": "108"
+        },
+        {
+            "DOI": "10.1186/s12915-017-0351-0",
+            "author": [
+                {
+                    "family": "Crawford",
+                    "given": "Jacob E."
+                },
+                {
+                    "family": "Alves",
+                    "given": "Joel M."
+                },
+                {
+                    "family": "Palmer",
+                    "given": "William J."
+                },
+                {
+                    "family": "Day",
+                    "given": "Jonathan P."
+                },
+                {
+                    "family": "Sylla",
+                    "given": "Massamba"
+                },
+                {
+                    "family": "Ramasamy",
+                    "given": "Ranjan"
+                },
+                {
+                    "family": "Surendran",
+                    "given": "Sinnathamby N."
+                },
+                {
+                    "family": "Black",
+                    "given": "William C."
+                },
+                {
+                    "family": "Pain",
+                    "given": "Arnab"
+                },
+                {
+                    "family": "Jiggins",
+                    "given": "Francis M."
+                }
+            ],
+            "container-title": "BMC Biology",
+            "id": "crawford2017",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "Population genomics reveals that an anthropophilic population of <i>Aedes aegypti</i> mosquitoes in west africa recently gave rise to american and asian populations of this major disease vector",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
+            "DOI": "10.1016/j.cois.2022.100986",
+            "author": [
+                {
+                    "family": "Tchouassi",
+                    "given": "David P"
+                },
+                {
+                    "family": "Agha",
+                    "given": "Sheila B"
+                },
+                {
+                    "family": "Villinger",
+                    "given": "Jandouwe"
+                },
+                {
+                    "family": "Sang",
+                    "given": "Rosemary"
+                },
+                {
+                    "family": "Torto",
+                    "given": "Baldwyn"
+                }
+            ],
+            "container-title": "Current Opinion in Insect Science",
+            "id": "tchouassi2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "100986",
+            "title": "The distinctive bionomics of <i>Aedes aegypti</i> populations in africa",
+            "type": "article-journal",
+            "volume": "54"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gonçalves",
+                    "given": "Huener Silva"
+                },
+                {
+                    "dropping-particle": "de",
+                    "family": "Lara",
+                    "given": "Jorge Tibilletti"
+                }
+            ],
+            "container-title": "Contraponto",
+            "id": "gonçalves2021",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "Number: 1",
+            "page": "500",
+            "title": "Entre doentes e mosquitos: A dengue ronda o paraná em 1986",
+            "title-short": "Entre doentes e mosquitos",
+            "type": "article-journal",
+            "volume": "10"
+        },
+        {
+            "DOI": "10.1093/jme/tjac070",
+            "URL": "https://academic.oup.com/jme/article/59/4/1164/6596097",
+            "author": [
+                {
+                    "family": "Moore",
+                    "given": "Thomas C"
+                },
+                {
+                    "family": "Brown",
+                    "given": "Heidi E"
+                }
+            ],
+            "container-title": "Journal of Medical Entomology",
+            "editor": [
+                {
+                    "family": "Alto",
+                    "given": "Barry"
+                }
+            ],
+            "id": "moore2022",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        7,
+                        13
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 4",
+            "page": "1164-1170",
+            "title": "Estimating <i>Aedes aegypti</i> (Diptera: Culicidae) Flight Distance: Meta-Data Analysis",
+            "title-short": "Estimating <i>Aedes aegypti</i> (Diptera",
+            "type": "article-journal",
+            "volume": "59"
+        },
+        {
+            "DOI": "10.1038/s41579-021-00639-z",
+            "URL": "https://www.nature.com/articles/s41579-021-00639-z",
+            "author": [
+                {
+                    "family": "Baker",
+                    "given": "Rachel E."
+                },
+                {
+                    "family": "Mahmud",
+                    "given": "Ayesha S."
+                },
+                {
+                    "family": "Miller",
+                    "given": "Ian F."
+                },
+                {
+                    "family": "Rajeev",
+                    "given": "Malavika"
+                },
+                {
+                    "family": "Rasambainarivo",
+                    "given": "Fidisoa"
+                },
+                {
+                    "family": "Rice",
+                    "given": "Benjamin L."
+                },
+                {
+                    "family": "Takahashi",
+                    "given": "Saki"
+                },
+                {
+                    "family": "Tatem",
+                    "given": "Andrew J."
+                },
+                {
+                    "family": "Wagner",
+                    "given": "Caroline E."
+                },
+                {
+                    "family": "Wang",
+                    "given": "Lin-Fa"
+                },
+                {
+                    "family": "Wesolowski",
+                    "given": "Amy"
+                },
+                {
+                    "family": "Metcalf",
+                    "given": "C. Jessica E."
+                }
+            ],
+            "container-title": "Nature Reviews Microbiology",
+            "id": "baker2022",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        4
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "193-205",
+            "title": "Infectious disease in an era of global change",
+            "type": "article-journal",
+            "volume": "20"
+        },
+        {
+            "DOI": "10.1016/j.cell.2020.08.021",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0092867420310126",
+            "author": [
+                {
+                    "family": "Morens",
+                    "given": "David M."
+                },
+                {
+                    "family": "Fauci",
+                    "given": "Anthony S."
+                }
+            ],
+            "container-title": "Cell",
+            "id": "morens2020",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        9
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "1077-1092",
+            "title": "Emerging Pandemic Diseases: How We Got to COVID-19",
+            "title-short": "Emerging Pandemic Diseases",
+            "type": "article-journal",
+            "volume": "182"
+        },
+        {
+            "DOI": "10.1038/s41586-022-04788-w",
+            "URL": "https://www.nature.com/articles/s41586-022-04788-w",
+            "author": [
+                {
+                    "family": "Carlson",
+                    "given": "Colin J."
+                },
+                {
+                    "family": "Albery",
+                    "given": "Gregory F."
+                },
+                {
+                    "family": "Merow",
+                    "given": "Cory"
+                },
+                {
+                    "family": "Trisos",
+                    "given": "Christopher H."
+                },
+                {
+                    "family": "Zipfel",
+                    "given": "Casey M."
+                },
+                {
+                    "family": "Eskew",
+                    "given": "Evan A."
+                },
+                {
+                    "family": "Olival",
+                    "given": "Kevin J."
+                },
+                {
+                    "family": "Ross",
+                    "given": "Noam"
+                },
+                {
+                    "family": "Bansal",
+                    "given": "Shweta"
+                }
+            ],
+            "container-title": "Nature",
+            "id": "carlson2022",
+            "issue": "7919",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        7,
+                        21
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "555-562",
+            "title": "Climate change increases cross-species viral transmission risk",
+            "type": "article-journal",
+            "volume": "607"
+        },
+        {
+            "DOI": "10.1128/CMR.00023-07",
+            "URL": "https://journals.asm.org/doi/10.1128/CMR.00023-07",
+            "author": [
+                {
+                    "family": "Cheng",
+                    "given": "Vincent C. C."
+                },
+                {
+                    "family": "Lau",
+                    "given": "Susanna K. P."
+                },
+                {
+                    "family": "Woo",
+                    "given": "Patrick C. Y."
+                },
+                {
+                    "family": "Yuen",
+                    "given": "Kwok Yung"
+                }
+            ],
+            "container-title": "Clinical Microbiology Reviews",
+            "id": "cheng2007",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007,
+                        10
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "660-694",
+            "title": "Severe Acute Respiratory Syndrome Coronavirus as an Agent of Emerging and Reemerging Infection",
+            "type": "article-journal",
+            "volume": "20"
+        },
+        {
+            "DOI": "10.1086/315457",
+            "URL": "https://academic.oup.com/jid/article-lookup/doi/10.1086/315457",
+            "author": [
+                {
+                    "family": "Parashar",
+                    "given": "Umesh D."
+                },
+                {
+                    "family": "Sunn",
+                    "given": "Lye Munn"
+                },
+                {
+                    "family": "Ong",
+                    "given": "Flora"
+                },
+                {
+                    "family": "Mounts",
+                    "given": "Anthony W."
+                },
+                {
+                    "family": "Arif",
+                    "given": "Mohamad Taha"
+                },
+                {
+                    "family": "Ksiazek",
+                    "given": "Thomas G."
+                },
+                {
+                    "family": "Kamaluddin",
+                    "given": "Muhammad A."
+                },
+                {
+                    "family": "Mustafa",
+                    "given": "Amal N."
+                },
+                {
+                    "family": "Kaur",
+                    "given": "Hanjeet"
+                },
+                {
+                    "family": "Ding",
+                    "given": "Lay Ming"
+                },
+                {
+                    "family": "Othman",
+                    "given": "Ghazali"
+                },
+                {
+                    "family": "Radzi",
+                    "given": "Hayati M."
+                },
+                {
+                    "family": "Kitsutani",
+                    "given": "Paul T."
+                },
+                {
+                    "family": "Stockton",
+                    "given": "Patrick C."
+                },
+                {
+                    "family": "Arokiasamy",
+                    "given": "John"
+                },
+                {
+                    "family": "Gary, Jr.",
+                    "given": "Howard E."
+                },
+                {
+                    "family": "Anderson",
+                    "given": "Larry J."
+                }
+            ],
+            "container-title": "The Journal of Infectious Diseases",
+            "id": "parashar2000",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000,
+                        5
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "1755-1759",
+            "title": "Case-Control Study of Risk Factors for Human Infection with a New Zoonotic Paramyxovirus, Nipah Virus, during a 19981999 Outbreak of Severe Encephalitis in Malaysia",
+            "type": "article-journal",
+            "volume": "181"
+        },
+        {
+            "edition": "5th ed",
+            "editor": [
+                {
+                    "family": "Porta",
+                    "given": "Miquel S."
+                },
+                {
+                    "family": "International Epidemiological Association"
+                }
+            ],
+            "id": "adictio2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "language": "en",
+            "publisher": "Oxford University Press",
+            "publisher-place": "Oxford, New York",
+            "title": "A dictionary of epidemiology",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gordis",
+                    "given": "Leon"
+                }
+            ],
+            "edition": "Fifth edition",
+            "id": "gordis2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "publisher": "Elsevier/Saunders",
+            "publisher-place": "Philadelphia, PA",
+            "title": "Epidemiology",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1590/0001-3765202220211530",
+            "URL": "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0001-37652022000700601&tlng=en",
+            "author": [
+                {
+                    "family": "Ellwanger",
+                    "given": "Joel Henrique"
+                },
+                {
+                    "family": "Fearnside",
+                    "given": "Philip Martin"
+                },
+                {
+                    "family": "Ziliotto",
+                    "given": "Marina"
+                },
+                {
+                    "family": "Valverde-Villegas",
+                    "given": "Jacqueline María"
+                },
+                {
+                    "family": "Veiga",
+                    "given": "Ana Beatriz G. Da"
+                },
+                {
+                    "family": "Vieira",
+                    "given": "Gustavo F."
+                },
+                {
+                    "family": "Bach",
+                    "given": "Evelise"
+                },
+                {
+                    "family": "Cardoso",
+                    "given": "Jáder C."
+                },
+                {
+                    "family": "Müller",
+                    "given": "Nícolas Felipe D."
+                },
+                {
+                    "family": "Lopes",
+                    "given": "Gabriel"
+                },
+                {
+                    "family": "Caesar",
+                    "given": "Lílian"
+                },
+                {
+                    "family": "Kulmann-Leal",
+                    "given": "Bruna"
+                },
+                {
+                    "family": "Kaminski",
+                    "given": "Valéria L."
+                },
+                {
+                    "family": "Silveira",
+                    "given": "Etiele S."
+                },
+                {
+                    "family": "Spilki",
+                    "given": "Fernando R."
+                },
+                {
+                    "family": "Weber",
+                    "given": "Matheus N."
+                },
+                {
+                    "family": "Almeida",
+                    "given": "Sabrina E. De Matos"
+                },
+                {
+                    "family": "Hora",
+                    "given": "Vanusa P. Da"
+                },
+                {
+                    "family": "Chies",
+                    "given": "José Artur B."
+                }
+            ],
+            "container-title": "Anais da Academia Brasileira de Ciências",
+            "id": "ellwanger2022",
+            "issue": "suppl 3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "e20211530",
+            "title": "Synthesizing the connections between environmental disturbances and zoonotic spillover",
+            "type": "article-journal",
+            "volume": "94"
+        },
+        {
+            "URL": "https://www.who.int/news-room/fact-sheets/detail/vector-borne-diseases",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        9,
+                        26
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "WHO"
+                }
+            ],
+            "id": "whowor2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "language": "en",
+            "publisher": "World Health Organization",
+            "title": "Vector-borne diseases",
+            "type": "webpage"
+        },
+        {
+            "DOI": "10.3390/insects11110747",
+            "URL": "https://www.mdpi.com/2075-4450/11/11/747",
+            "author": [
+                {
+                    "family": "Donald",
+                    "given": "Claire L."
+                },
+                {
+                    "family": "Siriyasatien",
+                    "given": "Padet"
+                },
+                {
+                    "family": "Kohl",
+                    "given": "Alain"
+                }
+            ],
+            "container-title": "Insects",
+            "id": "donald2020",
+            "issue": "11",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        10,
+                        30
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 11",
+            "page": "747",
+            "title": "Toxorhynchites Species: A Review of Current Knowledge",
+            "title-short": "Toxorhynchites Species",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "DOI": "10.1093/jmedent/27.4.446",
+            "author": [
+                {
+                    "family": "Tsuji",
+                    "given": "Nobuyuki"
+                },
+                {
+                    "family": "Okazawa",
+                    "given": "Takao"
+                },
+                {
+                    "family": "Yamamura",
+                    "given": "Norio"
+                }
+            ],
+            "container-title": "Journal of medical entomology",
+            "id": "tsuji1990",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "note": "Number: 4",
+            "page": "446-453",
+            "title": "Autogenous and anautogenous mosquitoes: A mathematical analysis of reproductive strategies",
+            "title-short": "Autogenous and anautogenous mosquitoes",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "DOI": "10.1146/annurev.en.16.010171.001311",
+            "author": [
+                {
+                    "family": "Spielman",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Annual Review of Entomology",
+            "id": "spielman1971",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1971
+                    ]
+                ]
+            },
+            "page": "231-248",
+            "title": "Bionomics of autogenous mosquitoes",
+            "type": "article-journal",
+            "volume": "16"
+        },
+        {
+            "DOI": "10.1016/B9780128140437.00011X",
+            "URL": "https://www.sciencedirect.com/science/article/pii/B978012814043700011X",
+            "author": [
+                {
+                    "family": "Gerhardt",
+                    "given": "Reid R"
+                },
+                {
+                    "family": "Hribar",
+                    "given": "Lawrence J"
+                },
+                {
+                    "family": "Mullen",
+                    "given": "Gary R"
+                },
+                {
+                    "family": "Durden",
+                    "given": "Lance A"
+                }
+            ],
+            "editor": [
+                {
+                    "family": "Mullen",
+                    "given": "Gary R."
+                },
+                {
+                    "family": "Durden",
+                    "given": "Lance A."
+                }
+            ],
+            "id": "gerhardt2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "171-190",
+            "publisher": "Academic Press",
+            "publisher-place": "Mississippi, US",
+            "title": "Chapter 11 - flies (diptera)",
+            "type": "chapter"
+        },
+        {
+            "DOI": "10.1093/jmedent/31.4.554",
+            "author": [
+                {
+                    "family": "Chambers",
+                    "given": "Gail M."
+                },
+                {
+                    "family": "Klowden",
+                    "given": "Marc J."
+                }
+            ],
+            "container-title": "Journal of Medical Entomology",
+            "id": "chambers1994",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "page": "554-560",
+            "title": "Nutritional reserves of autogenous and anautogenous selected strains of <i>Aedes albopictus</i> (diptera: culicidae)",
+            "title-short": "Nutritional reserves of autogenous and anautogenous selected strains of <i>Aedes albopictus</i> (diptera",
+            "type": "article-journal",
+            "volume": "31"
+        },
+        {
+            "DOI": "10.1038/emi.2017.59",
+            "author": [
+                {
+                    "family": "Guedes",
+                    "given": "Duschinka RD"
+                },
+                {
+                    "family": "Paiva",
+                    "given": "Marcelo HS"
+                },
+                {
+                    "family": "Donato",
+                    "given": "Mariana MA"
+                },
+                {
+                    "family": "Barbosa",
+                    "given": "Priscilla P"
+                },
+                {
+                    "family": "Krokovsky",
+                    "given": "Larissa"
+                },
+                {
+                    "family": "Rocha",
+                    "given": "Sura W dos S"
+                },
+                {
+                    "family": "Saraiva",
+                    "given": "Karina LA"
+                },
+                {
+                    "family": "Crespo",
+                    "given": "Mônica M"
+                },
+                {
+                    "family": "Rezende",
+                    "given": "Tatiana MT"
+                },
+                {
+                    "family": "Wallau",
+                    "given": "Gabriel L"
+                },
+                {
+                    "family": "Barbosa",
+                    "given": "Rosângela MR"
+                },
+                {
+                    "family": "Oliveira",
+                    "given": "Cláudia MF"
+                },
+                {
+                    "family": "Melo-Santos",
+                    "given": "Maria AV"
+                },
+                {
+                    "family": "Pena",
+                    "given": "Lindomar"
+                },
+                {
+                    "family": "Cordeiro",
+                    "given": "Marli T"
+                },
+                {
+                    "family": "Franca",
+                    "given": "Rafael F de O"
+                },
+                {
+                    "dropping-particle": "de",
+                    "family": "Oliveira",
+                    "given": "André LS"
+                },
+                {
+                    "family": "Peixoto",
+                    "given": "Christina A"
+                },
+                {
+                    "family": "Leal",
+                    "given": "Walter S"
+                },
+                {
+                    "family": "Ayres",
+                    "given": "Constância FJ"
+                }
+            ],
+            "container-title": "Emerging Microbes & Infections",
+            "id": "guedes2017",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "1-11",
+            "title": "Zika virus replication in the mosquito <i>Culex quinquefasciatus</i> in brazil",
+            "type": "article-journal",
+            "volume": "6"
+        },
+        {
+            "DOI": "10.1016/B978-0-12-814043-7.00015-7",
+            "URL": "https://www.sciencedirect.com/science/article/pii/B9780128140437000157",
+            "author": [
+                {
+                    "family": "Foster",
+                    "given": "Woodbridge A"
+                },
+                {
+                    "family": "Walker",
+                    "given": "Edward D"
+                }
+            ],
+            "editor": [
+                {
+                    "family": "Mullen",
+                    "given": "Gary R."
+                },
+                {
+                    "family": "Durden",
+                    "given": "Lance A."
+                }
+            ],
+            "id": "foster2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "261-325",
+            "publisher": "Academic Press",
+            "publisher-place": "Mississippi, US",
+            "title": "Chapter 15 - mosquitoes (culicidae)",
+            "type": "chapter"
+        },
+        {
+            "DOI": "10.1111/1744-7917.13110",
+            "author": [
+                {
+                    "family": "Dou",
+                    "given": "Xiaoyi"
+                },
+                {
+                    "family": "Chen",
+                    "given": "Kangkang"
+                },
+                {
+                    "family": "Brown",
+                    "given": "Mark R"
+                },
+                {
+                    "family": "Strand",
+                    "given": "Michael R"
+                }
+            ],
+            "container-title": "Insect science",
+            "id": "dou2022",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "425-442",
+            "title": "Multiple endocrine factors regulate nutrient mobilization and storage in <i>Aedes aegypti</i> during a gonadotrophic cycle",
+            "type": "article-journal",
+            "volume": "30"
+        },
+        {
+            "DOI": "10.1038/s44298-025-00114-z",
+            "URL": "https://www.nature.com/articles/s44298-025-00114-z",
+            "author": [
+                {
+                    "family": "Madere",
+                    "given": "Ferralita S."
+                },
+                {
+                    "family": "Andrade Da Silva",
+                    "given": "Aurea Virginia"
+                },
+                {
+                    "family": "Okeze",
+                    "given": "Efemena"
+                },
+                {
+                    "family": "Tilley",
+                    "given": "Emma"
+                },
+                {
+                    "family": "Grinev",
+                    "given": "Andriyan"
+                },
+                {
+                    "family": "Konduru",
+                    "given": "Krishnamurthy"
+                },
+                {
+                    "family": "García",
+                    "given": "Mayra"
+                },
+                {
+                    "family": "Rios",
+                    "given": "Maria"
+                }
+            ],
+            "container-title": "npj Viruses",
+            "id": "madere2025",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025,
+                        4,
+                        25
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "36",
+            "title": "Flavivirus infections and diagnostic challenges for dengue, West Nile and Zika Viruses",
+            "type": "article-journal",
+            "volume": "3"
+        },
+        {
+            "DOI": "10.3390/insects16040397",
+            "URL": "https://www.mdpi.com/2075-4450/16/4/397",
+            "author": [
+                {
+                    "family": "Reis",
+                    "given": "Hanna Carolina Farias"
+                },
+                {
+                    "family": "Dias",
+                    "given": "Daniel Damous"
+                },
+                {
+                    "family": "Nascimento",
+                    "given": "Bruna Laís Sena Do"
+                },
+                {
+                    "family": "Reis",
+                    "given": "Lucia Aline Moura"
+                },
+                {
+                    "family": "Da Silva E Silva",
+                    "given": "Lucas Henrique"
+                },
+                {
+                    "family": "Da Silva",
+                    "given": "Fábio Silva"
+                },
+                {
+                    "family": "Vieira",
+                    "given": "Durval Bertram Rodrigues"
+                },
+                {
+                    "family": "Brandão",
+                    "given": "Roberto Carlos Feitosa"
+                },
+                {
+                    "family": "Da Silva",
+                    "given": "Eliana Vieira Pinto"
+                },
+                {
+                    "family": "Nunes Neto",
+                    "given": "Joaquim Pinto"
+                }
+            ],
+            "container-title": "Insects",
+            "id": "reis2025",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025,
+                        4,
+                        10
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "397",
+            "title": "Culicidae Fauna (Diptera: Culicomorpha) of the Quilombola Community of Abacatal, Ananindeua, Pará, in the Brazilian Amazon",
+            "title-short": "Culicidae Fauna (Diptera",
+            "type": "article-journal",
+            "volume": "16"
+        },
+        {
+            "DOI": "10.1016/j.lana.2025.101229",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2667193X2500239X",
+            "author": [
+                {
+                    "family": "De Lima",
+                    "given": "Shirlene T. S."
+                },
+                {
+                    "family": "Claro",
+                    "given": "Ingra M."
+                },
+                {
+                    "family": "Hua",
+                    "given": "Xinyi"
+                },
+                {
+                    "family": "De Jesus",
+                    "given": "Ronaldo"
+                },
+                {
+                    "family": "Serres",
+                    "given": "Kyla"
+                },
+                {
+                    "family": "Simões Mello",
+                    "given": "Leda M."
+                },
+                {
+                    "family": "Forato",
+                    "given": "Julia"
+                },
+                {
+                    "family": "Moreira",
+                    "given": "Filipe R. R."
+                },
+                {
+                    "family": "Kato",
+                    "given": "Rodrigo B."
+                },
+                {
+                    "family": "Guimarães",
+                    "given": "Gustavo N."
+                },
+                {
+                    "family": "Scachetti",
+                    "given": "Gabriel C."
+                },
+                {
+                    "family": "Andrade",
+                    "given": "Pamela Dos Santos"
+                },
+                {
+                    "family": "Duarte",
+                    "given": "Larissa M. F."
+                },
+                {
+                    "family": "De Lima",
+                    "given": "Maria Eduarda T."
+                },
+                {
+                    "family": "Ferraz",
+                    "given": "Clarissa P. M."
+                },
+                {
+                    "family": "Vianna",
+                    "given": "Marisa P. N."
+                },
+                {
+                    "family": "Santiago",
+                    "given": "Rodrigo M."
+                },
+                {
+                    "family": "Braga",
+                    "given": "Enock L. R."
+                },
+                {
+                    "family": "Carneiro",
+                    "given": "Igor S."
+                },
+                {
+                    "family": "Carlos L Firmino",
+                    "given": "Antonio"
+                },
+                {
+                    "family": "Cabral",
+                    "given": "Milena G."
+                },
+                {
+                    "family": "Souza",
+                    "given": "Caio"
+                },
+                {
+                    "family": "Mello",
+                    "given": "Liana Perdigão"
+                },
+                {
+                    "family": "Li",
+                    "given": "Sabrina"
+                },
+                {
+                    "family": "Sabino",
+                    "given": "Ester C."
+                },
+                {
+                    "family": "Sallum",
+                    "given": "Maria Anice M."
+                },
+                {
+                    "family": "Weaver",
+                    "given": "Scott C."
+                },
+                {
+                    "family": "Faria",
+                    "given": "Nuno R."
+                },
+                {
+                    "family": "Romano",
+                    "given": "Camila M."
+                },
+                {
+                    "family": "Dellicour",
+                    "given": "Simon"
+                },
+                {
+                    "family": "Proenca-Modena",
+                    "given": "José Luiz"
+                },
+                {
+                    "family": "De Souza",
+                    "given": "William M."
+                }
+            ],
+            "container-title": "The Lancet Regional Health - Americas",
+            "id": "delima2025",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025,
+                        11
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "101229",
+            "title": "Active West Nile virus transmission in Brazil: an epidemiological study",
+            "title-short": "Active West Nile virus transmission in Brazil",
+            "type": "article-journal",
+            "volume": "51"
+        },
+        {
+            "DOI": "10.1371/journal.pone.0100535",
+            "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4076277/",
+            "author": [
+                {
+                    "family": "Martins",
+                    "given": "Valquiria do Carmo Alves"
+                },
+                {
+                    "family": "Bastos",
+                    "given": "Michele de Souza"
+                },
+                {
+                    "family": "Ramasawmy",
+                    "given": "Rajendranath"
+                },
+                {
+                    "dropping-particle": "de",
+                    "family": "Figueiredo",
+                    "given": "Regina Pinto"
+                },
+                {
+                    "family": "Gimaque",
+                    "given": "João Bosco Lima"
+                },
+                {
+                    "family": "Braga",
+                    "given": "Wornei Silva Miranda"
+                },
+                {
+                    "family": "Nogueira",
+                    "given": "Mauricio Lacerda"
+                },
+                {
+                    "family": "Nozawa",
+                    "given": "Sergio"
+                },
+                {
+                    "family": "Naveca",
+                    "given": "Felipe Gomes"
+                },
+                {
+                    "family": "Figueiredo",
+                    "given": "Luiz Tadeu Moraes"
+                },
+                {
+                    "family": "Mourão",
+                    "given": "Maria Paula Gomes"
+                }
+            ],
+            "container-title": "PLoS ONE",
+            "id": "martins2014",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "title": "Clinical and virological descriptive study in the 2011 outbreak of dengue in the amazonas, brazil",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "DOI": "10.1128/jcm.00877-16",
+            "author": [
+                {
+                    "family": "Sardi",
+                    "given": "Silvia I."
+                },
+                {
+                    "family": "Somasekar",
+                    "given": "Sneha"
+                },
+                {
+                    "family": "Naccache",
+                    "given": "Samia N."
+                },
+                {
+                    "family": "Bandeira",
+                    "given": "Antonio C."
+                },
+                {
+                    "family": "Tauro",
+                    "given": "Laura B."
+                },
+                {
+                    "family": "Campos",
+                    "given": "Gubio S."
+                },
+                {
+                    "family": "Chiu",
+                    "given": "Charles Y."
+                }
+            ],
+            "container-title": "Journal of Clinical Microbiology",
+            "editor": [
+                {
+                    "family": "Loeffelholz",
+                    "given": "M. J."
+                }
+            ],
+            "id": "sardi2016",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Number: 9",
+            "page": "2348-2353",
+            "title": "Coinfections of zika and chikungunya viruses in bahia, brazil, identified by metagenomic next-generation sequencing",
+            "type": "article-journal",
+            "volume": "54"
+        },
+        {
+            "DOI": "10.1016/j.bjid.2021.102294",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1413867021007637",
+            "author": [
+                {
+                    "family": "Meireles",
+                    "given": "Andressa Rocha"
+                },
+                {
+                    "family": "Fernandes",
+                    "given": "Luciano Freitas"
+                },
+                {
+                    "family": "Fernandes",
+                    "given": "Priscilla Moreira Gonçalves"
+                },
+                {
+                    "family": "Da Cruz",
+                    "given": "Guilherme Henrique Santos"
+                }
+            ],
+            "container-title": "The Brazilian Journal of Infectious Diseases",
+            "id": "meireles2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "102294",
+            "title": "Primeiro Diagnóstico De Febre Do Nilo Ocidental Em Humano Em Minas Gerais: Relato De Caso",
+            "title-short": "Primeiro Diagnóstico De Febre Do Nilo Ocidental Em Humano Em Minas Gerais",
+            "type": "article-journal",
+            "volume": "26"
+        },
+        {
+            "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2554876/",
+            "author": [
+                {
+                    "family": "Mattingly",
+                    "given": "P. F."
+                }
+            ],
+            "container-title": "Bulletin of the World Health Organization",
+            "id": "mattingly1963",
+            "issued": {
+                "date-parts": [
+                    [
+                        1963
+                    ]
+                ]
+            },
+            "page": "135-139",
+            "title": "The urban mosquito hazard today",
+            "type": "article-journal",
+            "volume": "29"
+        },
+        {
+            "DOI": "10.1016/j.ibmb.2021.103650",
+            "author": [
+                {
+                    "family": "Lara",
+                    "given": "L M"
+                },
+                {
+                    "family": "Pereira-Filho",
+                    "given": "Adalberto Alves"
+                },
+                {
+                    "family": "Mateus Pereira",
+                    "given": "Rafael Henrique"
+                },
+                {
+                    "family": "Ferreira Malta",
+                    "given": "Luccas Gabriel"
+                },
+                {
+                    "family": "D’Ávila Pessoa",
+                    "given": "Grasielle Caldas"
+                },
+                {
+                    "family": "Koerich",
+                    "given": "Leonardo Barbosa"
+                },
+                {
+                    "family": "Pereira",
+                    "given": "Marcos Horácio"
+                },
+                {
+                    "family": "Araujo",
+                    "given": "Ricardo Nascimento"
+                },
+                {
+                    "dropping-particle": "de",
+                    "family": "Figueiredo Gontijo",
+                    "given": "Nelder"
+                },
+                {
+                    "family": "Viana Sant’Anna",
+                    "given": "Mauricio Roberto"
+                }
+            ],
+            "container-title": "Insect Biochemistry and Molecular Biology",
+            "id": "lara2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "page": "103650",
+            "title": "Adaptations to haematophagy: Investigations on how male and female <i>Culex quinquefasciatus</i> (diptera: Culicidae) deal with human complement activation after a blood meal",
+            "title-short": "Adaptations to haematophagy",
+            "type": "article-journal",
+            "volume": "139"
+        },
+        {
+            "DOI": "10.1371/journal.pntd.0007518",
+            "URL": "https://dx.plos.org/10.1371/journal.pntd.0007518",
+            "author": [
+                {
+                    "family": "Pereira",
+                    "given": "Thiago Nunes"
+                },
+                {
+                    "family": "Carvalho",
+                    "given": "Fabiano Duarte"
+                },
+                {
+                    "family": "De Mendonça",
+                    "given": "Silvana Faria"
+                },
+                {
+                    "family": "Rocha",
+                    "given": "Marcele Neves"
+                },
+                {
+                    "family": "Moreira",
+                    "given": "Luciano Andrade"
+                }
+            ],
+            "container-title": "PLOS Neglected Tropical Diseases",
+            "editor": [
+                {
+                    "family": "Kittayapong",
+                    "given": "Pattamaporn"
+                }
+            ],
+            "id": "pereira2020",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        4,
+                        14
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 4",
+            "page": "e0007518",
+            "title": "Vector competence of <i>Aedes aegypti</i>, <i>Aedes albopictus</i>, and <i>Culex quinquefasciatus</i> mosquitoes for Mayaro virus",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "DOI": "10.4269/ajtmh.16-0323",
+            "author": [
+                {
+                    "family": "Zambrano",
+                    "given": "Hector"
+                },
+                {
+                    "family": "Waggoner",
+                    "given": "Jesse J."
+                },
+                {
+                    "family": "Almeida",
+                    "given": "Cristina"
+                },
+                {
+                    "family": "Rivera",
+                    "given": "Lisette"
+                },
+                {
+                    "family": "Benjamin",
+                    "given": "Juan Quintana"
+                },
+                {
+                    "family": "Pinsky",
+                    "given": "Benjamin A."
+                }
+            ],
+            "container-title": "The American Journal of Tropical Medicine and Hygiene",
+            "id": "zambrano2016",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "894-896",
+            "title": "Zika virus and chikungunya virus CoInfections: A series of three cases from a single center in ecuador",
+            "title-short": "Zika virus and chikungunya virus CoInfections",
+            "type": "article-journal",
+            "volume": "95"
+        },
+        {
+            "DOI": "10.1089/vbz.2020.2762",
+            "URL": "https://www.liebertpub.com/doi/10.1089/vbz.2020.2762",
+            "author": [
+                {
+                    "family": "Näslund",
+                    "given": "Jonas"
+                },
+                {
+                    "family": "Ahlm",
+                    "given": "Clas"
+                },
+                {
+                    "family": "Islam",
+                    "given": "Koushikul"
+                },
+                {
+                    "family": "Evander",
+                    "given": "Magnus"
+                },
+                {
+                    "family": "Bucht",
+                    "given": "Göran"
+                },
+                {
+                    "family": "Lwande",
+                    "given": "Olivia Wesula"
+                }
+            ],
+            "container-title": "Vector-Borne and Zoonotic Diseases",
+            "id": "näslund2021",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        10,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 10",
+            "page": "731-746",
+            "title": "Emerging Mosquito-Borne Viruses Linked to <i>Aedes aegypti</i> and <i>Aedes albopictus</i> : Global Status and Preventive Strategies",
+            "title-short": "Emerging Mosquito-Borne Viruses Linked to <i>Aedes aegypti</i> and <i>Aedes albopictus</i> ",
+            "type": "article-journal",
+            "volume": "21"
+        },
+        {
+            "DOI": "10.21115/jbes.v9.n3.p267-76",
+            "URL": "http://docs.bvsalud.org/biblioref/2018/04/883013/doi-1021115_jbesv9n3p267-76.pdf",
+            "author": [
+                {
+                    "family": "Teich",
+                    "given": "Vanessa"
+                },
+                {
+                    "family": "Arinelli",
+                    "given": "Roberta"
+                },
+                {
+                    "family": "Fahham",
+                    "given": "Lucas"
+                }
+            ],
+            "container-title": "Jornal Brasileiro de Economia da Saúde",
+            "id": "teich2017",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "267-276",
+            "title": "<i>Aedes aegypti</i> e sociedade: O impacto econômico das arboviroses no brasil",
+            "title-short": "<i>Aedes aegypti</i> e sociedade",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "author": [
+                {
+                    "literal": "Brasil. Ministério da Saúde. Fundação Nacional de Saúde (FUNASA)"
+                }
+            ],
+            "id": "ms_fundaçãonacionaldesaúde2002",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "FUNASA",
+            "publisher-place": "Brasilia",
+            "title": "Programa nacional de controle da dengue (PNCD)",
+            "type": "book"
+        },
+        {
+            "URL": "http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0375-07602018000300002",
+            "author": [
+                {
+                    "family": "Valdés Miró",
+                    "given": "Vivian"
+                },
+                {
+                    "family": "Reyes Arencibia",
+                    "given": "Mayra"
+                },
+                {
+                    "family": "Bandomo Abreu",
+                    "given": "Noraima"
+                },
+                {
+                    "family": "Leyva Silva",
+                    "given": "Maureen"
+                },
+                {
+                    "family": "Marquetti Fernández",
+                    "given": "María del Carmen"
+                }
+            ],
+            "container-title": "Rev. cuba. med. trop",
+            "id": "valdésmiró2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "language": "es",
+            "page": "10-17",
+            "title": "Evaluación de las larvitrampas como método de vigilancia de <i>Aedes aegypti</i> (Diptera: Culicidae) y otros culícidos",
+            "title-short": "Evaluación de las larvitrampas como método de vigilancia de <i>Aedes aegypti</i> (Diptera",
+            "type": "article-journal",
+            "volume": "70"
+        },
+        {
+            "DOI": "10.1177/1178630219886570",
+            "author": [
+                {
+                    "family": "Nascimento",
+                    "given": "Kauani Larissa Campana"
+                },
+                {
+                    "dropping-particle": "da",
+                    "family": "Silva",
+                    "given": "João Fernando Marques"
+                },
+                {
+                    "family": "Zequi",
+                    "given": "João Antonio Cyrino"
+                },
+                {
+                    "family": "Lopes",
+                    "given": "José"
+                }
+            ],
+            "container-title": "Environmental Health Insights",
+            "id": "nascimento2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "language": "eng",
+            "page": "1178630219886570",
+            "title": "Comparison Between Larval Survey Index and Positive Ovitrap Index in the Evaluation of Populations of Aedes (Stegomyia) aegypti (Linnaeus, 1762) North of Paraná, Brazil",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "DOI": "10.1017/S0950268809002052",
+            "URL": "https://www.cambridge.org/core/product/identifier/S0950268809002052/type/journal_article",
+            "author": [
+                {
+                    "family": "Yang",
+                    "given": "H. M."
+                },
+                {
+                    "family": "Macoris",
+                    "given": "M. L. G."
+                },
+                {
+                    "family": "Galvani",
+                    "given": "K. C."
+                },
+                {
+                    "family": "Andrighetti",
+                    "given": "M. T. M."
+                },
+                {
+                    "family": "Wanderley",
+                    "given": "D. M. V."
+                }
+            ],
+            "container-title": "Epidemiology and Infection",
+            "id": "yang2009",
+            "issue": "8",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009,
+                        8
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "1179-1187",
+            "title": "Assessing the effects of temperature on dengue transmission",
+            "type": "article-journal",
+            "volume": "137"
+        },
+        {
+            "DOI": "10.5540/tema.2007.08.01.0159",
+            "URL": "http://sbmac.org.br/tema/seer/index.php/tema/article/view/243",
+            "author": [
+                {
+                    "family": "Yang",
+                    "given": "H. M."
+                },
+                {
+                    "family": "Macoris",
+                    "given": "M. L. G."
+                },
+                {
+                    "family": "Galvani",
+                    "given": "K. C"
+                },
+                {
+                    "family": "Andrighetti",
+                    "given": "M. T. M."
+                }
+            ],
+            "container-title": "TEMA - Tendências em Matemática Aplicada e Computacional",
+            "id": "yang2007",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007,
+                        3,
+                        13
+                    ]
+                ]
+            },
+            "page": "159-168",
+            "title": "Dinâmica da transmissão da dengue com dados entomológicos temperatura-dependentes",
+            "type": "article-journal",
+            "volume": "8"
+        },
+        {
+            "DOI": "10.1142/S0218339015500278",
+            "URL": "https://www.worldscientific.com/doi/abs/10.1142/S0218339015500278",
+            "author": [
+                {
+                    "family": "Esteva",
+                    "given": "Lourdes"
+                },
+                {
+                    "family": "Yang",
+                    "given": "Hyun Mo"
+                }
+            ],
+            "container-title": "Journal of Biological Systems",
+            "id": "esteva2015",
+            "issue": "04",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        12
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "1550027",
+            "title": "Assessing The Effects Of Temperature And Dengue Virus Load On Dengue Transmission",
+            "type": "article-journal",
+            "volume": "23"
+        },
+        {
+            "DOI": "10.1016/j.mbs.2002.11.001",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0025556404000719",
+            "author": [
+                {
+                    "family": "Wang",
+                    "given": "Wendi"
+                },
+                {
+                    "family": "Zhao",
+                    "given": "Xiao-Qiang"
+                }
+            ],
+            "container-title": "Mathematical Biosciences",
+            "id": "wang2004",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004,
+                        7
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "97-112",
+            "title": "An epidemic model in a patchy environment",
+            "type": "article-journal",
+            "volume": "190"
+        },
+        {
+            "DOI": "10.5540/tema.2017.018.01.0003",
+            "URL": "https://tema.sbmac.org.br/tema/article/view/871",
+            "author": [
+                {
+                    "family": "Santos",
+                    "given": "Fernando Luiz Pio"
+                }
+            ],
+            "container-title": "TEMA (São Carlos)",
+            "id": "santos2017",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        5,
+                        22
+                    ]
+                ]
+            },
+            "page": "3",
+            "title": "Patches approach to investigate the populational dynamics in dengue",
+            "type": "article-journal",
+            "volume": "18"
+        },
+        {
+            "DOI": "10.1371/journal.pntd.0008813",
+            "URL": "https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0008813",
+            "author": [
+                {
+                    "dropping-particle": "da",
+                    "family": "Silva",
+                    "given": "Karina Rossi"
+                },
+                {
+                    "dropping-particle": "da",
+                    "family": "Silva",
+                    "given": "William Ribeiro"
+                },
+                {
+                    "family": "Silva",
+                    "given": "Bianca Piraccini"
+                },
+                {
+                    "family": "Arcos",
+                    "given": "Adriano Nobre"
+                },
+                {
+                    "family": "Ferreira",
+                    "given": "Francisco Augusto da Silva"
+                },
+                {
+                    "family": "Soares-da-Silva",
+                    "given": "Joelma"
+                },
+                {
+                    "family": "Pontes",
+                    "given": "Grafe Oliveira"
+                },
+                {
+                    "family": "Roque",
+                    "given": "Rosemary Aparecida"
+                },
+                {
+                    "family": "Tadei",
+                    "given": "Wanderli Pedro"
+                },
+                {
+                    "family": "Navarro-Silva",
+                    "given": "Mário Antonio"
+                },
+                {
+                    "family": "Zequi",
+                    "given": "João Antonio Cyrino"
+                }
+            ],
+            "container-title": "PLOS Neglected Tropical Diseases",
+            "id": "silva2021",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        16
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "e0008813",
+            "title": "New traps for the capture of <i>Aedes aegypti</i> (Linnaeus) and <i>Aedes albopictus</i> (Skuse) (Diptera: Culicidae) eggs and adults",
+            "title-short": "New traps for the capture of <i>Aedes aegypti</i> (Linnaeus) and <i>Aedes albopictus</i> (Skuse) (Diptera",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
+            "author": [
+                {
+                    "family": "Novais",
+                    "given": "Caroline Monteiro"
+                },
+                {
+                    "family": "Pires-Alves",
+                    "given": "Melissa"
+                },
+                {
+                    "family": "Silva",
+                    "given": "Fábio Freitas"
+                }
+            ],
+            "container-title": "Revista Biotecnologia Ciência & Desenvolvimento",
+            "id": "novais2004",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "page": "11",
+            "title": "PCR em tempo real",
+            "type": "article-journal",
+            "volume": "33"
+        },
+        {
+            "DOI": "10.1128/CMR.19.1.165-256.2006",
+            "URL": "https://journals.asm.org/doi/10.1128/CMR.19.1.165-256.2006",
+            "author": [
+                {
+                    "family": "Espy",
+                    "given": "M. J."
+                },
+                {
+                    "family": "Uhl",
+                    "given": "J. R."
+                },
+                {
+                    "family": "Sloan",
+                    "given": "L. M."
+                },
+                {
+                    "family": "Buckwalter",
+                    "given": "S. P."
+                },
+                {
+                    "family": "Jones",
+                    "given": "M. F."
+                },
+                {
+                    "family": "Vetter",
+                    "given": "E. A."
+                },
+                {
+                    "family": "Yao",
+                    "given": "J. D. C."
+                },
+                {
+                    "family": "Wengenack",
+                    "given": "N. L."
+                },
+                {
+                    "family": "Rosenblatt",
+                    "given": "J. E."
+                },
+                {
+                    "family": "Cockerill",
+                    "given": "F. R."
+                },
+                {
+                    "family": "Smith",
+                    "given": "T. F."
+                }
+            ],
+            "container-title": "Clinical Microbiology Reviews",
+            "id": "espy2006",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 1",
+            "page": "165-256",
+            "title": "Real-Time PCR in Clinical Microbiology: Applications for Routine Laboratory Testing",
+            "title-short": "Real-Time PCR in Clinical Microbiology",
+            "type": "article-journal",
+            "volume": "19"
+        },
+        {
+            "author": [
+                {
+                    "family": "Santos",
+                    "given": "N. S. O."
+                },
+                {
+                    "family": "Romanos",
+                    "given": "Maria T. V."
+                },
+                {
+                    "family": "Wigg",
+                    "given": "Marcia Dutra"
+                }
+            ],
+            "edition": "3",
+            "id": "santos2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "Guanabara Koogan",
+            "publisher-place": "RJ",
+            "title": "Virologia humana",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1093/jme/tjab084",
+            "URL": "https://academic.oup.com/jme/article/58/6/2091/6287790",
+            "author": [
+                {
+                    "family": "Reinbold-Wasson",
+                    "given": "Drew David"
+                },
+                {
+                    "family": "Reiskind",
+                    "given": "Michael Hay"
+                }
+            ],
+            "container-title": "Journal of Medical Entomology",
+            "editor": [
+                {
+                    "family": "Yee",
+                    "given": "Donald"
+                }
+            ],
+            "id": "reinbold-wasson2021",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        11,
+                        9
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "2091-2100",
+            "title": "Comparative Skip-Oviposition Behavior Among Container Breeding <i>Aedes</i> spp. Mosquitoes (Diptera: Culicidae)",
+            "title-short": "Comparative Skip-Oviposition Behavior Among Container Breeding <i>Aedes</i> spp. Mosquitoes (Diptera",
+            "type": "article-journal",
+            "volume": "58"
+        },
+        {
+            "author": [
+                {
+                    "family": "Bentley",
+                    "given": "MD"
+                },
+                {
+                    "family": "Day",
+                    "given": "JF"
+                }
+            ],
+            "container-title": "Annual Review of Entomology",
+            "id": "bentley1989chemical",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1989
+                    ]
+                ]
+            },
+            "page": "401-421",
+            "publisher": "Annual Reviews 4139 El Camino Way, PO Box 10139, Palo Alto, CA 94303-0139, USA",
+            "title": "Chemical ecology and behavioral aspects of mosquito oviposition",
+            "type": "article-journal",
+            "volume": "34"
+        },
+        {
+            "DOI": "10.1093/jme/tju024",
+            "URL": "https://academic.oup.com/jme/article-lookup/doi/10.1093/jme/tju024",
+            "author": [
+                {
+                    "family": "Afify",
+                    "given": "A."
+                },
+                {
+                    "family": "Galizia",
+                    "given": "C. G."
+                }
+            ],
+            "container-title": "Journal of Medical Entomology",
+            "id": "afify2015",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        3,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "120-130",
+            "title": "Chemosensory Cues for Mosquito Oviposition Site Selection",
+            "type": "article-journal",
+            "volume": "52"
+        },
+        {
+            "DOI": "10.1093/jmedent/30.3.601",
+            "URL": "https://academic.oup.com/jme/article-lookup/doi/10.1093/jmedent/30.3.601",
+            "author": [
+                {
+                    "family": "Kittayapong",
+                    "given": "Pattamaporn"
+                },
+                {
+                    "family": "Strickman",
+                    "given": "Daniel"
+                }
+            ],
+            "container-title": "Journal of Medical Entomology",
+            "id": "kittayapong1993",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993,
+                        5,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "601-606",
+            "title": "Distribution of Container-Inhabiting <i>Aedes</i> Larvae (Diptera: Culicidae) at a Dengue Focus in Thailand",
+            "title-short": "Distribution of Container-Inhabiting <i>Aedes</i> Larvae (Diptera",
+            "type": "article-journal",
+            "volume": "30"
+        },
+        {
+            "DOI": "10.2987/8756-971X(2006)22[222:DSDOAA]2.0.CO;2",
+            "URL": "http://www.bioone.org/doi/abs/10.2987/8756-971X%282006%2922%5B222%3ADSDOAA%5D2.0.CO%3B2",
+            "author": [
+                {
+                    "family": "Tsuda",
+                    "given": "Yoshio"
+                },
+                {
+                    "family": "Suwonkerd",
+                    "given": "Wannapa"
+                },
+                {
+                    "family": "Chawprom",
+                    "given": "Srisucha"
+                },
+                {
+                    "family": "Prajakwong",
+                    "given": "Somsak"
+                },
+                {
+                    "family": "Takagi",
+                    "given": "Masahiro"
+                }
+            ],
+            "container-title": "Journal of the American Mosquito Control Association",
+            "id": "tsuda2006",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006,
+                        6
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "222-228",
+            "title": "Different spatial distribution of <i>Aedes aegypti</i> and <i>Aedes albopictus</i> along an urbanrural gradient and the relating environmental factors examined in three villages in northern Thailand",
+            "type": "article-journal",
+            "volume": "22"
+        },
+        {
+            "URL": "https://cidades.ibge.gov.br/brasil/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2026,
+                        2,
+                        1
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "IBGE"
+                }
+            ],
+            "id": "ibgeInstitutoBrasileiroGeografia2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        12,
+                        22
+                    ]
+                ]
+            },
+            "language": "pt-BR",
+            "note": "Citation Key: ibgeInstitutoBrasileiroGeografia2023",
+            "publisher": "BRASIL. Instituto Brasileiro de Geografia e Estatística",
+            "title": "Instituto Brasileiro de Geografia e Estatística (IBGE)",
+            "type": "webpage"
+        },
+        {
+            "DOI": "10.1590/0102-311x00032419",
+            "URL": "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0102-311X2019001104001&tlng=pt",
+            "author": [
+                {
+                    "family": "Saldanha",
+                    "given": "Raphael De Freitas"
+                },
+                {
+                    "family": "Bastos",
+                    "given": "Ronaldo Rocha"
+                },
+                {
+                    "family": "Barcellos",
+                    "given": "Christovam"
+                }
+            ],
+            "container-title": "Cadernos de Saúde Pública",
+            "id": "saldanha2019",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "e00032419",
+            "title": "Microdatasus: Pacote para download e pré-processamento de microdados do departamento de informática do SUS (DATASUS)",
+            "title-short": "Microdatasus",
+            "type": "article-journal",
+            "volume": "35"
+        },
+        {
+            "URL": "https://datasus.saude.gov.br/acesso-a-informacao/doencas-e-agravos-de-notificacao-de-2007-em-diante-sinan/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2026,
+                        2,
+                        1
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Brasil. Ministério da Saúde"
+                }
+            ],
+            "id": "brasil.ministériodasaúdeSINAN",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "language": "pt-BR",
+            "publisher-place": "Brasília, DF",
+            "title": "Doenças e Agravos de Notificação  2007 em diante (SINAN)  DATASUS",
+            "type": "book"
+        },
+        {
+            "URL": "http://www.datasus.gov.br",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2026,
+                        2,
+                        1
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Brasil. Ministério da Saúde. DATASUS"
+                }
+            ],
+            "id": "datasus2026",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "publisher-place": "Brasília, DF",
+            "title": "Informações de saúde (TABNET)",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1038/s41579-023-00878-2",
+            "URL": "https://www.nature.com/articles/s41579-023-00878-2",
+            "author": [
+                {
+                    "family": "Markov",
+                    "given": "Peter V."
+                },
+                {
+                    "family": "Ghafari",
+                    "given": "Mahan"
+                },
+                {
+                    "family": "Beer",
+                    "given": "Martin"
+                },
+                {
+                    "family": "Lythgoe",
+                    "given": "Katrina"
+                },
+                {
+                    "family": "Simmonds",
+                    "given": "Peter"
+                },
+                {
+                    "family": "Stilianakis",
+                    "given": "Nikolaos I."
+                },
+                {
+                    "family": "Katzourakis",
+                    "given": "Aris"
+                }
+            ],
+            "container-title": "Nature Reviews Microbiology",
+            "id": "markov2023",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        6
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "361-379",
+            "title": "The evolution of SARS-CoV-2",
+            "type": "article-journal",
+            "volume": "21"
+        },
+        {
+            "DOI": "10.4039/Ent10993-1",
+            "URL": "https://www.cambridge.org/core/product/identifier/S0008347X00043443/type/journal_article",
+            "author": [
+                {
+                    "family": "Parker",
+                    "given": "D. J."
+                }
+            ],
+            "container-title": "The Canadian Entomologist",
+            "id": "parker1977",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1977,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "93-94",
+            "title": "The biology of the tree-holes of Point Pelee National Park, Ontario: II. First record of <i>Toxorhynchites rutilus septentrionalis</i> in Canada (Diptera: Culicidae)",
+            "title-short": "The biology of the tree-holes of Point Pelee National Park, Ontario",
+            "type": "article-journal",
+            "volume": "109"
+        },
+        {
+            "ISSN": "1943-6270 8756-971X",
+            "abstract": "In laboratory experiments, 3rd- and early 4th-instar larvae of T. amboinensis, T. splendens and T. brevipalpis, previously starved for 24 h, rapidly cannibalized eggs of their own species, or ate the eggs of other species present on the water surface in small containers. Larvae of T. amboinensis and T. splendens of either instar cannibalized eggs somewhat more rapidly than T. brevipalpis, probably because eggs of T. brevipalpis distributed themselves around the edge of the container and were less accessible. When offered heterospecific eggs, 4th-instar larvae of all 3 species ate them as efficiently as they cannibalized their own, except that eggs of T. brevipalpis were eaten very slowly. T. amboinensis larvae were offered conspecific hatched eggs, and these also were consumed.",
+            "author": [
+                {
+                    "family": "Linley",
+                    "given": "J. R."
+                },
+                {
+                    "family": "Duzak",
+                    "given": "D."
+                }
+            ],
+            "id": "linleydurak1989",
+            "issued": {
+                "date-parts": [
+                    [
+                        1989
+                    ]
+                ]
+            },
+            "page": "359-362",
+            "title": "Egg cannibalism and carnivory among three species of toxorhynchites.",
+            "type": "article-journal",
+            "volume": "5"
+        },
+        {
+            "ISSN": "1564-0604 0042-9686",
+            "abstract": "There is growing interest and research concerning the possibilities of using pathogens, parasites and predators (relatively specific to vectors of disease) for the control of vectors of human disease, partly to combat insecticide resistance but also to avoid insecticidal destruction of harmless, or beneficial, insects and acariñes or, indeed, other life which can result from the conventional widespread use of non-selective insecticides. Our knowledge of the whole subject is far from complete. Yet a surprising amount of information exists in a widely scattered literature and is often submerged as incidental observation in papers of wider topic. This publication attempts to bring all this together in a systematic manner and, while the author emphasizes that omissions must have occurred and invites notice of these, there is no doubt that a very comprehensive and most valuable compilation has been achieved. The scope of these published records is clearly evident in 2 tables which show that there are about 600 known vector-pathogen (or parasite) associations and about 900 vector-predator associations. There is an encouraging degree of specificity in much of this. Protozoa comprise almost one-third of the parasitic species infecting vectors; parasitic wasps and other hymenoptera account for about a sixth of the total (but mainly affect flies, tsetse and the like), while between 53 and 90 associations are known for some other groups of parasites or pathogens. Protozoal microsporidians, fungi (e.g. Coelomomyces) and mermithid nematodes seem to have particular promise for mosquito control, and viral pathogens may prove to be a fruitful field of exploration as yet in its infancy. About a quarter of the predators are fish species (for mosquitoes), while 161 dipterous predators attack mosquitoes or blackfly at some stage. Macrochelid mites and certain beetles probably call for more research as effective housefly predators. This sort of viewpoint is brought out in the introduction which also succinctly comments on major attempts, a few successful but others not or less so, to control insect pests and vectors by introduced parasitism or predation at different times in the history of economic and medical entomology. The text is planned in 15 sections, each concerned with one of the major groups of medically important insects or acariñes, viz. sandflies and midges, blackflies, mosquitoes, horseflies and deerflies, houseflies, stableflies, tsetse, lice, fleas, bedbugs, triatomid bugs, cockroaches, urticating lepidoptera, ticks and mites, and finally, the black widow spider. In each section are recorded the parasites (or pathogens) and predators affecting, in its developmental and adult stages, the type of vector under consideration. For mosquitoes, the list occupies nearly half (39 pp.) of the text and ranges, for parasites, from a few reports of viral and rickettsia-like bodies through bacterial, spirochaetal, fungal, protozoal, rotiferan, parasitic worm and mite infections to predation of eggs, larvae and adults of mosquitoes by molluscs, other insects (and other arthropods), vertebrates and carnivorous plants. These parasites and predators are arranged by zoological classification and, under each parasitic or predatory species, is given at least a reference to its association with different mosquito species and, frequently, some indication of its efficacy as a control agent. The point is brought out in the work as a whole that we need to accumulate facts not only relevant to the possible use of these organisms in planned control projects but data bearing on their existing roles as factors controlling natural population densities of vector species. Records for the other vector groups are as yet much fewer than for mosquitoes, being dealt with in a similar way for blackflies, in 9 pages, for houseflies in 6, horseflies in 5, and all other sections are covered by 4 or fewer pages each. There is a splendid list of over 2, 000 fully titled references. Besides the wealth of condensed information listed in this compilation a remarkably good appreciation of how the main groups of the various parasites, pathogens and predators affect the vectors they attack is obtained from frequent introductory paragraphs on their biology dispersed throughout the systematic text, and some regard is given also, where relevant, to the adverse effects on vectors of organisms which they transmit in their capacity as vectors of disease to man. D. S. Bertram.",
+            "author": [
+                {
+                    "family": "Jenkins",
+                    "given": "D. W."
+                }
+            ],
+            "id": "jenkins1964",
+            "issued": {
+                "date-parts": [
+                    [
+                        1964
+                    ]
+                ]
+            },
+            "page": "150 pp.",
+            "publisher": "World Health Organization",
+            "publisher-place": "Geneva",
+            "title": "Pathogens, parasites and predators of medically important arthropods. Annotated list and bibliography.",
+            "type": "article-journal",
+            "volume": "30"
+        },
+        {
+            "DOI": "10.1126/science.164.3876.184",
+            "URL": "https://www.science.org/doi/10.1126/science.164.3876.184",
+            "author": [
+                {
+                    "family": "Harris",
+                    "given": "P."
+                },
+                {
+                    "family": "Riordan",
+                    "given": "D. F."
+                },
+                {
+                    "family": "Cooke",
+                    "given": "D."
+                }
+            ],
+            "container-title": "Science",
+            "id": "harris1969",
+            "issue": "3876",
+            "issued": {
+                "date-parts": [
+                    [
+                        1969,
+                        4,
+                        11
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "184-185",
+            "title": "Mosquitoes Feeding on Insect Larvae",
+            "type": "article-journal",
+            "volume": "164"
+        },
+        {
+            "DOI": "10.1016/j.meegid.2011.08.013",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1567134811002929",
+            "author": [
+                {
+                    "family": "Farajollahi",
+                    "given": "Ary"
+                },
+                {
+                    "family": "Fonseca",
+                    "given": "Dina M."
+                },
+                {
+                    "family": "Kramer",
+                    "given": "Laura D."
+                },
+                {
+                    "family": "Marm Kilpatrick",
+                    "given": "A."
+                }
+            ],
+            "container-title": "Infection, Genetics and Evolution",
+            "id": "farajollahi2011",
+            "issue": "7",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 7",
+            "page": "1577-1585",
+            "title": "“Bird biting” mosquitoes and human disease: A review of the role of Culex pipiens complex mosquitoes in epidemiology",
+            "title-short": "“Bird biting” mosquitoes and human disease",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "DOI": "10.1016/j.ijid.2022.06.050",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1201971222003836",
+            "author": [
+                {
+                    "family": "Junior",
+                    "given": "João Bosco Siqueira"
+                },
+                {
+                    "family": "Massad",
+                    "given": "Eduardo"
+                },
+                {
+                    "family": "Lobao-Neto",
+                    "given": "Abner"
+                },
+                {
+                    "family": "Kastner",
+                    "given": "Randee"
+                },
+                {
+                    "family": "Oliver",
+                    "given": "Louisa"
+                },
+                {
+                    "family": "Gallagher",
+                    "given": "Elaine"
+                }
+            ],
+            "container-title": "International Journal of Infectious Diseases",
+            "id": "junior2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        9
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "521-528",
+            "title": "Epidemiology and costs of dengue in Brazil: a systematic literature review",
+            "title-short": "Epidemiology and costs of dengue in Brazil",
+            "type": "article-journal",
+            "volume": "122"
+        },
+        {
+            "DOI": "10.1007/s42770-021-00632-x",
+            "URL": "https://link.springer.com/10.1007/s42770-021-00632-x",
+            "author": [
+                {
+                    "family": "Duarte",
+                    "given": "Matheus A."
+                },
+                {
+                    "family": "Campos",
+                    "given": "Fabrício S."
+                },
+                {
+                    "family": "Araújo Neto",
+                    "given": "Osvaldo F."
+                },
+                {
+                    "family": "Silva",
+                    "given": "Leonardo A."
+                },
+                {
+                    "family": "Silva",
+                    "given": "Arthur B."
+                },
+                {
+                    "family": "Aguiar",
+                    "given": "Thalita C."
+                },
+                {
+                    "family": "Santos",
+                    "given": "Raissa N."
+                },
+                {
+                    "family": "Souza",
+                    "given": "Ueric J. B."
+                },
+                {
+                    "family": "Alves",
+                    "given": "Giselly B."
+                },
+                {
+                    "family": "Melo",
+                    "given": "Fernando L."
+                },
+                {
+                    "family": "Ardisson-Araujo",
+                    "given": "Daniel M. P."
+                },
+                {
+                    "family": "Aguiar",
+                    "given": "Raimundo W. S."
+                },
+                {
+                    "family": "Ribeiro",
+                    "given": "Bergmann M."
+                }
+            ],
+            "container-title": "Brazilian Journal of Microbiology",
+            "id": "duarte2022",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        3
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "51-62",
+            "title": "Identification of potential new mosquito-associated viruses of adult Aedes aegypti mosquitoes from Tocantins state, Brazil",
+            "type": "article-journal",
+            "volume": "53"
+        },
+        {
+            "DOI": "10.1038/s41564-022-01089-w",
+            "URL": "https://www.nature.com/articles/s41564-022-01089-w",
+            "author": [
+                {
+                    "family": "Ko",
+                    "given": "Karrie K. K."
+                },
+                {
+                    "family": "Chng",
+                    "given": "Kern Rei"
+                },
+                {
+                    "family": "Nagarajan",
+                    "given": "Niranjan"
+                }
+            ],
+            "container-title": "Nature Microbiology",
+            "id": "ko2022",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        4,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "486-496",
+            "title": "Metagenomics-enabled microbial surveillance",
+            "type": "article-journal",
+            "volume": "7"
+        },
+        {
+            "DOI": "10.3390/pathogens14050416",
+            "URL": "https://www.mdpi.com/2076-0817/14/5/416",
+            "author": [
+                {
+                    "family": "Cintra",
+                    "given": "Amanda Montezano"
+                },
+                {
+                    "family": "Noda-Nicolau",
+                    "given": "Nathália Mayumi"
+                },
+                {
+                    "family": "Soman",
+                    "given": "Milena Leite De Oliveira"
+                },
+                {
+                    "family": "Affonso",
+                    "given": "Pedro Henrique De Andrade"
+                },
+                {
+                    "family": "Valente",
+                    "given": "Guilherme Targino"
+                },
+                {
+                    "family": "Grotto",
+                    "given": "Rejane Maria Tommasini"
+                }
+            ],
+            "container-title": "Pathogens",
+            "id": "cintra2025",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025,
+                        4,
+                        25
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "416",
+            "title": "The Main Arboviruses and Virus Detection Methods in Vectors: Current Approaches and Future Perspectives",
+            "title-short": "The Main Arboviruses and Virus Detection Methods in Vectors",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "DOI": "10.1016/j.jcv.2016.09.001",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1386653216305194",
+            "author": [
+                {
+                    "family": "Pabbaraju",
+                    "given": "Kanti"
+                },
+                {
+                    "family": "Wong",
+                    "given": "Sallene"
+                },
+                {
+                    "family": "Gill",
+                    "given": "Kara"
+                },
+                {
+                    "family": "Fonseca",
+                    "given": "Kevin"
+                },
+                {
+                    "family": "Tipples",
+                    "given": "Graham A."
+                },
+                {
+                    "family": "Tellier",
+                    "given": "Raymond"
+                }
+            ],
+            "container-title": "Journal of Clinical Virology",
+            "id": "pabbaraju2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        10
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "66-71",
+            "title": "Simultaneous detection of Zika, Chikungunya and Dengue viruses by a multiplex real-time RT-PCR assay",
+            "type": "article-journal",
+            "volume": "83"
+        },
+        {
+            "DOI": "10.1016/S1473-3099(16)30518-7",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1473309916305187",
+            "author": [
+                {
+                    "family": "Wilder-Smith",
+                    "given": "Annelies"
+                },
+                {
+                    "family": "Gubler",
+                    "given": "Duane J"
+                },
+                {
+                    "family": "Weaver",
+                    "given": "Scott C"
+                },
+                {
+                    "family": "Monath",
+                    "given": "Thomas P"
+                },
+                {
+                    "family": "Heymann",
+                    "given": "David L"
+                },
+                {
+                    "family": "Scott",
+                    "given": "Thomas W"
+                }
+            ],
+            "container-title": "The Lancet Infectious Diseases",
+            "id": "wilder-smith2017",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        3
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "e101-e106",
+            "title": "Epidemic arboviral diseases: priorities for research and public health",
+            "title-short": "Epidemic arboviral diseases",
+            "type": "article-journal",
+            "volume": "17"
+        },
+        {
+            "DOI": "10.1093/jme/tjw034",
+            "URL": "https://academic.oup.com/jme/article-lookup/doi/10.1093/jme/tjw034",
+            "author": [
+                {
+                    "family": "Barbosa",
+                    "given": "P. P."
+                },
+                {
+                    "family": "Guedes",
+                    "given": "D. R. D."
+                },
+                {
+                    "family": "Melo-Santos",
+                    "given": "M. A. V."
+                },
+                {
+                    "family": "Cordeiro",
+                    "given": "M. T."
+                },
+                {
+                    "family": "Acioli",
+                    "given": "R. V."
+                },
+                {
+                    "family": "Batista",
+                    "given": "C. A. V."
+                },
+                {
+                    "family": "Gonçalves",
+                    "given": "L. S. M."
+                },
+                {
+                    "family": "Souza",
+                    "given": "M. F. M."
+                },
+                {
+                    "family": "Araújo",
+                    "given": "Y. V."
+                },
+                {
+                    "family": "Magalhães",
+                    "given": "F. J. R."
+                },
+                {
+                    "family": "Regis",
+                    "given": "L."
+                },
+                {
+                    "family": "Ayres",
+                    "given": "C. F. J."
+                }
+            ],
+            "container-title": "Journal of Medical Entomology",
+            "id": "barbosa2016",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        5
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "613-619",
+            "title": "Vector Surveillance for Dengue Virus Detection in the Archipelago of Fernando de Noronha, Brazil",
+            "type": "article-journal",
+            "volume": "53"
+        },
+        {
+            "DOI": "10.2807/1560-7917.ES.2025.30.28.2500401",
+            "URL": "https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2025.30.28.2500401",
+            "author": [
+                {
+                    "family": "Bruce",
+                    "given": "Robert C"
+                },
+                {
+                    "family": "Abbott",
+                    "given": "Anthony J"
+                },
+                {
+                    "family": "Jones",
+                    "given": "Ben P"
+                },
+                {
+                    "family": "Gardner",
+                    "given": "Bathsheba L"
+                },
+                {
+                    "family": "Gonzalez",
+                    "given": "Estela"
+                },
+                {
+                    "family": "Ionescu",
+                    "given": "Andra-Maria"
+                },
+                {
+                    "family": "Jagdev",
+                    "given": "Madhujot"
+                },
+                {
+                    "family": "Jenkins",
+                    "given": "Ava"
+                },
+                {
+                    "family": "Santos",
+                    "given": "Mariana"
+                },
+                {
+                    "family": "Seilern-Macpherson",
+                    "given": "Katharina"
+                },
+                {
+                    "family": "Hanmer",
+                    "given": "Hugh J"
+                },
+                {
+                    "family": "Robinson",
+                    "given": "Robert A"
+                },
+                {
+                    "family": "Vaux",
+                    "given": "Alexander Gc"
+                },
+                {
+                    "family": "Johnson",
+                    "given": "Nicholas"
+                },
+                {
+                    "family": "Cunningham",
+                    "given": "Andrew A"
+                },
+                {
+                    "family": "Lawson",
+                    "given": "Becki"
+                },
+                {
+                    "family": "Medlock",
+                    "given": "Jolyon M"
+                },
+                {
+                    "family": "Folly",
+                    "given": "Arran J"
+                }
+            ],
+            "container-title": "Eurosurveillance",
+            "id": "bruce2025",
+            "issue": "28",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025,
+                        7,
+                        17
+                    ]
+                ]
+            },
+            "language": "en",
+            "title": "Detection of West Nile virus via retrospective mosquito arbovirus surveillance, United Kingdom, 2025",
+            "type": "article-journal",
+            "volume": "30"
+        },
+        {
+            "DOI": "10.1186/s13071-023-05778-1",
+            "URL": "https://parasitesandvectors.biomedcentral.com/articles/10.1186/s13071-023-05778-1",
+            "author": [
+                {
+                    "family": "Lin",
+                    "given": "Daniel Chieh-Ding"
+                },
+                {
+                    "family": "Weng",
+                    "given": "Shih-Che"
+                },
+                {
+                    "family": "Tsao",
+                    "given": "Po-Nien"
+                },
+                {
+                    "family": "Chu",
+                    "given": "Justin Jang Hann"
+                },
+                {
+                    "family": "Shiao",
+                    "given": "Shin-Hong"
+                }
+            ],
+            "container-title": "Parasites & Vectors",
+            "id": "lin2023",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        5,
+                        11
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "160",
+            "title": "Co-infection of dengue and Zika viruses mutually enhances viral replication in the mosquito Aedes aegypti",
+            "type": "article-journal",
+            "volume": "16"
+        },
+        {
+            "URL": "https://download.geofabrik.de/",
+            "author": [
+                {
+                    "family": "Geofabrik GmbH"
+                }
+            ],
+            "id": "geofabrikgmbh",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "title": "OpenStreetMap data extracts",
+            "type": "article-journal"
+        },
+        {
+            "URL": "https://repositorio.uel.br/items/9f2ff119-615d-4e1a-bf18-a1c524d40cb9",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        5,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Kawabata",
+                    "given": "Edson Kenji"
+                }
+            ],
+            "id": "kawabata2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "publisher-place": "Londrina",
+            "title": "Monitoramento e análise da circulação viral em culicidae (diptera) adultos no município de sertanópolis, paraná, brasil",
+            "type": "webpage"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gu",
+                    "given": "Weidong"
+                },
+                {
+                    "family": "Novak",
+                    "given": "Robert J."
+                }
+            ],
+            "id": "gu2004",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "page": "636-638",
+            "title": "Short report: Detection probability of arbovirus infection in mosquito populations",
+            "title-short": "Short report",
+            "type": "report"
+        },
+        {
+            "DOI": "10.1016/j.trstmh.2008.03.019",
+            "URL": "https://academic.oup.com/trstmh/article-lookup/doi/10.1016/j.trstmh.2008.03.019",
+            "author": [
+                {
+                    "family": "Gu",
+                    "given": "Weidong"
+                },
+                {
+                    "family": "Unnasch",
+                    "given": "Thomas R."
+                },
+                {
+                    "family": "Katholi",
+                    "given": "Charles R."
+                },
+                {
+                    "family": "Lampman",
+                    "given": "Richard"
+                },
+                {
+                    "family": "Novak",
+                    "given": "Robert J."
+                }
+            ],
+            "container-title": "Transactions of the Royal Society of Tropical Medicine and Hygiene",
+            "id": "gu2008",
+            "issue": "8",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008,
+                        8
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 8",
+            "page": "817-822",
+            "title": "Fundamental issues in mosquito surveillance for arboviral transmission",
+            "type": "article-journal",
+            "volume": "102"
+        },
+        {
+            "DOI": "10.1016/j.actatropica.2019.105061",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0001706X19304553",
+            "author": [
+                {
+                    "family": "Dos Reis",
+                    "given": "Izabel Cristina"
+                },
+                {
+                    "family": "Gibson",
+                    "given": "Gerusa"
+                },
+                {
+                    "family": "Ayllón",
+                    "given": "Tania"
+                },
+                {
+                    "family": "De Medeiros Tavares",
+                    "given": "Alessandre"
+                },
+                {
+                    "family": "De Araújo",
+                    "given": "Josélio Maria Galvão"
+                },
+                {
+                    "family": "Da Silva Monteiro",
+                    "given": "Elias"
+                },
+                {
+                    "family": "Rodrigues Aguiar",
+                    "given": "Amanda"
+                },
+                {
+                    "family": "De Oliveira",
+                    "given": "Josinaldo Vital"
+                },
+                {
+                    "family": "De Paiva",
+                    "given": "Anne Aline Pereira"
+                },
+                {
+                    "family": "Wana Bezerra Pereira",
+                    "given": "Hannaly"
+                },
+                {
+                    "family": "Dantas Monteiro",
+                    "given": "Joelma"
+                },
+                {
+                    "family": "Sá Carvalho",
+                    "given": "Marilia"
+                },
+                {
+                    "family": "Sabroza",
+                    "given": "Paulo Chagastelles"
+                },
+                {
+                    "family": "Alves Honório",
+                    "given": "Nildimar"
+                }
+            ],
+            "container-title": "Acta Tropica",
+            "id": "dosreis2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        9
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "105061",
+            "title": "Entomo-virological surveillance strategy for dengue, Zika and chikungunya arboviruses in field-caught Aedes mosquitoes in an endemic urban area of the Northeast of Brazil",
+            "type": "article-journal",
+            "volume": "197"
+        }
+    ],
+    "project_biblios": [
+        "references.bib"
+    ]
+}

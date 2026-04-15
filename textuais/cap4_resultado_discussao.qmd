@@ -28,8 +28,14 @@ require(viridis)
 ### dados ovos - semanas verdadeiras
 dados_ovos_orig <- readRDS("./data/df_ovos.RDS") |>
   ungroup() |>
-  mutate(sem = yearweek(data, week_start = 1)) |>
-  arrange(data)
+  mutate(sem = yearweek(data, week_start = 7)) |>
+  arrange(data) |>
+  mutate(
+    coleta = data,
+    instalação = lag(data),
+    instalação = coalesce(instalação, ymd("2023-10-09")),
+    exposicao = as.numeric(coleta - instalação),
+  )
 
 ### dados ovos - semanas corrigidas
 dados_ovos_cor <- readRDS("./data/df_ovos_cal_sem_corrigido.RDS") |>
@@ -37,6 +43,18 @@ dados_ovos_cor <- readRDS("./data/df_ovos_cal_sem_corrigido.RDS") |>
 
 ### dados ovos - meses corrigido
 dados_ovos_bruto <- readRDS("./data/df_ovos_corrigido_com_pontos.RDS")
+
+info_data_dados_ovos_bruto <- dados_ovos_bruto |>
+  select(data) |>
+  distinct() |>
+  arrange(data) |>
+  mutate(
+    ciclo = row_number(),
+    coleta = data,
+    instalação = lag(data),
+    instalação = coalesce(instalação, ymd("2023-10-09")),
+    exposicao = as.numeric(coleta - instalação),
+  )
 
 ### dados adultos
 
@@ -48,6 +66,47 @@ cal_sertanopolis_cap <- readRDS(
   "./data/den_sus_cal_sertanopolis_cap_2023_2026.RDS"
 )
 
+cal_sertanopolis_cap_notificados <- readRDS(
+  "./data/den_sus_cal_sertanopolis_cap_2023_2026_notificados.RDS"
+)
+
+### dados casos CHIKV
+
+chikV_serta_15_25 <- rbind(
+  readRDS("data/chi_2015_2018_fil_PR_Serta.RDS"),
+  readRDS("data/chi_2019_2022_fil_PR_Serta.RDS"),
+  readRDS("data/chi_2023_2026_fil_PR_Serta.RDS")
+) |>
+  filter(!CLASSI_FIN == "Descartado") |>
+  mutate(
+  ano = str_sub(SEM_PRI, start = 1, end = 4),
+  sem = str_sub(SEM_PRI, start = 5, end = 6),
+  W = "W",
+  ano_sem = yearweek(
+    str_c(ano, str_c(sem, W), sep = " "),
+    week_start = getOption("lubridate.week.start", 7)
+  )
+) |>
+  group_by(ano_sem) |>
+  summarise(total_casos_serta = n()) |>
+  filter(ano_sem > yearweek("2021 W50", week_start = 7)) |>
+  as_tsibble(index = ano_sem) |>
+  fill_gaps(.end = yearweek("2026 W01", week_start = 7)) |>
+  mutate(total_casos_serta = replace_na(total_casos_serta, 0)) |>
+  distinct() |>
+  as_tsibble(index = ano_sem) |>
+  mutate(
+    total_casos_serta = replace_na(total_casos_serta, 0),
+    status_proj = if_else(
+      ano_sem < yearweek("2023 W41", week_start = 7),
+      "antes",
+      "depois"
+    ),
+    total_casos_serta = as.numeric(total_casos_serta),
+    data = as_date(ano_sem)
+  ) |>
+  glimpse()
+
 
 # dados geoespaciais
 
@@ -58,102 +117,19 @@ corpos_hidricos <- st_read("./data/shp/corpos_hidricos.shp")
 ### armadilhas geoespaciais
 
 cord_sf <- st_read("./data/shp/pontos_a50_2025-ago-19.shp")
-```
 
-```{r}
-#| label: calc-cap4-cell01
-#| echo: false
-#| error: false
-#| warning: false
+### climaticos
 
-datas_coleta <- dados_ovos_orig |>
-  select(data) |>
-  distinct() |>
-  arrange(data) |>
-  mutate(
-    ciclo = row_number(),
-    coleta = data,
-    instalação = lag(data),
-    instalação = coalesce(instalação, ymd("2023-10-09")),
-    exposicao = as.numeric(coleta - instalação)
-  ) |>
-  mutate(
-    coleta = format(coleta, "%d/%m/%Y"),
-    instalação = format(instalação, "%d/%m/%Y")
-  ) |>
-  select(
-    Ciclo = ciclo,
-    "Data de Instalação" = instalação,
-    "Data de Coleta" = coleta,
-    "Tempo de exposição (dias)" = exposicao,
-    -data,
-  )
+info_ciclos_clima <- readRDS("./data/clima_serta_ciclos.RDS")
 ```
 
 # Dados coletados durante o monitoramento
 
-O estudo se iniciou em 09 de outubro de 2023, com a instalação das armadilhas e se estendeu até 23 de dezembro de 2025, com um total de 56 coletas realizadas no município de Sertanópolis-PR, representando aproximadamente 392 horas em campo e 84 horas de triagem de material. Parte dos dados do número de adultos capturados por aspiração e análises estão presentes no trabalho de @kawabata2024, já presente estudo utiliza dados de adultos coletados de 18 de março de 2024 a 25 de novembro de 2025.
+## Dados do número de ovos
 
-## Dados de armadilhas ovitrampa
+Durante o estudo, um total de 2587 armadilhas ovitrampas foram instaladas, das quais 98 foram desconsideradas devido à perda da armadilha ou da palheta contendo ovos, durante o período de exposição. Foi contabilizado um total de `r sum(dados_ovos_orig$ovos)` ovos de um total de `r sum(dados_ovos_orig$ovos > 0, na.rm = TRUE)` armadilhas contendo ovos, ao longo de `r sum(info_data_dados_ovos_bruto$exposicao)` dias de exposição da armadilha em campo.
 
-### Período de Coleta
-
-Referente a frequência da realização da coleta, não foi possível estabelecer uma variação padronizada entre os dias de coleta, devido a desafios de logística durante a execução do projeto, como problemas no transporte e cronograma. Porém, como demonstrado na @tbl-tempo-coleta, apesar da diferença no tempo de exposição, as armadilhas ficarem em campo por todo o período do estudo, apresentando uma média de `r round(mean(datas_coleta$'Tempo de exposição (dias)'),0)` dias de exposição, com `r round(as.numeric(sd(datas_coleta$'Tempo de exposição (dias)', na.rm = TRUE)),2)` dias de desvio padrão, ao longo do período.
-
-```{r}
-#| label: tbl-tempo-coleta
-#| tbl-cap: Tabela com as datas de coleta e instalação das armadilhas ovitrampa em Sertanópolis-PR.
-#| echo: false
-#| error: false
-#| warning: false
-
-## fica muito espaçado só uma coluna - tentar dividir!
-# datas_coleta |>
-#   flextable() |>
-#   theme_booktabs() |>
-#   align(align = "center", part = "all") |>
-#   add_footer_lines(
-#     values = "Fonte: O próprio autor."
-#   ) |>
-#   set_table_properties(layout = "autofit")
-
-tab1_cp04_cell02 <- datas_coleta |>
-  slice(1:28)
-tab2_cp04_cell02 <- datas_coleta |>
-  slice(29:56)
-tab_Lar1_cp04_cell02 <- bind_cols(tab1_cp04_cell02, tab2_cp04_cell02)
-
-tab_Lar1_cp04_cell02 |>
-  flextable() |>
-  delete_part(part = "header") |>
-  add_header_row( #forçar os nomes das colunas conta de erros
-    values = rep(
-      c(
-        "Ciclo",
-        "Data de Instalação",
-        "Data de Coleta",
-        "Tempo de exposição (dias)"
-      ),
-      2
-    )
-  ) |>
-  theme_booktabs() |>
-  align(align = "center", part = "all") |>
-  vline(j = 4, border = fp_border(color = "#00000042", width = 1)) |>
-  add_footer_lines(values = "Fonte: O próprio autor.") |>
-#   flextable::font(fontname = "Times New Roman", part = "all")
-  fontsize(size = 12, part = "body") |>
-  fontsize(size = 12, part = "header") |>
-  fontsize(size = 10, part = "footer") |>
-  width(j = c(1, 5), width = 0.4) |>
-  fit_to_width(max_width = 7.7)
-```
-
-### Dados do número de ovos
-
-Durante o estudo, um total de 2587 armadilhas ovitrampas foram instaladas, das quais 98 foram desconsideradas devido a perda da armadilha ou da palheta contendo ovos, durante o período de sua exposição. Foi contabilizado um total de `r sum(dados_ovos_orig$ovos)` ovos de um total de `r sum(dados_ovos_orig$ovos > 0, na.rm = TRUE)` armadilhas contendo ovos.
-
-Referente a todo o período do estudo, observa-se que, das 2489 armadilhas analisadas, o número de ovos coletados apresentou uma distribuição assimétrica, conforme demonstrado na @fig-dist-ovos. Considerando a totalidade das coletas, os dados de contagem de ovos apresentam moda de `r round(DescTools::Mode(dados_ovos_orig$ovos, na.rm = TRUE), 2)` ovos, mediana de `r round(median(dados_ovos_orig$ovos, na.rm = TRUE),2)` ovos, média de `r round(mean(dados_ovos_orig$ovos, na.rm = TRUE),2)` ovos e desvio padrão de `r round(sd(dados_ovos_orig$ovos, na.rm = TRUE),2)`. Tais condições indicam, além da distribuição assimétrica, uma inflação de zeros (excesso de zero) junto a uma presença de outliers e uma grade dispersão dos valores observados, fugindo de uma premissa de normalidade de dados e impossibilitam a implantação de métodos de análise lineares convencionais. Outros trabalhos, também realizados na região norte do Paraná, registraram uma distribuição de ovos similar aos observados nesta pesquisa, assimétricos com inflação de zeros, como em @silvak.2021 e em @alves2023.
+Referente a todo o período do estudo, observa-se que, das 2489 armadilhas analisadas, o número de ovos coletados apresentou uma distribuição assimétrica, conforme demonstrado na @fig-dist-ovos. Considerando a totalidade das coletas, os dados de contagem de ovos apresentam moda de `r round(DescTools::Mode(dados_ovos_orig$ovos, na.rm = TRUE), 2)` ovos, mediana de `r round(median(dados_ovos_orig$ovos, na.rm = TRUE),2)` ovos, média de `r round(mean(dados_ovos_orig$ovos, na.rm = TRUE),2)` ovos e desvio padrão de `r round(sd(dados_ovos_orig$ovos, na.rm = TRUE),2)`. Tais condições indicam, além da distribuição assimétrica, uma inflação de zeros (excesso de zero) junto a uma presença de outliers e uma grande dispersão dos valores observados, fugindo de uma premissa de normalidade de dados e impossibilitando a aplicação de métodos de análise lineares convencionais.
 
 ::: {#fig-dist-ovos layout-ncol="1"}
 ```{r}
@@ -234,7 +210,11 @@ ggsave(
 Painel de gráficos da distribuição de ovos obtido de 2489 armadilhas ovitrampa, ao longo do projeto de monitoramento realizado na cidade de Sertanópolis-PR, de outubro de 2023 a dezembro de 2025. A: Histograma da distribuição de ovos; B: Gráfico de caixas dos valores de ovos contados.
 :::
 
-Ao analisar os dados de ovos contabilizados (@fig-ovos-ciclos), observamos padrões elevados nos números de ovos. Destas observações, 190 apresentaram zero ovos contados. Observando o eixo das armadilha, pode-se verificar uma maior frequência de células representando muitos ovos nas armadilhas 15, 16, 18, 21, 22, 31, 34, 35, 36, 40, 42 e 43. Em contrapartida, as armadilhas 2, 17, 19, 20, 24 apresentaram maior frequência de células que indicam poucos ovos observados. Um resumo dos dados organizado por ano também pode ser verificado na @tbl-dados-ido-coleta-ano.
+A distribuição observada (@fig-dist-ovos), além da assimetria à direita e inflação de zeros, é típica de dados de contagem em estudos entomológicos de campo, principalmente de dados relacionados a monitoramento de *Aedes* vetores, por conta do seu perfil de distribuição espacial e de dependência do microambiente local. Padrões nesse perfil não são adequados a análises que levam em consideração pressupostos de normalidade, havendo a necessidade da utilização de modelos com utilização de distribuições mais flexível, que também compatíveis com inflação de zeros.
+
+No ponto de vista ecológico, esta a alta proporção de zeros também pode refletir uma heterogeneidade espacial, visto a atividade de fêmeas gravídicas na busca por criadouros (*e.g.* oviposição em saltos) e nos diferentes perfis espaciais de cada localidade. Fatores espaciais apresentam correlação com as taxas de oviposição, conforme demonstrado em estudos que averiguaram a interação entre a presença de criadouros e a redução de positividade de ovitrampas [@wilkerson2021]. Outros trabalhos, também realizados na região norte do Paraná, registraram uma distribuição de ovos similar aos observados nesta pesquisa, assimétricos com inflação de zeros, a exemplo de @silvak.2021 e de @alves2023.
+
+Ao analisar somente os dados de ovos contabilizados (@fig-ovos-ciclos), considerando o tempo de exposição da armadilha em campo, observamos padrões elevados nos números médios de ovos. Destas observações, 190 apresentaram zero ovos contados. Observando o eixo das armadilhas, pode-se verificar uma maior frequência de células representando muitos ovos nas armadilhas 15, 16, 18, 21, 22, 31, 34, 35, 36, 40, 42 e 43. Em contrapartida, as armadilhas 2, 17, 19, 20, 24 apresentaram maior frequência de células que indicam poucos ovos observados.
 
 ::: {#fig-ovos-ciclos layout-ncol="1" layout-align="center"}
 ```{r}
@@ -246,11 +226,12 @@ Ao analisar os dados de ovos contabilizados (@fig-ovos-ciclos), observamos padr�
 #| fig-height: 6
 
 hm_plot <- dados_ovos_bruto |>
-  select(data, armadilha, ovos, ano_mes) |>
-  left_join(data.frame(
-    ciclo = seq(1, 56, 1),
-    data = unique(dados_ovos_bruto$data)
-  )) |>
+  left_join(info_data_dados_ovos_bruto, by = "data") |>
+  mutate(
+    ovos_totais = ovos,
+    ovos = if_else(ovos == 0, 0, ovos / exposicao)
+  ) |>
+  select(data, armadilha, ovos, ano_mes, exposicao, ciclo) |>
   ungroup() |>
   mutate(armadilha = as.factor(armadilha)) |>
   ggplot(aes(x = ciclo, y = armadilha, fill = ovos)) +
@@ -271,16 +252,15 @@ hm_plot <- dados_ovos_bruto |>
       "#2c115f",
       "#000004"
     ),
-    values = c(0, 1, 5, 20, 35, 50, 70, 100, 200, 300, 500, 900, 1329) /
-      1329,
-    labels = c(0, 1, 5, 20, 35, 50, 70, 100, 200, 300, 500, "900+", 1330),
-    breaks = c(0, 1, 5, 20, 35, 50, 70, 100, 200, 300, 500, 900, 1330),
+    values = c(0, 0.5, 1, 2, 2.5, 3, 4, 4.5, 5, 10, 15, 20, 76) / 76,
+    labels = c(0, 0.5, 1, 2, 2.5, 3, 4, 4.5, 5, 10, 15, "20+", 76),
+    breaks = c(0, 0.5, 1, 2, 2.5, 3, 4, 4.5, 5, 10, 15, 20, 76),
     na.value = "#000000"
   ) +
   coord_cartesian(expand = FALSE, clip = "off") +
   labs(
-    title = "Mapa de calor do número de ovos contabilizados por coleta",
-    fill = "Quantidade de Ovos contados",
+    title = "",
+    fill = "Quantidade de Ovos contados \npor dia de exposição",
     x = "Ciclo de coleta",
     y = "Número da Armadilha"
   ) +
@@ -295,12 +275,13 @@ hm_plot <- dados_ovos_bruto |>
     legend.ticks.length = unit(4, "pt"),
     legend.title = element_text(size = 7, vjust = 1),
     legend.text = element_text(size = 6),
-    plot.title.position = "plot",
-    plot.title = element_markdown(
-      size = 12,
-      hjust = 0.5,
-      colour = "black"
-    ),
+    # plot.title.position = "plot",
+    # plot.title = element_markdown(
+    #   size = 12,
+    #   hjust = 0.5,
+    #   colour = "black"
+    # ),
+    plot.title = element_blank(),
     axis.title = element_text(size = 10, color = "black"),
     axis.text = element_text(size = 7, color = "black"),
     panel.grid = element_blank(),
@@ -320,10 +301,10 @@ ggsave(
 
 \footnotesize Fonte: o próprio autor
 
-Gráfico de calor do número de ovos comtabilizados por coleta de armadilha ovitrampa realizada no município de Sertanópolis-PR, no período de outubro de 2023 a dezembro de 2025, distribuído por cada ciclo de coleta realizado.
+Gráfico de calor do número médio de ovos contabilizados por cada dia de exposição da armadilha ovitrampa em campo, organizado por ciclos de coleta realizada no município de Sertanópolis-PR, no período de outubro de 2023 a dezembro de 2025.
 :::
 
-Ao analisar o eixo dos ciclos de coleta do gráfico da @fig-ovos-ciclos, nota-se uma faixa contendo células com poucos ovos entre os ciclos 43 e 49 (referentes ao período de maio a agosto de 2025 (@tbl-tempo-coleta)) e, com uma maior densidade de ovos, porém ainda com células contendo poucos ovos, uma faixa entre os ciclos 17 e 25 (também próximos a maio e agosto, porém de 2024). Também é possível visualizar uma faixa com agrupamentos de células contendo muitos ovos que se estende entre os ciclos 30 a 42 (novembro de 2024 a maio de 2025), visualmente representando uma divisão discrepante entre as células do ciclo 42 (com células de mais de 20 ovos) e ciclo 43 (com células abaixo de 20 ovos).
+Ao analisar o eixo dos ciclos de coleta do gráfico da @fig-ovos-ciclos, nota-se uma faixa contendo células com poucos ovos entre os ciclos 43 e 49, referentes ao período de maio a agosto de 2025 (@tbl-tempo-coleta) e, com uma maior densidade de ovos, porém ainda com células contendo poucos ovos, uma faixa entre os ciclos 17 e 25 (também próximos a maio e agosto, porém de 2024). Também é possível visualizar uma faixa com agrupamentos de células contendo muitos ovos que se estende entre os ciclos 30 a 42 (novembro de 2024 a maio de 2025), visualmente representando uma divisão discrepante entre as células do ciclo 42 (com células de mais de 20 ovos) e ciclo 43 (com células abaixo de 20 ovos). Um resumo dos dados organizado por ano também pode ser verificado na @tbl-dados-ido-coleta-ano.
 
 ```{r}
 #| label: calc-cap4-cell02
@@ -352,7 +333,6 @@ Ao analisar o eixo dos ciclos de coleta do gráfico da @fig-ovos-ciclos, nota-se
 #     "Arm. Anali." = sum(ovos >= 0, na.rm = TRUE)
 #   ) |>
 #   distinct()
-
 dados_ovos_cal_ano <- dados_ovos_orig |>
   mutate(ano = lubridate::year(data)) |>
   group_by(ano) |>
@@ -370,7 +350,8 @@ dados_ovos_cal_ano <- dados_ovos_orig |>
     "Total" = sum(ovos, na.rm = TRUE),
     "Média" = round(mean(ovos, na.rm = TRUE), digits = 2),
     "DP" = round(sd(ovos, na.rm = TRUE), digits = 2),
-    "Arm. Anali." = sum(ovos >= 0, na.rm = TRUE)
+    "A.A." = sum(ovos >= 0, na.rm = TRUE),
+    "T.E." = sum(exposicao, na.rm = TRUE) #lembrando que só está calc pra A01.
   ) |>
   distinct()
 ```
@@ -386,12 +367,12 @@ dados_ovos_cal_ano <- dados_ovos_orig |>
 dados_ovos_cal_ano |>
   ungroup() |>
   select(-ano) |>
-  flextable(cwidth = 0.85, cheight = 0.1) |>
+  flextable(cwidth = 0.74, cheight = 0.1) |>
   theme_booktabs() |>
   align(align = "center", part = "all") |>
   add_footer_lines(
     values = c(
-      "Legenda: IDO = Índice de Densidade de Ovos; IPO = Índice de Positividade de Ovitrampas; DP = Desvio Padrão; Arm. Anali. = Número de armadilhas analisadas (contendo ou não ovos)",
+      "Legenda: IDO = Índice de Densidade de Ovos; IPO = Índice de Positividade de Ovitrampas; DP = Desvio Padrão; A.A. = Número de armadilhas analisadas (contendo ou não ovos); T.E. = tempo de exposição total de armadilhas considerado (em dias).",
       "Fonte: O próprio autor."
     )
   ) |>
@@ -406,7 +387,7 @@ dados_ovos_cal_ano |>
 ## aaahh tem muita opção de formatação... socorro
 ```
 
-Pela @tbl-dados-ido-coleta-ano nota-se que o ano de 2023 possui uma discrepância no número de armadilhas analisadas em relação aos outros anos, decorrente principalmente do fato de, nesse ano, terem sido realizados somente três meses de coleta (@tbl-tempo-coleta). Também há uma diferença entre os anos pelo fato de o número de armadilhas instaladas ter se alterado no decorrer do projeto.
+A @tbl-dados-ido-coleta-ano também demonstra que o ano de 2023 possui uma discrepância no número de armadilhas analisadas em relação aos outros anos, decorrente principalmente do fato de, nesse ano, terem sido realizados somente três meses de coleta (@tbl-tempo-coleta).
 
 ### Índice de densidade de ovos e índice de positividade de ovitrampas
 
@@ -487,17 +468,25 @@ df_ovos_cord <- dados_ovos_orig |>
   distinct()
 ```
 
-Considerar o Índice de Densidade de Ovos (IDO) como a média de ovos encontrados nas armadilhas positivas em cada coleta, observa-se na @fig-comparacao-ido-ipo-sem a flutuação temporal desse indicador ao longo das semanas amostradas. Em análise visual da série histórica, o gráfico da flutuação do IDO apresenta queda nos valores calculados entre junho de 2025 a agosto de 2025. Esse período, somado às coletas 22 julho e 15 de agosto de 2024, são os únicos que apresentaram um IDO calculado abaixo de 35, classificados como "Alerta" de infestação de Ovos. Ainda destaca-se o valor de 19 de agosto de 2025, que apresentou IDO abaixo de 20, classificanda em "Satisfatório" para infestação de ovos.
+Considerando o Índice de Densidade de Ovos (IDO) como a média de ovos encontrados nas armadilhas positivas em cada coleta, se observa na @fig-comparacao-ido-ipo-sem a flutuação temporal desse indicador ao longo das semanas amostradas. Em análise visual da série histórica, o gráfico da flutuação do IDO apresenta queda nos valores calculados entre junho de 2025 a agosto de 2025. Esse período, somado às coletas de 22 de julho e 15 de agosto de 2024, são os únicos que apresentaram um IDO calculado abaixo de 35, classificados como "Alerta" de infestação de Ovos. Ainda destaca-se o valor calculado para 19 de agosto de 2025, que apresentou IDO abaixo de 20, classificada como "Satisfatório" para infestação de ovos.
 
 Observando o gráfico, é possível também notar picos dos valores de IDO se repetindo nos meses de dezembro/janeiro especificamente nas coletas de 21/12/2023, 08/01/2024, 07/01/2025, 21/01/2025 e 09/12/2025, bem como no mês de maio de 2024 (em 03/05/2024 e 17/05/2024). Destas observações, destacam-se 08/01/2024, 03/05/2024, 17/05/2024 e 07/01/2025 pelos maiores picos observados no período.
 
-Considerando o Índice de Positividade de ovitrampas a proporção de armadilhas contendo ovos em relação ao total de armadilhas instaladas, não avariadas, observa-se na @fig-comparacao-ido-ipo-sem os dados de IPO obtidos durante o estudo realizado na cidade de Sertanópolis. Durante todo o período nota-se que as taxas do IPO sempre se mantiveram acima de 50%, com a maioria das observações calculadas sendo acima de 75%. O menor valor observado ocorreu no dia 21 de outubro de 2023, data que coincidindo com a primeira coleta realizada no município.
+Os picos observados de IDO nos meses de dezembro e janeiro são consistentes com observações e descrições do comportamento sazonal da flutuação populacional de *Ae*. *aegypti* em regiões tropicais e subtropicais, estando relacionados com épocas de aumento de temperatura e pluviosidade médias, no hemisfério sul. Essas condições favorecem tanto a disponibilidade de criadouros quanto o encurtamento do ciclo de desenvolvimento dos imaturos, resultando em maior densidade populacional [@wilkerson2021; @desouzaleandroFuzzySystemEnsembles2024; @alvesARBOALVOBayesianSpatiotemporal2025; @denningtonPhenotypicVariationPopulations2025].
 
-Ao comparar ambos os gráficos, observa-se que as quedas no IDO são acompanhadas por reduções similares na flutuação do IPO, indicando menor atividade de fêmeas gravídicas nesses intervalos. Considerando os sinais da atividade de fêmeas como a taxa de oviposição em criadouros, quedas simultâneas podem representar alterações ambientais locais, dado a resposta de *Aedes* para com essas alterações [@wilkerson2021]. Essas modificações podem envolver o aumento do número de criadouros disponíveis, diminuindo as chances da fêmea ovipositar em armadilhas ou a diminuição do número populacional de mosquitos na região [@zequi2005; @silver2008; @rueda2008].
+Por conta da ausência de estações meteorológicas em Sertanópolis, não foi possível coletar informações dos dados climáticos locais, obtendo a precisão necessária para a realização de inferências precisas, porém, a partir dos modelos climáticos do Projeto POWER (NASA) [@nasa_power_project], dados climáticos foram obtidos para referencia.
 
-Por conta da ausência de estações meteorológicas em Sertanópolis, não foi possível coletar informações dos dados climáticos com a precisão necessária para a realização de inferências. Porém, considerando outras possíveis fontes de alteração ambiental, como atividade dos agentes de endemia e mobilização municipal, relata-se que, nas semanas do mês de abril de 2024 (do dia 15 ao dia 22) e fevereiro de 2025 (essa com duração mais prolongada, abrangendo os meses seguintes) onde foram realizados campanhas de limpeza urbana, vistoriando terrenos e removendo potenciais criadouros.
+Estudos em diferentes contextos corroboram com a presença de uma influência climática sobre os vetores, a exemplo de @alvesARBOALVOBayesianSpatiotemporal2025, que identificaram que a temperatura diurna média apresenta efeitos significativos sobre o risco de dengue, com um atraso de seis a oito semanas para sua interferência. Esse fenômeno indica que picos de IDO, que são indicativos da variação populacional do vetor, podem se relacionar a surtos de arboviroses semanas antes de serem observadas. A repetição do padrão observado em Sertanópolis, com picos consecutivos em janeiro de 2024 e janeiro de 2025, reforça a possibilidade de uma sazonalidade ligada à variação climática local, exercendo um papel na dinâmica populacional do vetor nesse período.
 
-Outra característica que necessita de atenção é o fato do número de armadilhas ter se alterado durante o período de amostragem. Porém, grande parte das armadilhas intaladas no início do projeto se mantiveram no mesmo imóvel por todo o período de tempo. Das 36 armadilhas instaladas no início, somente 6 sofreram alteração. Dessas 6 armadilhas, somente 2 foram reinstaladas em distâncias acima de 200m, devidoa a necessidade de realocação por proximidade a outras armadilhas já existente. Considerando o cenário geral, por conta das metidas de IDO e IPO serem referentes a uma média/taxa global, a inserção de novas armadilhas pode não ter tanta influência no resultado. Verificando a @fig-ovos-ciclos, também nota-se que não houve a presença de observações com grande número de ovos nas instalações de armadilhas mais recentes (do ciclo 48 em diante)
+Considerando a queda do IDO observado, no mês de agosto de 2025 (único período classificado como "Satisfatório"), é importante verificar que, visualmente, há uma relação com o período de inverno do hemisfério sul, que na região é marcado por temperaturas baixas, assim como observado na @fig-comparacao-ido-ipo-sem. A redução da pluviosidade também tem papel nessa relação, diminuindo a disponibilidade de criadouros, afetando também as taxas de oviposição por local, e influenciando o número  de ovos encontrados em cada armadilha ovitrampa [@bentley1989chemical; @afify2015; @wilkerson2021]. Considerando o observado na @fig-ovos-ciclos e @fig-comparacao-ido-ipo-sem, nos períodos de queda do número de ovos, podem-se assumir, visualmente, os efeitos de ambos os mecanismos nos números contabilizados.
+
+Considerando o Índice de Positividade de Ovitrampas (IPO), a proporção de armadilhas contendo ovos em relação ao total de armadilhas instaladas, não avariadas, pode ser observado na @fig-comparacao-ido-ipo-sem. Durante todo o período nota-se que as taxas do IPO sempre se mantiveram acima de 50%, com a maioria das observações calculadas sendo acima de 75%. O menor valor observado ocorreu no dia 21 de outubro de 2023, data também da primeira coleta realizada no município.
+
+Ao comparar ambos os gráficos, observa-se que as quedas no IDO são acompanhadas por reduções similares na flutuação do IPO, indicando menor atividade de fêmeas gravídicas nesses intervalos, que visualmente apresentam similaridade com dados climáticos de temperatura e pluviosidade. Considerando os sinais da atividade de fêmeas como a taxa de oviposição em criadouros, estas quedas simultâneas podem representar alterações ambientais locais, dada a resposta de *Aedes* a essas alterações [@wilkerson2021]. As quedas dos índices entomologicos podem também envolver o aumento do número de criadouros disponíveis, diminuindo as chances da fêmea ovipositar em armadilhas ou a própria diminuição do número populacional de mosquitos na região [@zequi2005; @silver2008; @rueda2008].
+
+Considerando outras possíveis fontes de alteração ambiental, como atividade dos agentes de endemia e mobilização municipal, relata-se que, nas semanas do mês de abril de 2024 (do dia 15 ao dia 22) e de fevereiro de 2025 (essa com duração mais prolongada, abrangendo os meses seguintes), foram foram realizadas campanhas de limpeza urbana, com a vistoria em terrenos e remoção de potenciais criadouros.
+
+Outra característica que pode ter influência é o fato do número de armadilhas ter se alterado durante o período de amostragem. Porém, grande parte das armadilhas instaladas no início do projeto se mantiveram no mesmo imóvel por todo o período de tempo. Das 36 armadilhas instaladas no início, somente 6 sofreram alteração. Dessas 6 armadilhas, somente 2 foram reinstaladas em distâncias acima de 200m, devido à necessidade de realocação por proximidade a outras armadilhas já existentes. Considerando o cenário geral, por conta das medidas de IDO e IPO serem referentes a uma média/taxa do conjunto, a inserção de novas armadilhas pode não ter tanta influência no resultado. Verificando a @fig-ovos-ciclos, também nota-se que não houve a presença de observações com grande número de ovos nas instalações de armadilhas mais recentes (do ciclo 48 em diante).
 
 ::: {#fig-comparacao-ido-ipo-sem layout-ncol="1" layout-align="center"}
 ```{r}
@@ -506,19 +495,24 @@ Outra característica que necessita de atenção é o fato do número de armadil
 #| warning: false
 #| echo: false
 #| fig-width: 6.3
-#| fig-height: 5
+#| fig-height: 8
+
+dados_ovos_cor_clima <- dados_ovos_cor |>
+  ungroup() |>
+  left_join(
+    info_ciclos_clima,
+    by = "data"
+  )
 
 break_plot_ido_sem_total_final <- dados_ovos_cor |>
   ungroup() |>
   select(ano_mes, data)
-#   |>
-#   distinct(ano_mes, .keep_all = T) # usar para caso for agrupar por pseudo "mês"
 
 fundo <- data.frame(xmin = as.Date(break_plot_ido_sem_total_final$data)) |>
   mutate(xmax = lead(xmin)) |>
   filter(row_number() %% 2 != 0)
 
-plot_ido_sem_total_final <- dados_ovos_cor |>
+plot_ido_sem_total_final <- dados_ovos_cor_clima |>
   ggplot() +
   geom_rect(
     data = fundo,
@@ -535,7 +529,7 @@ plot_ido_sem_total_final <- dados_ovos_cor |>
     linetype = 1
   ) +
   geom_line(
-    data = dados_ovos_cor,
+    data = dados_ovos_cor_clima,
     aes(x = data, y = ido),
     linewidth = 0.7
   ) +
@@ -543,8 +537,8 @@ plot_ido_sem_total_final <- dados_ovos_cor |>
   coord_cartesian(expand = FALSE, clip = "off") +
   scale_y_continuous(breaks = c(0, 20, 35, 100, 200), limits = c(0, 200)) +
   scale_x_date(
-    breaks = dados_ovos_cor$data,
-    labels = dados_ovos_cor$data_trans,
+    breaks = dados_ovos_cor_clima$data,
+    labels = dados_ovos_cor_clima$data_trans,
     guide = guide_axis(n.dodge = 2)
   ) +
   labs(
@@ -598,7 +592,7 @@ plot_ido_sem_total_final <- dados_ovos_cor |>
     # legend.title = element_blank()
   )
 
-plot_ipo_sem_total_final <- dados_ovos_cor |>
+plot_ipo_sem_total_final <- dados_ovos_cor_clima |>
   ggplot() +
   geom_rect(
     data = fundo,
@@ -615,7 +609,7 @@ plot_ipo_sem_total_final <- dados_ovos_cor |>
     linetype = 1
   ) +
   geom_line(
-    data = dados_ovos_cor,
+    data = dados_ovos_cor_clima,
     aes(x = data, y = ipo),
     linewidth = 0.7
   ) +
@@ -623,8 +617,8 @@ plot_ipo_sem_total_final <- dados_ovos_cor |>
   coord_cartesian(expand = FALSE, clip = "off") +
   scale_y_continuous(breaks = c(50, 75, 100), limits = c(50, 100)) +
   scale_x_date(
-    breaks = dados_ovos_cor$data,
-    labels = dados_ovos_cor$data_trans,
+    breaks = dados_ovos_cor_clima$data,
+    labels = dados_ovos_cor_clima$data_trans,
     guide = guide_axis(n.dodge = 2)
   ) +
   labs(
@@ -678,20 +672,214 @@ plot_ipo_sem_total_final <- dados_ovos_cor |>
     # legend.title = element_blank()
   )
 
+plot_temp_sem_total_final <- dados_ovos_cor_clima |>
+  ggplot() +
+  geom_rect(
+    data = fundo,
+    aes(xmin = xmin, xmax = xmax),
+    ymin = 0,
+    ymax = 40,
+    fill = "#e9f4fc",
+    color = NA
+  ) +
+  geom_hline(
+    yintercept = c(10, 20, 30),
+    linewidth = 0.2,
+    color = "gray80",
+    linetype = 1
+  ) +
+  geom_ribbon(
+    aes(x = data, ymin = t_min_ciclo, ymax = t_max_ciclo),
+    fill = "#4575B4",
+    alpha = 0.2
+  ) + # Faixa entre mínima e máxima
+  geom_line(
+    aes(x = data, y = t_max_ciclo, linetype = "Máxima"),
+    color = "#D73027",
+    linewidth = 0.6
+  ) + # linha temp max
+  geom_line(
+    aes(x = data, y = t_med_ciclo, linetype = "Média"),
+    color = "#4A4A4A",
+    linewidth = 0.7
+  ) + # linha temp med
+  geom_line(
+    aes(x = data, y = t_min_ciclo, linetype = "Mínima"),
+    color = "#4575B4",
+    linewidth = 0.6
+  ) + # linha temp min
+  coord_cartesian(expand = FALSE, clip = "off") +
+  scale_y_continuous(
+    breaks = c(0, 10, 20, 30, 40),
+    limits = c(0, 40)
+  ) +
+  scale_x_date(
+    breaks = dados_ovos_cor$data,
+    labels = dados_ovos_cor$data_trans,
+    guide = guide_axis(n.dodge = 2)
+  ) +
+  scale_linetype_manual(
+    name = "Temperatura",
+    values = c("Máxima" = "solid", "Média" = "solid", "Mínima" = "solid"),
+    guide = guide_legend(
+      override.aes = list(
+        color = c("#D73027", "#4A4A4A", "#4575B4"),
+        linewidth = 0.8
+      )
+    )
+  ) +
+  labs(
+    x = "Data da coleta dos dados",
+    y = "Temp. (°C)",
+    title = "Flutuação da média da temperatura durante os ciclos de coleta",
+    subtitle = "Cidade de Sertanópolis-PR"
+  ) +
+  theme(
+    text = element_text(family = "serif"),
+    plot.background = element_rect(fill = "#eeeeee45"),
+    plot.title = element_textbox_simple(
+      face = "bold",
+      size = 12,
+      width = NULL,
+      fill = NULL,
+      padding = margin(5, 4, 5, 4),
+      hjust = 0.5
+    ),
+    plot.subtitle = element_textbox_simple(
+      size = 10,
+      width = NULL,
+      fill = NULL,
+      padding = margin(1, 4, 5, 4),
+      hjust = 0.5
+    ),
+    plot.margin = margin(4, 15, 20, 10),
+    axis.text.x = element_markdown(
+      size = 8.5,
+      margin = margin(t = 3),
+      color = "black",
+      angle = 90,
+      vjust = 0.5
+    ),
+    axis.ticks.length.x = unit(4, "pt"),
+    axis.ticks = element_line(linewidth = 0.5),
+    axis.ticks.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = NA),
+    legend.justification = c(1, 1),
+    legend.background = element_blank(),
+    legend.key = element_blank(),
+  )
 
-fig_ido_ipo_sem_total_final <- ((plot_ido_sem_total_final +
+plot_prec_sem_total_final <- dados_ovos_cor_clima |>
+  ggplot() +
+  geom_rect(
+    data = fundo,
+    aes(xmin = xmin, xmax = xmax),
+    ymin = 0,
+    ymax = max(dados_ovos_cor_clima$t_preci_ciclo, na.rm = TRUE) * 1.1,
+    fill = "#e9fcf0",
+    color = NA
+  ) +
+  geom_hline(
+    yintercept = seq(
+      0,
+      max(dados_ovos_cor_clima$t_preci_ciclo, na.rm = TRUE),
+      by = 50
+    ),
+    linewidth = 0.2,
+    color = "gray80",
+    linetype = 1
+  ) +
+  geom_col(
+    aes(x = data, y = t_preci_ciclo),
+    fill = "#2171B5",
+    color = "#08519C",
+    width = 6,
+    linewidth = 0.2
+  ) +
+  coord_cartesian(expand = FALSE, clip = "off") +
+  scale_y_continuous(
+    limits = c(
+      0,
+      max(dados_ovos_cor_clima$t_preci_ciclo, na.rm = TRUE) * 1.1
+    )
+  ) +
+  scale_x_date(
+    breaks = dados_ovos_cor$data,
+    labels = dados_ovos_cor$data_trans,
+    guide = guide_axis(n.dodge = 2)
+  ) +
+  labs(
+    x = "Data da coleta dos dados",
+    y = "Prec. (mm)",
+    title = "Pluviosidade acumulada por ciclo de coleta",
+    subtitle = "Cidade de Sertanópolis-PR"
+  ) +
+  theme(
+    text = element_text(family = "serif"),
+    plot.background = element_rect(fill = "#eeeeee45"),
+    plot.title = element_textbox_simple(
+      face = "bold",
+      size = 12,
+      width = NULL,
+      fill = NULL,
+      padding = margin(5, 4, 5, 4),
+      hjust = 0.5
+    ),
+    plot.subtitle = element_textbox_simple(
+      size = 10,
+      width = NULL,
+      fill = NULL,
+      padding = margin(1, 4, 5, 4),
+      hjust = 0.5
+    ),
+    plot.margin = margin(4, 15, 20, 10),
+    axis.text.x = element_markdown(
+      size = 8.5,
+      margin = margin(t = 3),
+      color = "black",
+      angle = 90,
+      vjust = 0.5
+    ),
+    axis.ticks.length.x = unit(4, "pt"),
+    axis.ticks = element_line(linewidth = 0.5),
+    axis.ticks.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = NA),
+  )
+
+# Plot total -------------------------------------------------------------
+fig_ido_ipo_clima_total_final <- ((plot_ido_sem_total_final +
   theme(
     axis.text.x = element_blank(),
     axis.ticks.x = element_blank(),
     axis.title.x = element_blank()
   )) /
-  plot_ipo_sem_total_final) +
-  plot_layout(heights = c(3, 1), guides = 'collect') +
+  (plot_ipo_sem_total_final +
+    theme(
+      axis.text.x = element_blank(),
+      axis.ticks.x = element_blank(),
+      axis.title.x = element_blank()
+    )) /
+  (plot_temp_sem_total_final +
+    theme(
+      axis.text.x = element_blank(),
+      axis.ticks.x = element_blank(),
+      axis.title.x = element_blank()
+    )) /
+  plot_prec_sem_total_final) +
+  plot_layout(heights = c(3, 1, 2, 1.5), guides = "collect") +
   plot_annotation(
-    tag_levels = 'A',
-    caption = "Fonte: O próprio autor.",
+    tag_levels = "A",
+    caption = "Fonte: O próprio autor; dados climáticos do Projeto POWER.",
     theme = theme(
-      plot.caption = element_markdown(family = "serif", size = 10, hjust = 0),
+      plot.caption = element_markdown(
+        family = "serif",
+        size = 10,
+        hjust = 0
+      ),
       plot.caption.position = "plot"
     )
   ) &
@@ -704,21 +892,13 @@ fig_ido_ipo_sem_total_final <- ((plot_ido_sem_total_final +
     legend.text = element_text(family = "serif", size = 7)
   )
 
-fig_ido_ipo_sem_total_final
-
-ggsave(
-  "./fig/slide/ido_ipo.png",
-  fig_ido_ipo_sem_total_final,
-  width = 31,
-  height = 16,
-  units = "cm"
-)
+fig_ido_ipo_clima_total_final
 ```
 
-Flutuação do Índice de Densidade de Ovos (IDO) e do Índice de Positividade de Ovitrampos (IPO) por coleta de armadilha ovitrampa instalada no município de Sertanópolis-PR, no período de outubro de 2023 a dezembro de 2025, destacando o número de armadilhas instaladas no período amostrado. A: Gráfico do IDO calculado para cada semana amostrada; B: Gráfico do IPO calculado para cada semana amostrada.
+Flutuação do Índice de Densidade de Ovos (IDO) e do Índice de Positividade de Ovitrampas (IPO) por coleta de armadilha ovitrampa instalada no município de Sertanópolis-PR, no período de outubro de 2023 a dezembro de 2025, destacando o número de armadilhas instaladas no período amostrado. A: Gráfico do IDO calculado para cada semana amostrada; B: Gráfico do IPO calculado para cada semana amostrada; C: Médias de temperatura (minima, média e máxima) durante a exposição da armadilha em campo; D: Precipitação acumulada durante os dias de exposição da armadilha em campo.
 :::
 
-Ao verificar a sobreposição dos dados de IDO (@fig-comparacao-ido-ano), observa-se que a flutuação nos anos de 2024 e 2025, apesar de diferentes, apresentam similaridade, considerando que ambas sofrem uma redução do IDO no mês de junho/julho, aumentando nos meses seguintes até atingir um pico em janeiro. Porém, observa-se que o pico do IDO no ano de 2024, próximo aos meses de abril e maio não se repete em 2025, talvez devido a alterações das condições ambientais como citado anteriormente. Considerando que apenas dois anos de coleta foram realizados, ainda há a necessidade da continua investigação e monitoramento para verificar possíveis relações e a presença de uma tendência temporal.
+Ao verificar a sobreposição dos dados de IDO (@fig-comparacao-ido-ano), observa-se que a flutuação nos anos de 2024 e 2025, apesar de diferentes, apresentam similaridade, considerando que ambas sofrem uma redução do IDO no mês de junho/julho, aumentando nos meses seguintes até atingir um pico em janeiro. Porém, observa-se que o pico do IDO no ano de 2024, próximo aos meses de abril e maio não se repete em 2025, possivelmente devido a alterações das condições ambientais como citado anteriormente. Considerando que apenas dois anos de coleta foram realizados, ainda há a necessidade de contínua investigação e monitoramento para afirmar possíveis relações, ou a presença de uma tendência temporal a longo prazo.
 
 ::: {#fig-comparacao-ido-ano layout-ncol="1" layout-align="center"}
 ```{r}
@@ -796,10 +976,10 @@ ggsave(
 
 \footnotesize Fonte: o próprio autor.
 
-Flutuação de Índice de Densidade de Ovos (IDO) por coleta de armadilha ovitrampainstalada no município de Sertanópolis-PR, apresentando valores agrupado mensalmente e sobrepostos pelo mesmo período anual. Dados referentes ao período de outubro/2023 a dezembro/2025.
+Flutuação de Índice de Densidade de Ovos (IDO) por coleta de armadilha ovitrampa instaladas instaladas no município de Sertanópolis-PR, apresentando valores agrupados mensalmente e sobrepostos pelo mesmo período anual. Dados referentes ao período de outubro/2023 a dezembro/2025.
 :::
 
-A partir dos dados de IDO calculados mensalmente, foram produzidos relatórios dos índices de infestação calculados. Os relatórios podem ser vizualisado em: <https://drive.google.com/drive/folders/1jceNS-I-CmwbIYNsyR_38qtu1_YopR33?usp=drive_link>, apresentando resultados similares aos da @fig-mapas-influencia-2023, @fig-mapas-influencia-2024 e @fig-mapas-influencia-2025. Dados tabelados também podem ser encontrados em: <https://github.com/kwbt-KENI/2025_Mestrado.git>
+A partir dos dados de IDO calculados mensalmente, foram produzidos relatórios dos índices de infestação calculados. Os relatórios podem ser visualisados em: <https://drive.google.com/drive/folders/1jceNS-I-CmwbIYNsyR_38qtu1_YopR33?usp=drive_link>, apresentando resultados similares aos da @fig-mapas-influencia-2023, @fig-mapas-influencia-2024 e @fig-mapas-influencia-2025. Dados tabelados também podem ser encontrados em: <https://github.com/kwbt-KENI/2025_Mestrado.git>. É importante notar que, pelos relatos dos agentes de endemias, os relatórios gerados auxiliaram nas atividades de monitoramento de vetores, indicando localidades com maiores índices vetorias, possibilitando a tomada de ações pontuais. Alguns relatos podem ser verificados em @tv_parana_turismo_2025.
 
 ```{r}
 #| label: calc-cap4-cell04
@@ -818,7 +998,7 @@ plots_mapas_mes <- readRDS("./fig/ggplot_RDS/mapas_mensais.RDS")
 #| warning: false
 #| echo: false
 #| fig-width: 6.3
-#| fig-height: 4.5
+#| fig-height: 5.5
 
 plot_mapas_2023 <- plots_mapas_mes[["2023 out"]] +
   plots_mapas_mes[["2023 nov"]] +
@@ -856,12 +1036,12 @@ Dados do monitoramento de infestação de *Aedes*, calculados para a cidade de S
 ::: {#fig-mapas-influencia-2024 layout-ncol="1"}
 ```{r}
 #| message: false
-#| fig-align: default
+#| fig-align: center
 #| paged-print: true
 #| warning: false
 #| echo: false
 #| fig-width: 6.3
-#| fig-height: 18
+#| fig-height: 8
 
 plot_mapas_2024 <- plots_mapas_mes[["2024 jan"]] +
   plots_mapas_mes[["2024 fev"]] +
@@ -911,12 +1091,12 @@ Dados do monitoramento de infestação de *Aedes*, calculados para a cidade de S
 ::: {#fig-mapas-influencia-2025 layout-ncol="1"}
 ```{r}
 #| message: false
-#| fig-align: default
+#| fig-align: center
 #| paged-print: true
 #| warning: false
 #| echo: false
 #| fig-width: 6.3
-#| fig-height: 18
+#| fig-height: 8
 
 plot_mapas_2025 <- plots_mapas_mes[["2025 jan"]] +
   plots_mapas_mes[["2025 fev"]] +
@@ -961,18 +1141,18 @@ Dados do monitoramento de infestação de *Aedes*, calculados para a cidade de S
 :::
 
 
-
 ### Distribuição das armadilhas ovitrampa
 
-A localidade das 50 armadilhas pode ser vista em @fig-dist-pontos. Com base no mapa, nota-se que existiram pontos com procimidade abaixo de até 250m de distância.
+A localidade das 50 armadilhas pode ser vista em @fig-dist-pontos. Com base no mapa, nota-se que existiram pontos com proximidade inferior a 250 metros de distância.
 
 ::: {#fig-dist-pontos layout-ncol="1" layout-align="center"}
 ```{r}
 #| message: false
-#| fig-align: default
+#| fig-align: center
 #| warning: false
 #| echo: false
 #| fig-width: 6.3
+#| out-width: "100%"
 
 dist_pontos <- ggplot() +
   geom_sf(data = ruas, aes(color = "#4a4a4ad8"), fill = NA, size = 0.3) +
@@ -1040,18 +1220,11 @@ dist_pontos <- ggplot() +
     panel.background = element_blank(),
     axis.title = element_blank(),
     axis.text = element_text(family = "serif", size = 4.5),
-    axis.text.y = element_text(angle = 270, hjust = 0.5)
+    axis.text.y = element_text(angle = 270, hjust = 0.5),
+    plot.margin = margin(0, 0, 0, 0, "cm")
   )
 
 dist_pontos
-
-ggsave(
-  "./fig/slide/map_distancia.png",
-  dist_pontos,
-  width = 32,
-  height = 16,
-  units = "cm"
-)
 ```
 
 \footnotesize Fonte: o próprio autor; @geofabrikgmbh.
@@ -1063,11 +1236,11 @@ Distribuição das 50 armadilhas ovitrampa instaladas no município de Sertanóp
 
 ### Adultos capturados
 
-Dos Culicidae adultos capturados, contados e identificados, somam-se um total de 11352 indivíduos contabilizadas. Destes, 249 são da espécie *Ae. aegypti*, com 42,23% de fêmeas, 11101 da espécie *Cx. quinquefasciatus*, com 30,05% de fêmeas, e 2 indivíduos da espécie *Ae. albopictus*, todos machos. Culicidae de outras espécies também foram capturados, incluindo espécies de *Anopheles* spp. Meigen 1818. A @tbl-n-adultos representa o número total de adultos capturados nos diferentes locais, ao longo do período de coleta.
+Dos Culicidae adultos capturados, contados e identificados, somam-se um total de 11.352 indivíduos contabilizados. Destes, 249 são da espécie *Ae. aegypti*, com 42,23% de fêmeas, 11.101 da espécie *Cx. quinquefasciatus*, com 30,05% de fêmeas, e 2 indivíduos da espécie *Ae. albopictus*, todos machos. Culicidae de outras espécies também foram capturados, incluindo espécies de *Anopheles* spp. Meigen 1818. A @tbl-n-adultos representa o número total de adultos capturados nos diferentes locais, ao longo do período de coleta.
 
 ```{r}
 #| label: tbl-n-adultos
-#| tbl-cap: Tabela com o número de adultos capturados aspiração com aspirador de Nasci adaptado em diferentes pontos da cidade de Sertanópolis-PR.
+#| tbl-cap: Tabela com o número de adultos capturados por aspiração com aspirador de Nasci adaptado em diferentes pontos da cidade de Sertanópolis-PR.
 #| echo: false
 #| error: false
 #| warning: false
@@ -1143,27 +1316,31 @@ fex_tabela_n_adultos <- tabela_n_adultos |>
 fex_tabela_n_adultos
 ```
 
-Dos locais de aspiração estabelecidos, a localidade (A46)P-46 apresentou o maior número absoluto de indivíduos capturados, somando ao total 10111 adultos (10098 *Cx. quinquefasciatus* e 13 *Ae. aegypti*). O local é um abatedouro municipal, apresentando, em sua proximidade, lagoas de estabilidade, onde são destinados os materiais orgânicos e rejeitos do abatedouro. A presença da lagoa, pela dificuldade da gestão local, propicia a proliferação de *Cx. quinquefasciatus*, se tornando um hotspot na região.
+Dos locais de aspiração estabelecidos, a localidade (A46)P-46 apresentou o maior número absoluto de indivíduos capturados, somando ao total 10111 adultos (10098 *Cx. quinquefasciatus* e 13 *Ae. aegypti*). O local é um abatedouro municipal, apresentando, em sua proximidade, lagoas de estabilidade, onde são destinados os materiais orgânicos e rejeitos do abatedouro. A presença da lagoa, pela dificuldade da gestão local, propicia a proliferação de *Cx. quinquefasciatus*, se tornando uma área crítica na região, permitindo a proliferação de imaturos dessa espécie. A relevância desse local vai além do incômodo causado pela hematofagia das fêmeas e seus efeitos, também é necessário considerar que a espécie tem potencial como vetor de arbovírus (*e.g.* WNV, SLEV e OROV) e nematoides (*e.g.* *W. bancrofti*) [@delima2025; @gorris2024; @guedes2017]. A identificação dessas áreas críticas sugere a necessidade de intervenções na infraestrutura e controle do vetor no local.
 
-O ponto (A33)UBS-2 apresentou o segundo maior número absoluto de adultos capturados, com 511 indivíduos (461 *Cx. quinquefasciatus* e 50 *Ae. aegypti*). O local, assim como os pontos (SNA)UBS-1 (com 88 *Cx. quinquefasciatus*, 45 *Ae. aegypti* e 1 *Ae. albopictus*) e (A33)UBS-2 (com 43 *Cx. quinquefasciatus*, 15 *Ae. aegypti*) são unidades básicas de saúde, e a presença de culicídeos nos locais pode promover riscos a saúde dos pacientes, e a maior propagação de arbovírus.
+O ponto (A33)UBS-2 apresentou o segundo maior número absoluto de adultos capturados, com 511 indivíduos (461 *Cx. quinquefasciatus* e 50 *Ae. aegypti*). O local, assim como os pontos (SNA)UBS-1 (com 88 *Cx. quinquefasciatus*, 45 *Ae. aegypti* e 1 *Ae. albopictus*) e (A33)UBS-2 (com 43 *Cx. quinquefasciatus*, 15 *Ae. aegypti*) são unidades básicas de saúde, e a presença de culicídeos nos locais pode representar riscos à saúde dos pacientes, e a maior propagação de arbovírus. Essas condições remetem à necessidade de incorporar as UBS como pontos prioritários de vigilância e controle vetorial.
 
-Os pontos (A09)P-09 e (A10)P-10 apresentaram o terceiro e quarto maior número absoluto de adultos capturados. (A09)P-09 com 260 indivíduos totais (201 *Cx. quinquefasciatus* e 59 *Ae. aegypti*) e (A10)P-10 com 236 indivíduos (182 *Cx. quinquefasciatus* e 45 *Ae. aegypti*). Já os pontos (A09)P-09 e (A36)P-36 apresentaram os menos valores, sendo (A09)P-09 com 52 indivíduos (41 *Cx. quinquefasciatus*, 10 *Ae. aegypti* e 1 *Ae. albopictus*) e (A36)P-36 com somente 5 indivíduos (2 *Cx. quinquefasciatus* e 3 *Ae. aegypti*).
+Os pontos (A09)P-09 e (A10)P-10 apresentaram o terceiro e quarto maior número absoluto de adultos capturados. (A09)P-09 com 260 indivíduos totais (201 *Cx. quinquefasciatus* e 59 *Ae. aegypti*) e (A10)P-10 com 236 indivíduos (182 *Cx. quinquefasciatus* e 45 *Ae. aegypti*). Já os pontos (A09)P-09 e (A36)P-36 apresentaram os menores valores, sendo (A09)P-09 com 52 indivíduos (41 *Cx. quinquefasciatus*, 10 *Ae. aegypti* e 1 *Ae. albopictus*) e (A36)P-36 com somente 5 indivíduos (2 *Cx. quinquefasciatus* e 3 *Ae. aegypti*).
 
-Referente ao número de indivíduos totais, ressalta-se a presença de *Cx. quinquefasciatus* em todos os pontos de aspiração, seja em grande quantidade (como observado em (A46)P46 e (A33)UBS-2) ou em poucos números, trazendo não somente um incomodo as populações lá presentes, mas também um risco a saúde pelo potencial em transmitir diferentes arbovírus. E, apesar a baixa captura de adultos de *Aedes*, os indicativos da sua prenseça e circulação via armadilhas ovitrampa indicam uma comunidade que se mantem ativa o ano inteiro, também apresentando riscos a população.
+Referente ao número de indivíduos totais, ressalta-se a presença de *Cx. quinquefasciatus* em todos os pontos de aspiração, seja em grande quantidade (como observado em (A46)P46 e (A33)UBS-2) ou em poucos números, representando não somente um incômodo às populações lá presentes, mas também um risco à saúde pelo potencial de transmitir diferentes arbovírus. E, apesar da baixa captura de adultos de *Aedes*, os indicativos da sua presença e circulação via armadilhas ovitrampa indicam uma comunidade que se mantém ativa o ano inteiro, também apresentando riscos à população.
 
 ### Detecção viral (DENV 1-4, ZIKV e CHIKV)
 
-Os 8 *pools* avaliadas, formados por todas as 30 fêmeas de *Ae. aegypti* capturadas, cada *pool* representando um local de aspiração, tiveram o material genético extraídas com sucesso, apresentando a presença de RNA em todas as amostras e com poucos contaminantes. Dos testes e detecção viral realizados, não foram confirmadas a amplificação de RNA de DENV, ZIKV e CHIKV, conforme identificado na @fig-ampli-virus.
+Os 8 *pools* avaliados, formados por todas as 30 fêmeas de *Ae. aegypti* capturadas, cada *pool* representando um local de aspiração, tiveram o material genético extraído com sucesso, apresentando a presença de RNA em todas as amostras e com poucos contaminantes. Dos testes e detecção viral realizados, não foi confirmada a amplificação de RNA de DENV, ZIKV e CHIKV, conforme identificado na @fig-ampli-virus. Destaca-se que, durante o período no qual ocorreram as coletas, foram notificados `r sum(cal_sertanopolis_cap_notificados$total_casos_serta[cal_sertanopolis_cap_notificados$status_proj == "depois"])` casos de DENV, dos quais 391 casos foram confirmados por análises de laboratório, sendo destes verificados os sorotipos DENV-1, DENV-2 e DENV-3 em circulação.
 
 ::: {#fig-ampli-virus layout-ncol="1" layout-align="center"}
 ![](fig\curva_amplificacao.png){width="100%" fig-align="center"}
 
 \footnotesize Fonte: Termociclador Rotor-Gene Q (Qiagen®)
 
-Curva de amplificação em tempo real de RNA viral. Relatório gerado pelo software do Termociclador Rotor-Gene Q (Qiagen®), de análises de fêmeas de *Ae. aegypti* para presença de vírus DENV (no canal VIC (DENV 1 e 3) e FAM(DENV 2 e 4)), CHIKV (no canal FMA) e ZIKV (no canal FMA), pelo kit de detecção IBMP Biomol ZDC-Zika, Dengue e Chikungunya INF-047®. Fêmeas capturadas em Sertanópolis/PR, entre março de 2024 a novembro de 2025.
+Curva de amplificação em tempo real de RNA viral. Relatório gerado pelo software do Termociclador Rotor-Gene Q (Qiagen®), de análises de fêmeas de *Ae. aegypti* para presença de vírus DENV (no canal VIC (DENV 1 e 3) e FAM(DENV 2 e 4)), CHIKV (no canal FAM) e ZIKV (no canal FAM), pelo kit de detecção IBMP Biomol ZDC-Zika, Dengue e Chikungunya INF-047®. Fêmeas capturadas em Sertanópolis/PR, entre março de 2024 a novembro de 2025.
 :::
 
-A ausência de resultados positivos na detecção viral é associada à baixa quantidade de amostras e as taxas de infecção dos arbovírus nos mosquitos. Para maiores chances de detecção, @gu2004 indicam que um mínimo de 1600 indivíduos deve ser coletado, para taxas de 80% de positividade em amostras analisadas. Influências do ambiente, como taxas de infecção local, ou na própria comunidade de vetores, como a presença de outros patógenos pode interferir na ecologia viral local e influenciar nas taxas de detecção [@gu2008; @silvak.2021; @dosreis2019]. Considerando a circulação dos vírus DENV, ZIKV e CHIKV no município de Sertanópolis-PR, é possível verificar, na @fig-casos-denv-serta, a flutuação de casos no município.
+É importante acrescentar que, pelos dados do SINAN (BRASIL. Ministério da Saúde, [-@brasil.ministériodasaúdeSINAN]), foi identificada a circulação do arbovírus DENV sorotipo 2 no município, entre fevereiro de 2019 a janeiro de 2020. Em fevereiro de 2023 foi identificada a circulação de DENV sorotipo 1, que coincide com o aumento do número de casos no período. Em março de 2024, foi identificada a circulação de DENV sorotipo 3, podendo estar relacionado ao maior número de casos do período. Verificou-se a circulação de DENV sorotipos 1, 2 e 3 nas amostras subsequentes, datadas de março a abril de 2024. Referente às amostragens realizadas em março de 2025, só se identificou DENV sorotipo 3. Também foram notificados `r sum(chikV_serta_15_25$total_casos_serta[chikV_serta_15_25$status_proj == "depois"])` casos de CHIV no período (@fig-casos-chikv-serta). Nota-se também que não haveram registros de casos prováveis de ZIKV (BRASIL. Ministério da Saúde, -@brasil.ministériodasaúdeSINAN).
+
+A ausência da detecção de RNA viral de DENV, ZIKV e CHIKV nos oito pools analisados pode ser interpretada como resultado da baixa quantidade de fêmeas analisadas. Gu e Nuvak (-@gu2004), por exemplo, indicam que um mínimo de 1600 indivíduos deve ser coletado, para obtenção de taxas de 80% de positividade em amostras analisadas, número aproximadamente 50 vezes superior ao obtido neste estudo. Essa limitação amostral é vista em estudos de vigilância viral em vetores, em municípios de pequeno e médio porte, onde a captura sistemática de grandes números de adultos é desafiadora [@silvak.2021; @alves2023; @gu2008].
+
+A distribuição temporal das capturas pode também ter interferido nos resultados, por não ter coincidido com os picos de circulação viral na cidade em todas as coletas. Observa-se que as taxas de infecção em populações de *Aedes* flutuam de forma não-linear ao longo do ano, formando janelas temporais com maiores e menores taxas ao longo do tempo, como pode ser observado no histórico de casos prováveis de DENV no município de Sertanópolis (@fig-casos-denv-serta) [@cintra2025; @wilder-smith2017]. Além da influência temporal, interações com o ambiente também podem influenciar essa dinâmica, a exemplo da possível presença de vírus específicos de insetos (*insect-specific viruses*) e outros patógenos que podem alterar as taxas de infecção de DENV nos vetores [@ripollInsectspecificRNAViruses2025; @olmoMosquitoVectorCompetence2023]. Assim, a ausência de detecção dos arbovírus no estudo demonstra a necessidade de uma ampliação dos esforços para captura em trabalhos futuros.
 
 ::: {#fig-casos-denv-serta layout-ncol="1" layout-align="center"}
 ```{r}
@@ -1232,21 +1409,23 @@ fig_cal_sertanopolis_cap <- cal_sertanopolis_cap |>
   theme(
     text = element_text(family = "serif"),
     plot.background = element_rect(fill = "#EEEEEE"),
-    plot.title = element_textbox_simple(
-      face = "bold",
-      size = 12,
-      width = NULL,
-      fill = NULL,
-      padding = margin(5, 4, 5, 4),
-      hjust = 0.5
-    ),
-    plot.subtitle = element_textbox_simple(
-      size = 10,
-      width = NULL,
-      fill = NULL,
-      padding = margin(1, 4, 5, 4),
-      hjust = 0.5
-    ),
+    plot.title = element_blank(),
+    plot.subtitle = element_blank(),
+    # plot.title = element_textbox_simple(
+    #   face = "bold",
+    #   size = 12,
+    #   width = NULL,
+    #   fill = NULL,
+    #   padding = margin(5, 4, 5, 4),
+    #   hjust = 0.5
+    # ),
+    # plot.subtitle = element_textbox_simple(
+    #   size = 10,
+    #   width = NULL,
+    #   fill = NULL,
+    #   padding = margin(1, 4, 5, 4),
+    #   hjust = 0.5
+    # ),
     plot.margin = margin(4, 15, 10, 10),
     axis.text.x = element_text(
       size = 8.5,
@@ -1268,23 +1447,19 @@ fig_cal_sertanopolis_cap <- cal_sertanopolis_cap |>
 
 fig_cal_sertanopolis_cap
 
-ggsave(
-  "./fig/slide/casos_denv_serta.png",
-  fig_cal_sertanopolis_cap,
-  width = 32,
-  height = 16,
-  units = "cm"
-)
+# ggsave(
+#   "./fig/slide/casos_denv_serta.png",
+#   fig_cal_sertanopolis_cap,
+#   width = 32,
+#   height = 16,
+#   units = "cm"
+# )
 ```
 
 \footnotesize Fonte: BRASIL. Ministério da Saúde, [-@brasil.ministériodasaúdeSINAN]; BRASIL. Ministério da Saúde. DATASUS, [-@datasus2026]; IBGE, [-@ibgeInstitutoBrasileiroGeografia2023]; Saldanha, Bastos e Barcellos [-@saldanha2019].
 
-Gráfico de casos registrados de Dengue do Município de Sertanópolis-Paraná, de dezembro de 2021 a dezembro de 2025, destacando o período de atividade do projeto de monitoramento de *Aedes* spp. na cidade de Sertanópolis/PR.
+Gráfico de casos prováveis de Dengue do Município de Sertanópolis-Paraná, registrados na plataforma SINAN, entre dezembro de 2021 a dezembro de 2025, destacando o período de atividade do projeto de monitoramento de *Aedes* spp. na cidade de Sertanópolis/PR.
 :::
-
-Para melhor acompanhar os resultados do gráfico da @fig-casos-denv-serta, é importante acrescentar que, pelos dados do SINAN (BRASIL. Ministério da Saúde, [-@brasil.ministériodasaúdeSINAN]), foi identificado a circulação do arbovírus DENV sorotipo 2 no município, entre fevereiro de 2019 a janeiro de 2020. Em fevereiro de 2023 foi identificado a circulação de DENV sorotipo 1, que coincide com o aumento do número de casos no período. Em março de 2024, foi identificado a circulação de DENV sorotipo 3, podendo estar relacionado ao maior número de casos do período. Verificou-se a circulação de DENV sorotipos 1, 2 e 3 nas amostras subsequêntes, datadas de março a abril de 2024. Referente as amostragens realizadas em março de 2025, só se identificou DENV sorotipo 3.
-
-Não houve registro de casos de ZIKV no município de Sertanópolis-PR no período investigado (janeiro de 2015 a janeiro de 2026). Referente aos casos de CHIKV, verificou-se a presença de 18 casos notificados no município, que podem ser verificados na @fig-casos-chikv-serta.
 
 ::: {#fig-casos-chikv-serta layout-ncol="1" layout-align="center"}
 ```{r}
@@ -1292,39 +1467,6 @@ Não houve registro de casos de ZIKV no município de Sertanópolis-PR no perío
 #| error: false
 #| warning: false
 #| fig-width: 6.3
-
-chikV_serta_15_25 <- rbind(
-  readRDS("data/chi_2015_2018_fil_PR_Serta.RDS"),
-  readRDS("data/chi_2019_2022_fil_PR_Serta.RDS"),
-  readRDS("data/chi_2023_2026_fil_PR_Serta.RDS")
-) |>
-  mutate(
-    ano = str_sub(SEM_PRI, start = 1, end = 4),
-    sem = str_sub(SEM_PRI, start = 5, end = 6),
-    W = "W",
-    ano_sem = yearweek(
-      str_c(ano, str_c(sem, W), sep = " "),
-      week_start = getOption("lubridate.week.start", 7)
-    )
-  ) |>
-  group_by(ano_sem) |>
-  summarise(total_casos_serta = n()) |>
-  filter(ano_sem > yearweek("2021 W50", week_start = 7)) |>
-  as_tsibble(index = ano_sem) |>
-  fill_gaps(.end = yearweek("2026 W01", week_start = 7)) |>
-  mutate(total_casos_serta = replace_na(total_casos_serta, 0)) |>
-  distinct() |>
-  as_tsibble(index = ano_sem) |>
-  mutate(
-    total_casos_serta = replace_na(total_casos_serta, 0),
-    status_proj = if_else(
-      ano_sem < yearweek("2023 W41", week_start = 7),
-      "antes",
-      "depois"
-    ),
-    total_casos_serta = as.numeric(total_casos_serta),
-    data = as_date(ano_sem)
-  )
 
 plot_chikV_serta_21_25 <- chikV_serta_15_25 |>
   ggplot(aes(x = data, y = total_casos_serta, color = status_proj)) +
@@ -1384,21 +1526,23 @@ plot_chikV_serta_21_25 <- chikV_serta_15_25 |>
   theme(
     text = element_text(family = "serif"),
     plot.background = element_rect(fill = "#EEEEEE"),
-    plot.title = element_textbox_simple(
-      face = "bold",
-      size = 12,
-      width = NULL,
-      fill = NULL,
-      padding = margin(5, 4, 5, 4),
-      hjust = 0.5
-    ),
-    plot.subtitle = element_textbox_simple(
-      size = 10,
-      width = NULL,
-      fill = NULL,
-      padding = margin(1, 4, 5, 4),
-      hjust = 0.5
-    ),
+    plot.title = element_blank(),
+    plot.subtitle = element_blank(),
+    # plot.title = element_textbox_simple(
+    #   face = "bold",
+    #   size = 12,
+    #   width = NULL,
+    #   fill = NULL,
+    #   padding = margin(5, 4, 5, 4),
+    #   hjust = 0.5
+    # ),
+    # plot.subtitle = element_textbox_simple(
+    #   size = 10,
+    #   width = NULL,
+    #   fill = NULL,
+    #   padding = margin(1, 4, 5, 4),
+    #   hjust = 0.5
+    # ),
     plot.margin = margin(4, 15, 10, 10),
     axis.text.x = element_text(
       size = 8.5,
@@ -1421,16 +1565,16 @@ plot_chikV_serta_21_25 <- chikV_serta_15_25 |>
 
 plot_chikV_serta_21_25
 
-ggsave(
-  "./fig/slide/casos_chikv_serta.png",
-  plot_chikV_serta_21_25,
-  width = 32,
-  height = 16,
-  units = "cm"
-)
+# ggsave(
+#   "./fig/slide/casos_chikv_serta.png",
+#   plot_chikV_serta_21_25,
+#   width = 32,
+#   height = 16,
+#   units = "cm"
+# )
 ```
 
 \footnotesize Fonte: BRASIL. Ministério da Saúde, [-@brasil.ministériodasaúdeSINAN]; BRASIL. Ministério da Saúde. DATASUS, [-@datasus2026]; IBGE, [-@ibgeInstitutoBrasileiroGeografia2023]; Saldanha, Bastos e Barcellos [-@saldanha2019].
 
-Gráfico de casos registrados de Chikungunya do Município de Sertanópolis-Paraná, de dezembro de 2021 a dezembro de 2025, destacando o período de atividade do projeto de monitoramento de *Aedes* spp. na cidade de Sertanópolis/PR.
+Gráfico de casos prováveis de Chikungunya do Município de Sertanópolis-Paraná, registrados na plataforma SINAN, entre dezembro de 2021 a dezembro de 2025, destacando o período de atividade do projeto de monitoramento de *Aedes* spp. na cidade de Sertanópolis/PR.
 :::

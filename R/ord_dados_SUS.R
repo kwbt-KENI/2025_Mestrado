@@ -173,6 +173,9 @@ chikV_serta_15_25 <- rbind(
 
 View(chikV_serta_15_25)
 
+chikV_serta_15_25 |>
+  filter(CLASSI_FIN == c("Descartado"))
+
 # denV_serta_15_25 <- rbind(
 #   readRDS("data/den_2015_2018_fil_PR_Serta.RDS"),
 #   readRDS("data/den_2019_2022_fil_PR_Serta.RDS"),

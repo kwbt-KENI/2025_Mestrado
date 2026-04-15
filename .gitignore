@@ -6,8 +6,6 @@
 /.vscode
 /.quarto/
 **/*.quarto_ipynb
-.Rproj.user
-2025_Mestrado_no_git.Rproj
 abntexQuarto.tex
 abntexQuarto copy.tex
 abntex2abrev.sty

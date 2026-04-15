@@ -4,12 +4,16 @@
 <!-- \setlength{\parindent}{0cm} -->
 \ABNTEXchapterfont\normalsize
 
+
 <!-- PRETEXTUAIS -->
+
+\pretextual
 {{< include pretextuais.qmd >}}
 
-<!-- TEXTUAIS -->
+<!-- {{< pagebreak >}} -->
 
-\mainmatter
+<!-- TEXTUAIS -->
+\textual
 
 <!-- Introdução -->
 {{< include textuais/cap1_introducao.qmd >}}
@@ -29,8 +33,8 @@
 <!-- Extras -->
 <!-- {{< include textuais/cap6_trabalhos_futuros.qmd >}} -->
 
-\newpage
-\postextual
+{{< pagebreak >}}
 
 <!-- Referências -->
+\postextual
 {{< include textuais/cap7_referencias.qmd >}}

@@ -3,15 +3,11 @@ project:
 
 number-sections: true
 
-lang: pt-BR
-
 bibliography: "references.bib"
 csl: "./src/abnt2.csl"
 
 #lembrar - aqui eu configurei chapter como section, então, atenção
 format:
-  # docx:
-    # reference-doc: "./src/custom-reference-doc.docx"
   pdf:
     toc: false
     pdf-engine: xelatex
@@ -31,7 +27,9 @@ format:
       - left=30mm
       - right=20mm
       - bottom=20mm
-    colorlinks: true
+    include-before-body: []
+    babel-options: brazilian
+    colorlinks: false
     linkcolor: black
     urlcolor: black
     citecolor: black
@@ -49,16 +47,18 @@ execute:
   warning: false
   freeze: auto
 
-knitr:
-  opts_chunk:
-    out.width: "100%"
+# knitr:
+#   opts_chunk:
+#     out.width: "100%"
 
 # https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/language/_language-pt-BR.yml
 # dicionário para o Quarto, entrada separada por conta do conflito com bib Bable (LaTeX)
+
 crossref:
   fig-title: "**Figura**"
   fig-prefix : "Figura"
   tbl-title: "**Tabela**"
+  tbl-prefix : "Tabela"
   lst-title: "Listagem"
   thm-title: "**Teorema**"
   lem-title: "Lema"
@@ -68,14 +68,8 @@ crossref:
   def-title: "Definição"
   exm-title: "Exemplo"
   exr-title: "Exercício"
-  sec-prefix: "Seção"
-  eq-prefix: "Equação"
+  sec-prefix: "seção"
+  eq-prefix: "equação"
   lof-title: "LISTA DE FIGURAS"
   lot-title: "LISTA DE TABELAS"
   lol-title: "LISTA DE LISTAGENS"
-
-
-  # Notas para edição:
-  # 2º título em Versalet (/textsc{})
-  # 3º 1º letra em Maiúsculo, em todas as palavras
-  # Legendas com espaçamento simples
